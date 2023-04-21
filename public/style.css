@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+  background-image: url("color-background.jpg");
+  background-size: cover;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  display: block;
+}
+
+.logo {
+  width: 20%;
+}
+
+nav a {
+  display: inline-block;
+  float: right;
+  flex-direction: row;
+  margin: 5em;
+  margin-right: 1em;
+}
+
+form div {
+  margin: 4em;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-right: 1em;
+}
+
+.login-submit {
+  display: inline-block;
+  margin: 1em;
+}
