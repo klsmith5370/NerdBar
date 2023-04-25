@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {authenticate} from '../store'
+// import Home from './Home'
 
 /**
  * COMPONENT
@@ -28,7 +29,13 @@ const AuthForm = props => {
         </div>
         {error && error.response && <div> {error.response.data} </div>}
       </form>
-      <img className="logo" src="NerdBar-logo.jpg" alt="NerdBar brand logo"/>
+      <div>
+        <img className="logo" src="NerdBar-logo.jpg" alt="NerdBar brand logo"/>
+      </div>
+   
+      <button className="view-all-cards">Click to view all recipes!!</button>
+
+      {/* <Home /> */}
     </div>
   )
 }

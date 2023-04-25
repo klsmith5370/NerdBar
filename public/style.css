@@ -2,6 +2,8 @@ body {
   font-family: "Ubuntu Condensed", sans-serif;
   background-image: url("color-background.jpg");
   background-size: cover;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -76,4 +78,11 @@ form div {
 .login-submit {
   display: inline-block;
   margin: 1em;
+}
+
+.view-all-cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 40em;
+  margin-left: 50em;
 }
