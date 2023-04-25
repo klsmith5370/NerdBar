@@ -1,8 +1,7 @@
 body {
-  font-family: sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
   background-image: url("color-background.jpg");
   background-size: cover;
-
 }
 
 a {
@@ -14,23 +13,64 @@ label {
 }
 
 .logo {
-  width: 20%;
+  width: 18%;
+}
+
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+} */
+
+/* nav {
+  display: flex;
 }
 
 nav a {
-  display: inline-block;
-  float: right;
+  margin: 0 1em;
+}
+
+form {
+  display: flex;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2em;
+}
+
+.login-submit {
+  margin-top: 1em;
+} */
+
+/* nav {
+  display: flex;
+  align-items: flex-end;
+}
+
+nav a {
+  margin-right: 100px;
+  float: left;
+} */
+
+nav a {
+  margin: 4em;
   flex-direction: row;
-  margin: 5em;
-  margin-right: 1em;
+  align-items: center;
+  float: right;
+  margin-right: 2em;
+  padding-left: 2em;
+  margin-top: 1em;
 }
 
 form div {
   margin: 4em;
-  display: flex;
   flex-direction: column;
   float: right;
-  margin-right: 1em;
+  margin-right: 2em;
+  padding-left: 2em;
 }
 
 .login-submit {
