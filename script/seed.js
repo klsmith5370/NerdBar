@@ -1,6 +1,7 @@
 'use strict'
 
-const {db, models: {User} } = require('../server/db')
+const {db, models: {User, CharacterRecipe} } = require('../server/db')
+
 
 /**
  * seed - this function clears the database, updates tables to
@@ -16,7 +17,89 @@ async function seed() {
     User.create({ username: 'yuna', password: '123' }),
   ])
 
+  const characterRecipes = await Promise.all([
+    CharacterRecipe.create({
+      characterName: 'Nezuko Kamado',
+      recipeName: 'Blood Demon Art',
+      recipeDescription: '2 oz vodka, fill with cranberry or raspberry juice',
+      characterCategory: 'Anime, Kimetsu no Yaiba',
+      characterImage: ''
+    }),
+
+    CharacterRecipe.create({
+      characterName: '',
+      recipeName: '',
+      recipeDescription: '',
+      characterCategory: 'Anime',
+      characterImage: ''
+    }),
+
+    CharacterRecipe.create({
+      characterName: '',
+      recipeName: '',
+      recipeDescription: '',
+      characterCategory: 'Anime',
+      characterImage: ''
+    }),
+
+    CharacterRecipe.create({ 
+      characterName: '',
+      recipeName: '',
+      recipeDescription: '',
+      characterCategory: 'Anime',
+      characterImage: ''
+    }),
+
+    CharacterRecipe.create({
+      characterName: '',
+      recipeName: '',
+      recipeDescription: '',
+      characterCategory: 'Anime',
+      characterImage: ''
+    }),
+
+    CharacterRecipe.create({
+      characterName: 'Morgana',
+      recipeName: '',
+      recipeDescription: '',
+      characterCategory: 'Video Game, Persona 5 Royal',
+      characterImage: ''
+    }),
+    CharacterRecipe.create({
+      characterName: 'Isabelle',
+      recipeName: '',
+      recipeDescription: '',
+      characterCategory: 'Video Game, Animal Crossing',
+      characterImage: ''
+    }),
+
+    CharacterRecipe.create({
+      characterName: 'Pikachu',
+      recipeName: 'Electro Web',
+      recipeDescription: '',
+      characterCategory: 'Video Game, Pokemon',
+      characterImage: ''
+    }),
+
+    CharacterRecipe.create({
+      characterName: 'Sephiroth',
+      recipeName: 'One Winged Angel',
+      recipeDescription: '',
+      characterCategory: 'Video Game, Final Fantasy',
+      characterImage: ''
+    }),
+
+    CharacterRecipe.create({
+      characterName: '',
+      recipeName: '',
+      recipeDescription: '',
+      characterCategory: 'Video Game, ',
+      characterImage: ''
+    }),
+  ])
+
   console.log(`seeded ${users.length} users`)
+  console.log(`seeded ${characterRecipes.length} recipes`)
   console.log(`seeded successfully`)
   return {
     users: {

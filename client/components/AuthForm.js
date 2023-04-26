@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {authenticate} from '../store'
+import { Link } from 'react-router-dom'
 // import Home from './Home'
 
 /**
@@ -32,10 +33,10 @@ const AuthForm = props => {
       <div>
         <img className="logo" src="NerdBar-logo.jpg" alt="NerdBar brand logo"/>
       </div>
-   
-      <button className="view-all-cards">Click to view all recipes!!</button>
-
-      {/* <Home /> */}
+      
+      <Link to="/view-all">
+        <button className="view-all-cards">Click to view all recipes!!</button>
+      </Link>
     </div>
   )
 }
