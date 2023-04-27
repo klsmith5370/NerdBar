@@ -21,7 +21,7 @@ async function seed() {
     CharacterRecipes.create({
       characterName: 'Nezuko',
       recipeName: 'Blood Demon Art',
-      recipeDescription: '2 oz vodka, fill with cranberry or raspberry juice, a splash of soda, add lychee jelly for garnish',
+      recipeDescription: '2 oz vodka, fill with cranberry or raspberry juice, a splash of soda and grenadine, add lychee jelly for garnish',
       recipeCategory: 'Alcoholic, drinks',
       characterImage: 'https://cdn.epicstream.com/images/ncavvykf/epicstream/1291d35e00f077741819c23a19e5043c0a54e8fc-864x382.png'
     }),
@@ -38,14 +38,14 @@ async function seed() {
       characterName: '',
       recipeName: '',
       recipeDescription: '',
-      recipeCategory: 'Alcoholic, drinks',
+      recipeCategory: 'Non-alcoholic, drinks',
       characterImage: ''
     }),
 
     CharacterRecipes.create({
       characterName: 'Morgana',
       recipeName: 'Not A Cat!',
-      recipeDescription: '',
+      recipeDescription: '1 oz tequila of your choice, 1 oz rum of your choice, ice, blackberry/black cherry juice of your choice, garnish with black sea salt around the rim',
       recipeCategory: 'Alcoholic, drinks',
       characterImage: 'https://cdn.shopify.com/s/files/1/0101/1036/9888/products/UDONStore-Product-P5Shirt-MorganaInsta_1080x.jpg'
     }),

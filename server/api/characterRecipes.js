@@ -1,7 +1,7 @@
 // const router = require('express').Router()
 
 // const {
-//     models: { CharacterRecipes },
+//     models: { CharacterRecipe },
 // } = require('../db')
 
 // module.exports = router
