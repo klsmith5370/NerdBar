@@ -19,7 +19,7 @@ async function seed() {
 
   const characterRecipes = await Promise.all([
     CharacterRecipes.create({
-      characterName: 'Nezuko Kamado',
+      characterName: 'Nezuko',
       recipeName: 'Blood Demon Art',
       recipeDescription: '2 oz vodka, fill with cranberry or raspberry juice, a splash of soda, add lychee jelly for garnish',
       recipeCategory: 'Alcoholic, drinks',
@@ -42,43 +42,12 @@ async function seed() {
       characterImage: ''
     }),
 
-    CharacterRecipes.create({ 
-      characterName: '',
-      recipeName: '',
-      recipeDescription: '',
-      recipeCategory: '',
-      characterImage: ''
-    }),
-
-    CharacterRecipes.create({
-      characterName: '',
-      recipeName: '',
-      recipeDescription: '',
-      recipeCategory: '',
-      characterImage: ''
-    }),
-
     CharacterRecipes.create({
       characterName: 'Morgana',
       recipeName: 'Not A Cat!',
       recipeDescription: '',
       recipeCategory: 'Alcoholic, drinks',
       characterImage: 'https://cdn.shopify.com/s/files/1/0101/1036/9888/products/UDONStore-Product-P5Shirt-MorganaInsta_1080x.jpg'
-    }),
-    CharacterRecipes.create({
-      characterName: 'Isabelle',
-      recipeName: 'Bells',
-      recipeDescription: '',
-      recipeCategory: '',
-      characterImage: 'https://mario.wiki.gallery/images/thumb/2/2b/Isabelle_SSBU.png/800px-Isabelle_SSBU.png'
-    }),
-
-    CharacterRecipes.create({
-      characterName: 'Pikachu',
-      recipeName: 'Electro Web',
-      recipeDescription: '',
-      recipeCategory: '',
-      characterImage: 'https://oyster.ignimgs.com/mediawiki/apis.ign.com/pokemon-blue-version/8/89/Pikachu.jpg'
     }),
 
     CharacterRecipes.create({
