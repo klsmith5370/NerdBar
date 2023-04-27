@@ -22,7 +22,7 @@ const CharacterRecipe = db.define("recipe", {
         type: Sequelize.TEXT,
     },
 
-    characterCategory: {
+    recipeCategory: {
         type: Sequelize.ARRAY(Sequelize.TEXT),
     },
 

@@ -1,6 +1,6 @@
 'use strict'
 
-const {db, models: {User, CharacterRecipe} } = require('../server/db')
+const {db, models: {User, CharacterRecipes} } = require('../server/db')
 
 
 /**
@@ -18,83 +18,83 @@ async function seed() {
   ])
 
   const characterRecipes = await Promise.all([
-    CharacterRecipe.create({
+    CharacterRecipes.create({
       characterName: 'Nezuko Kamado',
       recipeName: 'Blood Demon Art',
-      recipeDescription: '2 oz vodka, fill with cranberry or raspberry juice',
-      characterCategory: 'Anime, Kimetsu no Yaiba',
-      characterImage: ''
+      recipeDescription: '2 oz vodka, fill with cranberry or raspberry juice, a splash of soda, add lychee jelly for garnish',
+      recipeCategory: 'Alcoholic, drinks',
+      characterImage: 'https://cdn.epicstream.com/images/ncavvykf/epicstream/1291d35e00f077741819c23a19e5043c0a54e8fc-864x382.png'
     }),
 
-    CharacterRecipe.create({
+    CharacterRecipes.create({
+      characterName: 'Anya Forger',
+      recipeName: 'WAKU WAKU!',
+      recipeDescription: 'fill glass with your favorite lemon-lime soda and mix with pink cranberry juice, garnish with cut-out lemon stars',
+      recipeCategory: 'Non-alcoholic, drinks',
+      characterImage: 'https://img1.ak.crunchyroll.com/i/spire2/59a30d14cee549bafa1f0ba5f6f4e6681650356534_full.png'
+    }),
+
+    CharacterRecipes.create({
       characterName: '',
       recipeName: '',
       recipeDescription: '',
-      characterCategory: 'Anime',
+      recipeCategory: 'Alcoholic, drinks',
       characterImage: ''
     }),
 
-    CharacterRecipe.create({
+    CharacterRecipes.create({ 
       characterName: '',
       recipeName: '',
       recipeDescription: '',
-      characterCategory: 'Anime',
+      recipeCategory: '',
       characterImage: ''
     }),
 
-    CharacterRecipe.create({ 
+    CharacterRecipes.create({
       characterName: '',
       recipeName: '',
       recipeDescription: '',
-      characterCategory: 'Anime',
+      recipeCategory: '',
       characterImage: ''
     }),
 
-    CharacterRecipe.create({
-      characterName: '',
-      recipeName: '',
-      recipeDescription: '',
-      characterCategory: 'Anime',
-      characterImage: ''
-    }),
-
-    CharacterRecipe.create({
+    CharacterRecipes.create({
       characterName: 'Morgana',
-      recipeName: '',
+      recipeName: 'Not A Cat!',
       recipeDescription: '',
-      characterCategory: 'Video Game, Persona 5 Royal',
-      characterImage: ''
+      recipeCategory: 'Alcoholic, drinks',
+      characterImage: 'https://cdn.shopify.com/s/files/1/0101/1036/9888/products/UDONStore-Product-P5Shirt-MorganaInsta_1080x.jpg'
     }),
-    CharacterRecipe.create({
+    CharacterRecipes.create({
       characterName: 'Isabelle',
-      recipeName: '',
+      recipeName: 'Bells',
       recipeDescription: '',
-      characterCategory: 'Video Game, Animal Crossing',
-      characterImage: ''
+      recipeCategory: '',
+      characterImage: 'https://mario.wiki.gallery/images/thumb/2/2b/Isabelle_SSBU.png/800px-Isabelle_SSBU.png'
     }),
 
-    CharacterRecipe.create({
+    CharacterRecipes.create({
       characterName: 'Pikachu',
       recipeName: 'Electro Web',
       recipeDescription: '',
-      characterCategory: 'Video Game, Pokemon',
-      characterImage: ''
+      recipeCategory: '',
+      characterImage: 'https://oyster.ignimgs.com/mediawiki/apis.ign.com/pokemon-blue-version/8/89/Pikachu.jpg'
     }),
 
-    CharacterRecipe.create({
+    CharacterRecipes.create({
       characterName: 'Sephiroth',
       recipeName: 'One Winged Angel',
       recipeDescription: '',
-      characterCategory: 'Video Game, Final Fantasy',
-      characterImage: ''
+      recipeCategory: 'Alcholic, drinks',
+      characterImage: 'https://rare-gallery.com/uploads/posts/332547-Sephiroth-Final-Fantasy-7-Remake-4K.jpg'
     }),
 
-    CharacterRecipe.create({
-      characterName: '',
-      recipeName: '',
-      recipeDescription: '',
-      characterCategory: 'Video Game, ',
-      characterImage: ''
+    CharacterRecipes.create({
+      characterName: 'Princess Peach',
+      recipeName: 'Peach Kingdom',
+      recipeDescription: '2 oz peach schnapps, 2 oz lemon vodka, ',
+      recipeCategory: 'Alcoholic, drinks',
+      characterImage: 'https://play.nintendo.com/images/profile-mk-peach.7bf2a8f2.aead314d58b63e27.png'
     }),
   ])
 

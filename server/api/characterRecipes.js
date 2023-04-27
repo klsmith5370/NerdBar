@@ -1,15 +1,15 @@
-const router = require('express').Router()
+// const router = require('express').Router()
 
-const {
-    models: { CharacterRecipes },
-} = require('../db')
+// const {
+//     models: { CharacterRecipes },
+// } = require('../db')
 
-module.exports = router
+// module.exports = router
 
-router.get()
+// router.get()
 
-router.get()
+// router.get()
 
-router.post()
+// router.post()
 
-router.delete()
+// router.delete()

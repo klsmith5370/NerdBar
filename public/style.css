@@ -14,48 +14,58 @@ label {
   display: block;
 }
 
+@media (max-width: 600px) {
+  .logo {
+    width: 50%;
+  }
+  
+  nav a {
+    margin: 2em;
+    margin-right: 1em;
+    padding-left: 1em;
+    margin-top: 0.5em;
+  }
+  
+  form div {
+    margin: 2em;
+    margin-right: 1em;
+    padding-left: 1em;
+  }
+  
+  .view-all-cards {
+    margin-top: 20em;
+    margin-left: 30em;
+  }
+}
+
+@media (min-width: 600px) {
+  .logo {
+    width: 18%;
+  }
+  
+  nav a {
+    margin: 4em;
+    margin-right: 2em;
+    padding-left: 2em;
+    margin-top: 1em;
+  }
+  
+  form div {
+    margin: 4em;
+    margin-right: 2em;
+    padding-left: 2em;
+  }
+  
+  .view-all-cards {
+    margin-top: 40em;
+    margin-left: 50em;
+  }
+}
+
 .logo {
   width: 18%;
+  position: fixed;
 }
-
-/* .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-} */
-
-/* nav {
-  display: flex;
-}
-
-nav a {
-  margin: 0 1em;
-}
-
-form {
-  display: flex;
-}
-
-form div {
-  display: flex;
-  flex-direction: column;
-  margin: 0 2em;
-}
-
-.login-submit {
-  margin-top: 1em;
-} */
-
-/* nav {
-  display: flex;
-  align-items: flex-end;
-}
-
-nav a {
-  margin-right: 100px;
-  float: left;
-} */
 
 nav a {
   margin: 4em;
@@ -80,9 +90,10 @@ form div {
   margin: 1em;
 }
 
-.view-all-cards {
+/* .view-all-cards {
   display: flex;
   justify-content: center;
   margin-top: 40em;
   margin-left: 50em;
-}
+} */
+
