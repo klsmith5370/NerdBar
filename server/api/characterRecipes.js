@@ -1,15 +1,47 @@
-// const router = require('express').Router()
+const router = require('express').Router()
 
-// const {
-//     models: { CharacterRecipe },
-// } = require('../db')
+const {
+    models: { CharacterRecipe },
+} = require('../db')
 
-// module.exports = router
+module.exports = router
 
-// router.get()
+// getting all recipes
+router.get('/', async (req, res, next) => {
+    try {
+        const recipes = await CharacterRecipe.findAll()
+        res.json(recipes)
+    } catch (error) {
+        next(error)
+    }
+})
 
-// router.get()
+// getting a single recipe
+router.get('/:id', async(req, res, next) => {
+    try {
+        const recipe = await CharacterRecipe.findByPk(req.params.id)
+        res.json(recipe)
+    } catch (error) {
+        next(error)
+    }
+})
 
-// router.post()
+// creating a recipe (will be accessible via logged in users)
+router.post('/', async (req, res, next) => {
+    try {
+        res.status(201).send(await CharacterRecipe.create(req.body))
+    } catch (error) {
+        next(error)
+    }
+})
 
-// router.delete()
+// deleting a recipe (will be accessible via logged in users)
+router.delete('/:id', async (req, res, next) => {
+    try {
+        const recipe = await CharacterRecipe.findByPk(req.params.id)
+        await recipe.destroy()
+        res.json(recipe)
+    } catch (error) {
+        next(error)
+    }
+})
