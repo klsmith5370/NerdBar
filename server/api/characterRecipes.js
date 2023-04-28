@@ -3,7 +3,6 @@ const router = require('express').Router()
 const {
     models: { CharacterRecipe },
 } = require('../db')
-
 module.exports = router
 
 // getting all recipes
