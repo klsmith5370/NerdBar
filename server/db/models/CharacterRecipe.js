@@ -18,6 +18,14 @@ const CharacterRecipe = db.define("recipe", {
         }
     },
 
+    recipeIngredients: {
+        type: Sequelize.TEXT,
+    },
+
+    recipeInstructions: {
+        type: Sequelize.TEXT,
+    },
+
     recipeDescription: {
         type: Sequelize.TEXT,
     },
