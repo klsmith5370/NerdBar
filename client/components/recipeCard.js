@@ -31,7 +31,11 @@ export const RecipeCard = (props) => {
                                 {recipe.recipeName}
                             </Typography>
                             <Typography variant='body2' color='text.secondary'>
-
+                                {recipe.recipeDescription}
+                                <br />
+                                {recipe.recipeIngredients}
+                                <br />
+                                {recipe.recipeInstructions}
                             </Typography>
                         </CardContent>
                     </CardActionArea>
