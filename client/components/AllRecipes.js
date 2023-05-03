@@ -1,27 +1,48 @@
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
-import Pagination from '@mui/material/Pagination'
-import Container from '@mui/material/Container'
-import { RecipeCard } from './recipeCard'
+import React, { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+// import { Container } from '@material-ui/core'
+// import { Grid } from '@material-ui/core'
+import RecipeCard from './recipeCard'
+import { fetchAllRecipes } from '../store/recipes'
 
 export const AllRecipes = () => {
-    let recipes = useSelector((state) => state.recipes)
+    const recipes = useSelector((state) => state.recipes)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(fetchAllRecipes())
+    }, [dispatch])
 
     return (
-        <Container fluid className='all-recipes'>
-            <Box sx={{ width: '100%' }}>
-                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                    <Grid item xs={6}>
-                    <Item>
-                        <RecipeCard />
-                    </Item>
-                    </Grid>
-                    <Grid item xs={6}>
-                    <Item>2</Item>
-                    </Grid>
-                </Grid>
-            </Box>
-            <Pagination count={10} variant="outlined" color="secondary" />
-        </Container>
+        <div className='all-recipes-container'>
+            <div>
+                {recipes.map((recipe) => (
+                    <div key={recipe.id}>
+                        <RecipeCard recipe={recipe}/>
+                    </div>
+                ))}
+            </div>
+        </div>
     )
 }
+
+
+// const AllRecipes = () => {
+//     const recipes = useSelector((state) => state.recipes)
+
+
+//     return (
+//         <Container className='all-recipes'>
+//             <Grid container spacing={2}>
+//                 {recipes.map((recipe) => (
+//                     <Grid item xs={12} sm={6} md={4} key={recipe.id}>
+//                         <RecipeCard recipe={recipe}/>
+//                     </Grid>
+//                 ))}
+//             </Grid>
+//             {/* <Pagination count={10} variant="outlined" color="secondary" /> */}
+//         </Container>
+//     )
+// }
+
+export default AllRecipes

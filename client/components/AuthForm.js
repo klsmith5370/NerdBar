@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {authenticate} from '../store'
 import { Link } from 'react-router-dom'
+import AllRecipes from './AllRecipes'
 // import Home from './Home'
 
 /**
@@ -33,8 +34,7 @@ const AuthForm = props => {
       <div>
         <img className="logo" src="NerdBar-logo.jpg" alt="NerdBar brand logo"/>
       </div>
-      
-      <Link to="/view-all">
+      <Link to="/characterRecipes">
         <button className="view-all-cards">Click to view all recipes!!</button>
       </Link>
     </div>

@@ -9,21 +9,20 @@ const GET_ALL_RECIPES = 'GET_ALL_RECIPES'
 /**
  * ACTION CREATORS
  */
-const setAllRecipes = (recipes) => ({
-    type: GET_ALL_RECIPES,
-    recipes,
-})
-
+const setAllRecipes = (recipes) => {
+    return {
+        type: GET_ALL_RECIPES,
+        recipes,
+    }
+}
 
 /**
  * THUNK CREATORS
  */
 
 export const fetchAllRecipes = () => async (dispatch) => {
-    dispatch({ type: 'INC'})
-    let { data } = await axios.get('/api/characterRecipes')
+    const { data } = await axios.get('/api/characterRecipes')
     dispatch(setAllRecipes(data))
-    dispatch({ type: 'DEC'})
 }
 
 /**
