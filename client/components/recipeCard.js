@@ -2,8 +2,6 @@ import React, { useEffect }from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Container, Card, CardContent, CardMedia, Typography, CardActionArea } from '@material-ui/core'
-import { fetchAllRecipes } from '../store/recipes'
-
 
 export const RecipeCard = () => {
     const recipes = useSelector(state => state.recipes)
@@ -20,6 +18,8 @@ export const RecipeCard = () => {
                         <h3>{recipe.characterName}</h3>
                         <h2>{recipe.recipeName}</h2>
                         <p>{recipe.recipeDescription}</p>
+                        <p>{recipe.recipeIngredients}</p>
+                        <p>{recipe.recipeInstructions}</p>
                       </div>
                 </div>
             ))}
@@ -63,3 +63,4 @@ export const RecipeCard = () => {
 //         </Container>
 //     )
 // }
+export default RecipeCard

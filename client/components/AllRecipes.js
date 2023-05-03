@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 // import { Container } from '@material-ui/core'
 // import { Grid } from '@material-ui/core'
-import RecipeCard from './recipeCard'
+import { RecipeCard } from './recipeCard'
 import { fetchAllRecipes } from '../store/recipes'
 
 export const AllRecipes = () => {
@@ -18,7 +18,7 @@ export const AllRecipes = () => {
             <div>
                 {recipes.map((recipe) => (
                     <div key={recipe.id}>
-                        <RecipeCard recipe={recipe}/>
+                        <RecipeCard />
                     </div>
                 ))}
             </div>
