@@ -14,10 +14,11 @@ a {
 
 label {
   display: block;
+  margin-top: 0.7em;
 }
 
 .logo {
-  width: 50%;
+  width: 400px;
   max-width: 200px;
   position: fixed;
   padding: 2em;
