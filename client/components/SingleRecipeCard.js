@@ -1,9 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Container, Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core'
 
 export const SingleRecipeCard = () => {
-    const recipe = useSelector((state) => state.recipe)
-    const {characterImage, recipeName, recipeIngredients, recipeInstructions, recipeDescription } = recipe
+    const recipe = useSelector(state => state.recipe)
+    const { characterImage, recipeName, recipeIngredients, recipeInstructions, recipeDescription } = recipe
 
     return (
         <Container>

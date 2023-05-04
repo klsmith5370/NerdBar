@@ -16,7 +16,6 @@ const setSingleRecipe = (recipe) => {
 }
 
 
-
 /**
  * THUNK CREATORS
  */
@@ -24,7 +23,6 @@ export const fetchSingleRecipe = (id) => async (dispatch) => {
     const { data } = await axios.get(`/api/characterRecipes/${id}`)
     dispatch(setSingleRecipe(data))
 }
-
 
 
 /**

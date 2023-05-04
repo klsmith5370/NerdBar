@@ -25,26 +25,6 @@ export const RecipeCard = () => {
                                 {recipe.characterName}
                             </Typography>
 
-                            {/* <Typography gutterBottom variant='h4'>
-                                {recipe.recipeName}
-                            </Typography> */}
-
-                            {/* <Typography variant='body2'>
-                                {recipe.recipeDescription}
-                            </Typography> */}
-{/* 
-                            <br />
-
-                            <Typography variant='body2'>
-                                {recipe.recipeIngredients}
-                            </Typography>
-
-                            <br />
-
-                            <Typography variant='body2'>
-                            {recipe.recipeInstructions}
-                            </Typography> */}
-
                         </CardContent>
                     </CardActionArea>
                 </Card>

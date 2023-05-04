@@ -6,7 +6,12 @@ import auth from './auth'
 import recipesReducer from './recipes'
 import singleRecipeReducer from './recipe'
 
-const reducer = combineReducers({ auth, recipes: recipesReducer, recipe: singleRecipeReducer })
+const reducer = combineReducers({ 
+  auth, 
+  recipes: recipesReducer, 
+  recipe: singleRecipeReducer
+})
+
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
 )
