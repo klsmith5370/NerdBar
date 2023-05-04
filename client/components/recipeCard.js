@@ -1,6 +1,6 @@
-import React, { useEffect }from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { Container, Card, CardContent, CardMedia, Typography, CardActionArea } from '@material-ui/core'
 
 export const RecipeCard = () => {
@@ -11,11 +11,10 @@ export const RecipeCard = () => {
             {recipes.map((recipe) => (
                 <Card key={recipe.id} sx={{ maxWidth: 345 }}>
                     <CardActionArea>
-                        <Link to={`/characterRecipes/${recipe.id}`} style={{ color: 'inherit' }}>
+                        <Link to={`/characterRecipes/${recipe.id}`}>
                             <CardMedia
                                 component='img'
-                                height='100'
-                                width='100'
+                                height='140'
                                 image={recipe.characterImage}
                                 alt='character image'
                             />
@@ -30,10 +29,10 @@ export const RecipeCard = () => {
                                 {recipe.recipeName}
                             </Typography>
 
-                            <Typography variant='body2' color='text.secondary'>
+                            <Typography variant='body2'>
                                 {recipe.recipeDescription}
                             </Typography>
-
+{/* 
                             <br />
 
                             <Typography variant='body2'>
@@ -44,7 +43,7 @@ export const RecipeCard = () => {
 
                             <Typography variant='body2'>
                             {recipe.recipeInstructions}
-                            </Typography>
+                            </Typography> */}
 
                         </CardContent>
                     </CardActionArea>
@@ -52,7 +51,11 @@ export const RecipeCard = () => {
         ))}
         </Container>
     )
+}
 
+export default RecipeCard
+
+// if wanting to use regular React
     // return (
     //     <div className='recipe-card-container'>
     //         {recipes.map(recipe => (
@@ -72,6 +75,3 @@ export const RecipeCard = () => {
     //         ))}
     //     </div>
     // )
-}
-
-export default RecipeCard
