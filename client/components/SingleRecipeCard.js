@@ -1,11 +1,9 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 import { Container, Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core'
 
 export const SingleRecipeCard = () => {
     const recipe = useSelector((state) => state.recipe)
-    const {characterImage, recipeName, recipeIngredients, recipeInstructions} = recipe
-    const { id } = useParams()
+    const {characterImage, recipeName, recipeIngredients, recipeInstructions, recipeDescription } = recipe
 
     return (
         <Container>
@@ -18,16 +16,20 @@ export const SingleRecipeCard = () => {
                         alt='character image'
                     />
                     <CardContent>
-                        <Typography variant='body2'>
-
+                        <Typography gutterBottom variant='h5'>
+                            {recipeName}
                         </Typography>
 
                         <Typography variant='body2'>
-
+                            {recipeDescription}
                         </Typography>
 
                         <Typography variant='body2'>
-
+                            {recipeIngredients}
+                        </Typography>
+                
+                        <Typography variant='body2'>
+                            {recipeInstructions}
                         </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -36,3 +38,5 @@ export const SingleRecipeCard = () => {
     )
 
 }
+
+export default SingleRecipeCard

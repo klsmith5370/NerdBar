@@ -6,6 +6,7 @@ import Home from './components/Home';
 import { AllRecipes } from './components/AllRecipes'
 
 import {me} from './store'
+import { SingleRecipe } from './components/SingleRecipe';
 
 
 /**
@@ -32,7 +33,7 @@ class Routes extends Component {
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
             <Route path="/characterRecipes" component={AllRecipes} />
-            <Route path='/characterRecipes/:id' />
+            <Route path='/characterRecipes/:id' component={SingleRecipe} />
           </Switch>
         )}
       </div>

@@ -21,13 +21,13 @@ export const RecipeCard = () => {
                         </Link>
                         <CardContent>
 
-                            <Typography gutterBottom variant='h5' component='div'>
+                            <Typography gutterBottom variant='h4' component='div'>
                                 {recipe.characterName}
                             </Typography>
 
-                            <Typography gutterBottom variant='h4'>
+                            {/* <Typography gutterBottom variant='h4'>
                                 {recipe.recipeName}
-                            </Typography>
+                            </Typography> */}
 
                             {/* <Typography variant='body2'>
                                 {recipe.recipeDescription}
