@@ -2,6 +2,8 @@ body {
   font-family: "Ubuntu Condensed", sans-serif;
   background-image: url("color-background.jpg");
   background-size: cover;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -14,7 +16,60 @@ label {
   display: block;
 }
 
-@media (max-width: 600px) {
+.logo {
+  width: 50%;
+  max-width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+
+}
+
+nav a {
+  margin: 0.5em;
+  padding: 0.5em 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2em;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5em 0;
+}
+
+form input[type='text'],
+form input[type='password'] {
+  padding: 0.5em;
+  margin: 0.5em 2em;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.login-submit {
+  display: inline-block;
+  margin: 1em;
+}
+
+.view-all-cards {
+  margin-top: 35em;
+  text-align: center;
+}
+
+
+/* @media (max-width: 600px) {
   .logo {
     width: 50%;
   }
@@ -88,7 +143,7 @@ form div {
 .login-submit {
   display: inline-block;
   margin: 1em;
-}
+} */
 
 /* .view-all-cards {
   display: flex;
