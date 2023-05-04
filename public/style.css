@@ -20,8 +20,9 @@ label {
   width: 50%;
   max-width: 200px;
   position: fixed;
+  padding: 2em;
   top: 0;
-  left: 0
+  left: 0;
 }
 
 nav {
@@ -66,89 +67,8 @@ form input[type='password'] {
 .view-all-cards {
   margin-top: 35em;
   text-align: center;
+  margin-left: 15em;
 }
 
 
-/* @media (max-width: 600px) {
-  .logo {
-    width: 50%;
-  }
-  
-  nav a {
-    margin: 2em;
-    margin-right: 1em;
-    padding-left: 1em;
-    margin-top: 0.5em;
-  }
-  
-  form div {
-    margin: 2em;
-    margin-right: 1em;
-    padding-left: 1em;
-  }
-  
-  .view-all-cards {
-    margin-top: 20em;
-    margin-left: 30em;
-  }
-}
-
-@media (min-width: 600px) {
-  .logo {
-    width: 18%;
-  }
-  
-  nav a {
-    margin: 4em;
-    margin-right: 2em;
-    padding-left: 2em;
-    margin-top: 1em;
-  }
-  
-  form div {
-    margin: 4em;
-    margin-right: 2em;
-    padding-left: 2em;
-  }
-  
-  .view-all-cards {
-    margin-top: 40em;
-    margin-left: 50em;
-  }
-}
-
-.logo {
-  width: 18%;
-  position: fixed;
-}
-
-nav a {
-  margin: 4em;
-  flex-direction: row;
-  align-items: center;
-  float: right;
-  margin-right: 2em;
-  padding-left: 2em;
-  margin-top: 1em;
-}
-
-form div {
-  margin: 4em;
-  flex-direction: column;
-  float: right;
-  margin-right: 2em;
-  padding-left: 2em;
-}
-
-.login-submit {
-  display: inline-block;
-  margin: 1em;
-} */
-
-/* .view-all-cards {
-  display: flex;
-  justify-content: center;
-  margin-top: 40em;
-  margin-left: 50em;
-} */
 

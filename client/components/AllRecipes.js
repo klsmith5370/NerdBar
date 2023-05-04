@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Container } from '@material-ui/core'
-import { Grid, Item } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import { RecipeCard } from './recipeCard'
 import { fetchAllRecipes } from '../store/recipes'
 
@@ -14,14 +14,26 @@ export const AllRecipes = () => {
 
     return (
         <Container className='all-recipes'>
-            <Grid container spacing={2} columns={16}>
-                <Grid item xs={8}>
+            <Grid container spacing={4}>
+                <Grid item xs={12}>
                     <RecipeCard />
-                </Grid>
+                </Grid> 
             </Grid>
-            {/* <Pagination count={10} variant="outlined" color="secondary" /> */}
         </Container>
     )
+
+    // return (
+    //     <Container className='all-recipes'>
+    //         <Grid container spacing={2}>
+    //             {recipes.map((recipe) => (
+    //                 <Grid item xs={14} sm={8} md={6} key={recipe.id}>
+    //                     <RecipeCard />
+    //                 </Grid>
+    //             ))}
+    //         </Grid>
+    //         {/* <Pagination count={10} variant="outlined" color="secondary" /> */}
+    //     </Container>
+    // )
 
 }
 

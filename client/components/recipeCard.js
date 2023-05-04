@@ -29,9 +29,9 @@ export const RecipeCard = () => {
                                 {recipe.recipeName}
                             </Typography>
 
-                            <Typography variant='body2'>
+                            {/* <Typography variant='body2'>
                                 {recipe.recipeDescription}
-                            </Typography>
+                            </Typography> */}
 {/* 
                             <br />
 
