@@ -9,7 +9,7 @@ import singleRecipeReducer from './recipe'
 const reducer = combineReducers({ 
   auth, 
   recipes: recipesReducer, 
-  recipe: singleRecipeReducer
+  recipe: singleRecipeReducer,
 })
 
 const middleware = composeWithDevTools(

@@ -6,7 +6,7 @@ import Home from './components/Home';
 import { AllRecipes } from './components/AllRecipes'
 
 import {me} from './store'
-import { SingleRecipe } from './components/SingleRecipe';
+import SingleRecipe from './components/SingleRecipe'
 
 
 /**
@@ -26,7 +26,8 @@ class Routes extends Component {
           <Switch>
             <Route path="/home" component={Home} />
             <Route path='/characterRecipes' component={AllRecipes} />
-            <Redirect to="/home" />
+            <Route path='/characterRecipes/:id' />
+            {/* <Redirect to="/home" /> */}
           </Switch>
         ) : (
           <Switch>

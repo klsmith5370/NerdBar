@@ -11,21 +11,22 @@ export const RecipeCard = () => {
             {recipes.map((recipe) => (
                 <Card key={recipe.id} sx={{ maxWidth: 345 }}>
                     <CardActionArea>
-                        <Link to={`/characterRecipes/${recipe.id}`}>
-                            <CardMedia
-                                component='img'
-                                height='140'
-                                image={recipe.characterImage}
-                                alt='character image'
-                            />
+
+                    <Link to={`/characterRecipes/${recipe.id}`}>
+                        <CardMedia
+                            component='img'
+                            height='140'
+                            image={recipe.characterImage}
+                            alt='character image'
+                        />
                         </Link>
+
                         <CardContent>
-
-                            <Typography gutterBottom variant='h4' component='div'>
-                                {recipe.characterName}
+                            <Typography gutterBottom variant='h4' component='div'>             
+                                    {recipe.characterName}
                             </Typography>
-
                         </CardContent>
+
                     </CardActionArea>
                 </Card>
         ))}

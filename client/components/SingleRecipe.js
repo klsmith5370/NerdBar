@@ -1,4 +1,4 @@
-import React, { useEffect }from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 // import { Container, Card, CardActionArea, CardMedia, CardContent, Typography } from '@material-ui/core'
@@ -6,13 +6,13 @@ import { fetchSingleRecipe } from '../store/recipe'
 
 export const SingleRecipe = () => {
     const recipe = useSelector(state => state.recipe)
-    const { characterImage, recipeName, recipeInstructions, recipeIngredients, recipeDescription } = recipe
+    const { recipeName, recipeIngredients, recipeDescription, recipeInstructions, characterImage} = recipe
     const dispatch = useDispatch()
     const { id } = useParams()
 
     useEffect(() => {
         dispatch(fetchSingleRecipe(id))
-    }, [dispatch])
+    }, [dispatch, id])
 
 
     return (
