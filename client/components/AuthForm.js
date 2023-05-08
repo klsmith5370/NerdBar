@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 /**
  * COMPONENT
  */
-const AuthForm = props => {
+export const AuthForm = props => {
   const {name, displayName, handleSubmit, error} = props
 
   return (

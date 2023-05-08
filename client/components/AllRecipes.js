@@ -4,6 +4,7 @@ import { Container } from '@material-ui/core'
 import { RecipeCard } from './recipeCard'
 import { fetchAllRecipes } from '../store/recipes'
 
+
 export const AllRecipes = () => {
     const dispatch = useDispatch()
 
@@ -16,6 +17,7 @@ export const AllRecipes = () => {
             <RecipeCard />
 
         </Container>
+
     )
 
     // Notes for future:

@@ -8,16 +8,16 @@ export const RecipeCard = () => {
 
 
     return (
-        <Container>
+        <Container className='recipe-cards'>
             <Grid container spacing={2}>
                 {recipes.map((recipe) => (
-                    <Grid item xs={12} sm={6} md={6} lg={6}>
-                        <Card key={recipe.id} sx={{ maxWidth: 345 }}>
+                    <Grid item xs={12} sm={6} md={6} lg={6} key={recipe.id}>
+                        <Card sx={{ maxWidth: 345 }}>
                             <CardActionArea>
                                 <Link to={`/characterRecipes/${recipe.id}`}>
                                     <CardMedia 
                                         component='img'
-                                        height='140'
+                                        height='300'
                                         image={recipe.characterImage}
                                         alt='character image'
                                     />

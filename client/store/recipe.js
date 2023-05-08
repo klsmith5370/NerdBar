@@ -8,7 +8,7 @@ const GET_SINGLE_RECIPE = 'GET_SINGLE_RECIPE'
 /**
  * ACTION CREATORS
  */
-export const getSingleRecipe = (recipe) => {
+const setSingleRecipe = (recipe) => {
     return {
         type: GET_SINGLE_RECIPE,
         recipe,
@@ -19,15 +19,10 @@ export const getSingleRecipe = (recipe) => {
 /**
  * THUNK CREATORS
  */
-export const fetchSingleRecipe = (id) => {
-    return async (dispatch) => {
-        try {
-            const { data } = await axios.get(`/api/characterRecipes/${id}`)
-            dispatch(getSingleRecipe(data))
-        } catch (error) {
-            return error
-        }
-    }
+export const fetchSingleRecipe = (id) => async (dispatch) => {
+    const { data } = await axios.get(`/api/characterRecipes/${id}`)
+    dispatch(setSingleRecipe(data))
+
 }
 
 

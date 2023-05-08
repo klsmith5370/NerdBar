@@ -6,7 +6,7 @@ import { fetchSingleRecipe } from '../store/recipe'
 
 export const SingleRecipe = () => {
     const recipe = useSelector(state => state.recipe)
-    const { recipeName, recipeIngredients, recipeDescription, recipeInstructions, characterImage} = recipe
+    // const { recipeName, recipeIngredients, recipeDescription, recipeInstructions, characterImage} = recipe
     const dispatch = useDispatch()
     const { id } = useParams()
 
@@ -18,14 +18,14 @@ export const SingleRecipe = () => {
     return (
         <div className='single-recipe-container'>
             <div className='character-image'>
-                <img src={characterImage} alt='character image'/>
+                <img src={recipe.characterImage} alt='character image'/>
             </div>
 
             <div className='recipe-details'>
-                <h5>{recipeName}</h5>
-                <p>{recipeIngredients}</p>
-                <p>{recipeInstructions}</p>
-                <p>{recipeDescription}</p>
+                <h5>{recipe.recipeName}</h5>
+                <p>{recipe.recipeIngredients}</p>
+                <p>{recipe.recipeInstructions}</p>
+                <p>{recipe.recipeDescription}</p>
             </div>
 
         </div>
