@@ -12,7 +12,7 @@ export const SingleRecipe = () => {
 
     useEffect(() => {
         dispatch(fetchSingleRecipe(id))
-    }, [dispatch, id])
+    }, [dispatch])
 
 
     return (

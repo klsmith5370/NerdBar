@@ -14,8 +14,8 @@ export const AllRecipes = () => {
 
     return (
         <Container className='all-recipes'>
-            <Grid container spacing={4}>
-                <Grid item xs={12}>
+            <Grid container spacing={2}>
+                <Grid item xs={14} sm={8} md={6}>
                     <RecipeCard />
                 </Grid> 
             </Grid>
