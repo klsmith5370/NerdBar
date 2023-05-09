@@ -22,6 +22,7 @@ export const SingleRecipe = () => {
             </div>
 
             <div className='recipe-details'>
+                <h4>{recipe.characterName}</h4>
                 <h5>{recipe.recipeName}</h5>
                 <p>{recipe.recipeIngredients}</p>
                 <p>{recipe.recipeInstructions}</p>

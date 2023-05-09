@@ -6,7 +6,7 @@ import Home from './components/Home';
 import { AllRecipes } from './components/AllRecipes'
 
 import {me} from './store'
-import SingleRecipe from './components/SingleRecipe'
+import { SingleRecipe }from './components/SingleRecipe'
 import { AuthForm } from '../client/components/AuthForm'
 
 
@@ -27,17 +27,17 @@ class Routes extends Component {
           <Switch>
             <Route path="/home" component={Home} />
             <Route path='/characterRecipes' component={AllRecipes} />
-            <Route path='/characterRecipes/:id' />
+            <Route path='/characterRecipes/:id' component={SingleRecipe}/>
             <Redirect to='/home' />
           </Switch>
         ) : (
           <Switch>
             <Route path='/' exact component={ Login } />
-            <Route path='/home' component={AuthForm} />
+            <Route path='/home' exact component={AuthForm} />
             <Route path='/login' component={Login} />
             <Route path='/signup' component={Signup} />
             <Route path='/characterRecipes' component={AllRecipes} />
-            <Route path='/characterRecipes/:id' exact component={SingleRecipe} />
+            <Route exact path='/characterRecipes/:id' component={SingleRecipe} />
           </Switch>
         )}
       </div>

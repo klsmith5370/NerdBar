@@ -13,27 +13,24 @@ export const AuthForm = props => {
     <div>
       <form onSubmit={handleSubmit} name={name}>
         <div>
-          <label htmlFor="username">
+          <label htmlFor='username'>
             <small>Username</small>
           </label>
-          <input name="username" type="text" />
+          <input name='username' type='text' />
         </div>
         <div>
-          <label htmlFor="password">
+          <label htmlFor='password'>
             <small>Password</small>
           </label>
-          <input name="password" type="password" />
+          <input name='password' type='password' />
         </div>
         <div>
-          <button className="login-submit" type="submit">{displayName}</button>
+          <button className='login-submit' type='submit'>{displayName}</button>
         </div>
         {error && error.response && <div> {error.response.data} </div>}
       </form>
-      <div>
-        <img className="logo" src="NerdBar-logo.jpg" alt="NerdBar brand logo"/>
-      </div>
-      <Link to="/characterRecipes">
-        <button className="view-all-cards">Click to view all recipes!!</button>
+      <Link to='/characterRecipes'>
+        <button className='view-all-cards'>Click to view all recipes!!</button>
       </Link>
     </div>
   )

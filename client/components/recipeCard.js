@@ -25,7 +25,7 @@ export const RecipeCard = () => {
 
                                 <CardContent>
                                     <Typography gutterBottom variant='h4' component='div'>
-                                        {recipe.characterName}
+                                        {recipe.recipeName}
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
