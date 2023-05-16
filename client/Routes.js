@@ -8,6 +8,7 @@ import { AllRecipes } from './components/AllRecipes'
 import {me} from './store'
 import { SingleRecipe }from './components/SingleRecipe'
 import { AuthForm } from '../client/components/AuthForm'
+import Contact from './components/Contact';
 
 
 /**
@@ -38,6 +39,7 @@ class Routes extends Component {
             <Route path='/signup' component={Signup} />
             <Route path='/characterRecipes' component={AllRecipes} />
             <Route exact path='/characterRecipes/:id' component={SingleRecipe} />
+            <Route path='/follow' component={Contact} />
           </Switch>
         )}
       </div>
