@@ -15,7 +15,6 @@ export const AllRecipes = () => {
     return (
         <Container className='all-recipes'>
             <RecipeCard />
-
         </Container>
 
     )

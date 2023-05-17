@@ -6,7 +6,7 @@ import Home from './components/Home';
 import { AllRecipes } from './components/AllRecipes'
 
 import {me} from './store'
-import { SingleRecipe }from './components/SingleRecipe'
+// import { SingleRecipe }from './components/SingleRecipe'
 import { AuthForm } from '../client/components/AuthForm'
 import Contact from './components/Contact';
 
@@ -28,7 +28,7 @@ class Routes extends Component {
           <Switch>
             <Route path="/home" component={Home} />
             <Route path='/characterRecipes' component={AllRecipes} />
-            <Route path='/characterRecipes/:id' component={SingleRecipe}/>
+            {/* <Route path='/characterRecipes/:id' component={SingleRecipe}/> */}
             <Redirect to='/home' />
           </Switch>
         ) : (
@@ -38,7 +38,7 @@ class Routes extends Component {
             <Route path='/login' component={Login} />
             <Route path='/signup' component={Signup} />
             <Route path='/characterRecipes' component={AllRecipes} />
-            <Route exact path='/characterRecipes/:id' component={SingleRecipe} />
+            {/* <Route exact path='/characterRecipes/:id' component={SingleRecipe} /> */}
             <Route path='/follow' component={Contact} />
           </Switch>
         )}
