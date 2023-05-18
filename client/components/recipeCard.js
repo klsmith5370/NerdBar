@@ -1,11 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { Container, Grid, Card, CardContent, CardMedia, Typography, CardActionArea } from '@material-ui/core'
+import { Container, Grid, Card, CardContent, CardMedia, CardHeader, Typography, CardActionArea, IconButton, Collapse, IconButton, } from '@material-ui/core'
+import { ExpandMoreIcon, MoreVertIcon } from '@material-ui/core'
+import { styled } from '@material-ui/core'
+
+const ExpandMore = styled((props) => {
+    const { expand, ...other } = props;
+    return <IconButton {...other} />;
+  })(({ theme, expand }) => ({
+    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  }));
 
 export const RecipeCard = () => {
+    const [expanded, setExpanded] = useState(false)
     const recipes = useSelector(state => state.recipes)
 
+    const handleExpandClick = () => {
+        setExpanded(!expanded);
+    };
 
     return (
         <Container className='recipe-cards'>
@@ -27,6 +44,7 @@ export const RecipeCard = () => {
                                     <Typography gutterBottom variant='h5' component='div'>
                                         {recipe.recipeName}
                                     </Typography>
+                                    
                                 </CardContent>
                             </CardActionArea>
                         </Card>
