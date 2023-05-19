@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { Container, Grid, Card, CardContent, CardMedia, CardHeader, Typography, CardActionArea, IconButton, Collapse, IconButton, } from '@material-ui/core'
+import { Container, Grid, Card, CardContent, CardMedia, CardHeader, Typography, CardActionArea, CardActions, IconButton, Collapse } from '@material-ui/core'
 import { ExpandMoreIcon, MoreVertIcon } from '@material-ui/core'
 import { styled } from '@material-ui/core'
+import { BsChevronDown } from 'react-icons/bs'
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -44,8 +45,24 @@ export const RecipeCard = () => {
                                     <Typography gutterBottom variant='h5' component='div'>
                                         {recipe.recipeName}
                                     </Typography>
-                                    
+
+                                    <Typography>
+                                        {recipe.recipeDescription}
+                                    </Typography>
+
                                 </CardContent>
+
+                                <CardActions disableSpacing>
+                                    <ExpandMore 
+                                        expand={expanded}
+                                        onClick={handleExpandClick}
+                                        aria-expanded={expanded}
+                                        aria-label='show more'
+                                    >
+                                        <BsChevronDown />
+                                    </ExpandMore>
+                                </CardActions>
+
                             </CardActionArea>
                         </Card>
                     </Grid>
