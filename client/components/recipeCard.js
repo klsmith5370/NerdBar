@@ -62,6 +62,18 @@ export const RecipeCard = () => {
                                         <BsChevronDown />
                                     </ExpandMore>
                                 </CardActions>
+                                <Collapse in={expanded} timeout='auto' unmountOnExit>
+                                    <CardContent>
+                                        <Typography>
+
+                                        </Typography>
+
+                                        <Typography>
+                                            
+                                        </Typography>
+                                    </CardContent>
+
+                                </Collapse>
 
                             </CardActionArea>
                         </Card>
