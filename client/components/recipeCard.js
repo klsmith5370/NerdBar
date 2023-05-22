@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { Container, Grid, Card, CardContent, CardMedia, CardHeader, Typography, CardActionArea, CardActions, IconButton, Collapse } from '@material-ui/core'
-import { ExpandMoreIcon, MoreVertIcon } from '@material-ui/core'
 import { styled } from '@material-ui/core'
 import { BsChevronDown } from 'react-icons/bs'
 
@@ -65,11 +64,19 @@ export const RecipeCard = () => {
                                 <Collapse in={expanded} timeout='auto' unmountOnExit>
                                     <CardContent>
                                         <Typography>
-
+                                            Ingredients:
                                         </Typography>
 
                                         <Typography>
-                                            
+                                            {recipe.recipeIngredients}
+                                        </Typography>
+
+                                        <Typography paragraph>
+                                            Instructions:
+                                        </Typography>
+
+                                        <Typography paragraph>
+                                            {recipe.recipeInstructions}
                                         </Typography>
                                     </CardContent>
 
