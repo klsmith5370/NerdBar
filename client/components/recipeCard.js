@@ -20,9 +20,13 @@ export const RecipeCard = () => {
     const [expanded, setExpanded] = useState(false)
     const recipes = useSelector(state => state.recipes)
 
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
+
+    const handleExpandClick = (recipeId) => {
+        setExpanded((prevExpanded) => ({
+            ...prevExpanded,
+            [recipeId]: !prevExpanded[recipeId]
+        }))
+    }
 
     return (
         <Container className='recipe-cards'>
@@ -57,16 +61,16 @@ export const RecipeCard = () => {
 
                                 <CardActions disableSpacing>
                                     <ExpandMore 
-                                        expand={expanded}
-                                        onClick={handleExpandClick}
-                                        aria-expanded={expanded}
+                                        expand={expanded[recipe.id]}
+                                        onClick={() => handleExpandClick(recipe.id)}
+                                        aria-expanded={expanded[recipe.id]}
                                         aria-label='show more'
                                     >
                                         <BsChevronDown />
                                     </ExpandMore>
                                 </CardActions>
 
-                                <Collapse in={expanded} timeout='auto' unmountOnExit>
+                                <Collapse in={expanded[recipe.id]} timeout='auto' unmountOnExit>
                                     <CardContent>
                                         <Typography>
                                             Ingredients:
