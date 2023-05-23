@@ -42,6 +42,10 @@ export const RecipeCard = () => {
 
                                 <CardContent>
                                     <Typography gutterBottom variant='h5' component='div'>
+                                        {recipe.characterName}
+                                    </Typography>
+
+                                    <Typography gutterBottom variant='h6'>
                                         {recipe.recipeName}
                                     </Typography>
 
@@ -61,6 +65,7 @@ export const RecipeCard = () => {
                                         <BsChevronDown />
                                     </ExpandMore>
                                 </CardActions>
+
                                 <Collapse in={expanded} timeout='auto' unmountOnExit>
                                     <CardContent>
                                         <Typography>
@@ -71,11 +76,14 @@ export const RecipeCard = () => {
                                             {recipe.recipeIngredients}
                                         </Typography>
 
+                                    </CardContent>
+
+                                    <CardContent>
                                         <Typography paragraph>
                                             Instructions:
                                         </Typography>
 
-                                        <Typography paragraph>
+                                        <Typography>
                                             {recipe.recipeInstructions}
                                         </Typography>
                                     </CardContent>
