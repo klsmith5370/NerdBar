@@ -1,12 +1,11 @@
-import React, {Component, Fragment} from 'react'
-import {connect} from 'react-redux'
-import {withRouter, Route, Switch, Redirect} from 'react-router-dom'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { withRouter, Route, Switch, Redirect } from 'react-router-dom'
 import { Login, Signup } from './components/AuthForm'
 import Home from './components/Home';
 import { AllRecipes } from './components/AllRecipes'
 
-import {me} from './store'
-// import { SingleRecipe }from './components/SingleRecipe'
+import { me } from './store'
 import { AuthForm } from '../client/components/AuthForm'
 import Contact from './components/Contact';
 
@@ -28,17 +27,15 @@ class Routes extends Component {
           <Switch>
             <Route path="/home" component={Home} />
             <Route path='/characterRecipes' component={AllRecipes} />
-            {/* <Route path='/characterRecipes/:id' component={SingleRecipe}/> */}
             <Redirect to='/home' />
           </Switch>
         ) : (
           <Switch>
-            <Route path='/' exact component={ Login } />
+            <Route path='/' exact component={Login} />
             <Route path='/home' exact component={AuthForm} />
             <Route path='/login' component={Login} />
             <Route path='/signup' component={Signup} />
             <Route path='/characterRecipes' component={AllRecipes} />
-            {/* <Route exact path='/characterRecipes/:id' component={SingleRecipe} /> */}
             <Route path='/follow' component={Contact} />
           </Switch>
         )}
