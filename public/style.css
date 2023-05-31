@@ -79,9 +79,12 @@ form input[type='password'] {
   border-radius: 10px; */
 }
 
-/* .recipe-card {
-  box-shadow: 10px;
-  border-radius: 100px;
-} */
+.follow {
+  width: 250px;
+  margin: 2em;
+  
+}
+
+
 
 
