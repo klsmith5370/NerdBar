@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
+import { SearchBar } from './SearchBar'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
@@ -24,7 +25,6 @@ const Navbar = ({handleClick, isLoggedIn}) => (
           <Link to='/home'>Home</Link>
           <Link to='/follow'>Follow us!</Link>
         </div>
-
       )}     
     </nav>
   </div>
