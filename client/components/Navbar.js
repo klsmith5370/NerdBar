@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
 import { SearchBar } from './SearchBar'
+import { HiHome }from 'react-icons/hi'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
@@ -20,9 +21,9 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         <div>
           {/* The navbar will show these links before you log in */}
           <img className='logo' src='NerdBar-logo.jpg' alt='NerdBar brand logo'/>
+          <Link to='/home'><HiHome /></Link>
           <Link to="/login">Login</Link>
           <Link to="/signup">Sign Up</Link>
-          <Link to='/home'>Home</Link>
           <Link to='/follow'>Follow us!</Link>
         </div>
       )}     
