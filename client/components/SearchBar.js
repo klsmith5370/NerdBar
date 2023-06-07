@@ -13,6 +13,8 @@ export const SearchBar = () => {
     }
 
     return (
-        <Container></Container>
+        <Container>
+            
+        </Container>
     )
 }

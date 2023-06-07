@@ -8,8 +8,8 @@ export const Contact = () => {
     return (
         <div className='follow'>
             <h2>Follow us on Instagram & TikTok!</h2>
-            <Link><SiTiktok /></Link>
-            <Link><GrInstagram /></Link>
+            <Link className='icon-link'><SiTiktok /></Link>
+            <Link className='icon-link'><GrInstagram /></Link>
         </div>
     )
 }
