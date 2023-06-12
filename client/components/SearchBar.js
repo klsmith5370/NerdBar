@@ -14,7 +14,7 @@ export const SearchBar = () => {
 
     return (
         <Container>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='search'>
                 <TextField 
                     label='Search'
                     value={search}

@@ -67,7 +67,7 @@ form input[type='password'] {
 }
 
 .view-all-cards {
-  margin-top: 50em;
+  margin-top: 35em;
   text-align: center;
   margin-left: 15em;
 }
@@ -88,6 +88,10 @@ form input[type='password'] {
 .icon-link {
   margin-right: 50px;
   font-size: 40px;
+}
+
+.search {
+  margin-top: 1.5em;
 }
 
 
