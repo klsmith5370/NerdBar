@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {authenticate} from '../store'
 import { Link } from 'react-router-dom'
+import { Button } from '@material-ui/core'
 
 /**
  * COMPONENT
@@ -30,7 +31,7 @@ export const AuthForm = props => {
         {error && error.response && <div> {error.response.data} </div>}
       </form>
       <Link to='/characterRecipes'>
-        <button className='view-all-cards'>Click to view all recipes!!</button>
+        <Button className='view-all-cards' variant='contained' color='primary'>Click to view all recipes!!</Button>
       </Link>
     </div>
   )
