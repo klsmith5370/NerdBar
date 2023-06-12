@@ -2,7 +2,6 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { Container } from '@material-ui/core'
-import RecipeCard from './recipeCard'
 
 export const Search = () => {
     const { characterName } = useParams()
@@ -17,7 +16,7 @@ export const Search = () => {
            {characters.length > 0 ? (
             <div>
                 <h3>Results: {characters.length}</h3>
-                <RecipeCard />
+                
             </div>
            ) : null}
         </Container>
