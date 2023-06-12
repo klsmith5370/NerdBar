@@ -9,6 +9,7 @@ import { me, logout } from './store'
 import { AuthForm } from '../client/components/AuthForm'
 import Contact from './components/Contact';
 import Navbar from './components/Navbar'
+import Search from './components/Search';
 
 
 const App = () => {
@@ -45,6 +46,7 @@ const App = () => {
             <Route path='/signup' element={<Signup />} />
             <Route path='/characterRecipes' element={<AllRecipes />} />
             <Route path='/follow' element={<Contact />} />
+            <Route path='/search/:characterName' element={<Search />} />
           </Routes>
           )}
         </div>
