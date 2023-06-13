@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { Container } from '@material-ui/core'
+import RecipeCard from './recipeCard'
+import SingleRecipeCard from './SingleRecipeCard'
+
 
 export const Search = () => {
     const { characterName } = useParams()
@@ -9,14 +12,20 @@ export const Search = () => {
     const characterFilter = (item) => 
         item.characterName.toLowerCase().includes(characterName.toLowerCase())
 
-    const characters = useSelector((state) => state.recipes).filter(characterFilter)
+    const filteredRecipes = useSelector((state) => state.recipes).filter(characterFilter)
 
     return (
         <Container className='search-results'>
-           {characters.length > 0 ? (
+           {filteredRecipes.length > 0 ? (
             <div>
-                <h3>Results: {characters.length}</h3>
-                
+                <h3>Results: {filteredRecipes.length}</h3>
+                {filteredRecipes.map((recipe) => {
+                    return (
+                        <div key={recipe.id}>
+                            <SingleRecipeCard recipe={recipe} />
+                        </div>
+                    )
+                })}
             </div>
            ) : null}
         </Container>

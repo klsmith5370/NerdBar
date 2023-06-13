@@ -1,10 +1,18 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { useParams } from 'react-router-dom'
+import { fetchSingleRecipe } from '../store/recipe'
 import { Container, Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core'
 
 export const SingleRecipeCard = () => {
     const recipe = useSelector(state => state.recipe)
+    const dispatch = useDispatch()
+    const { id } = useParams()
     const { characterImage, recipeName, recipeIngredients, recipeInstructions, recipeDescription } = recipe
+
+    useEffect(() => {
+        dispatch(fetchSingleRecipe(id))
+    }, [dispatch])
 
     return (
         <Container>
@@ -12,7 +20,7 @@ export const SingleRecipeCard = () => {
                 <CardActionArea>
                     <CardMedia 
                         component='img'
-                        height='150'
+                        height='300'
                         image={characterImage}
                         alt='character image'
                     />

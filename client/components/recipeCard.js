@@ -16,7 +16,7 @@ const ExpandMore = styled((props) => {
     }),
   }));
 
-export const RecipeCard = () => {
+export const RecipeCard = ({ recipe }) => {
     const [expanded, setExpanded] = useState(false)
     const recipes = useSelector(state => state.recipes)
 
@@ -33,7 +33,7 @@ export const RecipeCard = () => {
             <Grid container spacing={2}>
                 {recipes.map((recipe) => (
                     <Grid item xs={12} sm={6} md={6} lg={6} key={recipe.id}>
-                        <Card sx={{ maxWidth: 345 }} style={{ backgroundColor: '#CC76A1', borderRadius: '10px'}}>
+                        <Card sx={{ maxWidth: 345 }} style={{ backgroundColor: '#CC76A1', borderRadius: '10px' }}>
                             <CardActionArea>
                                 <Link to={`/characterRecipes/${recipe.id}`}>
                                     <CardMedia 
