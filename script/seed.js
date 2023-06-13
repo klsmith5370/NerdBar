@@ -61,7 +61,7 @@ async function seed() {
       recipeIngredients: '1 1/2 oz dark rum. 1 oz pineapple juice. 1/2 oz lime juice. 1/2 oz blue curaçao. 1/4 oz grenadine. 1/4 oz absinthe. Pineapple wedge, for garnish.',
       recipeInstructions: 'Combine the dark rum, pineapple juice, lime juice, blue curaçao, and grenadine in a shaker with ice. Shake well and strain into a chilled glass filled with ice. Slowly pour the absinthe over the back of a spoon to float it on top of the cocktail. Garnish with a pineapple wedge. Sip and feel the power of the One-Winged Angel course through you.',
       recipeDescription: 'This cocktail is inspired by Sephiroths infamous transformation into his One-Winged Angel form during the final battle of FF7. The dark rum and pineapple juice represent the darkness and power of his character, while the blue curaçao and grenadine add a touch of his signature color. The absinthe float on top represents the ethereal and otherworldly nature of his transformation. Sip on this cocktail and embrace your own inner power. Enjoy!',
-      characterImage: 'https://rare-gallery.com/uploads/posts/332547-Sephiroth-Final-Fantasy-7-Remake-4K.jpg'
+      characterImage: 'https://static.wikia.nocookie.net/finalfantasy/images/4/4e/Sephiroth_appears_to_Cloud_after_Sector_7_fall_from_FFVII_Remake.jpg'
     }),
 
     CharacterRecipe.create({
