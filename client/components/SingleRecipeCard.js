@@ -6,10 +6,10 @@ import { Container, Card, CardActionArea, CardContent, CardMedia, Typography } f
 
 export const SingleRecipeCard = () => {
     const recipe = useSelector(state => state.recipe)
+    const { characterImage, recipeName, recipeIngredients, recipeInstructions, recipeDescription } = recipe
     const dispatch = useDispatch()
     const { id } = useParams()
-    const { characterImage, recipeName, recipeIngredients, recipeInstructions, recipeDescription } = recipe
-
+    
     useEffect(() => {
         dispatch(fetchSingleRecipe(id))
     }, [dispatch])

@@ -16,7 +16,7 @@ const ExpandMore = styled((props) => {
     }),
   }));
 
-export const RecipeCard = ({ recipe }) => {
+export const RecipeCard = () => {
     const [expanded, setExpanded] = useState(false)
     const recipes = useSelector(state => state.recipes)
 

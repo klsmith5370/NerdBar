@@ -5,7 +5,6 @@ import { Container } from '@material-ui/core'
 import RecipeCard from './recipeCard'
 import SingleRecipeCard from './SingleRecipeCard'
 
-
 export const Search = () => {
     const { characterName } = useParams()
 
@@ -22,7 +21,7 @@ export const Search = () => {
                 {filteredRecipes.map((recipe) => {
                     return (
                         <div key={recipe.id}>
-                            <SingleRecipeCard recipe={recipe} />
+                            <SingleRecipeCard recipe={filteredRecipes} />
                         </div>
                     )
                 })}
