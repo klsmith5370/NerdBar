@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { Container } from '@material-ui/core'
-import RecipeCard from './recipeCard'
 import SingleRecipeCard from './SingleRecipeCard'
 
 export const Search = () => {
