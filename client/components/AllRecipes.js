@@ -6,11 +6,7 @@ import { fetchAllRecipes } from '../store/recipes'
 
 
 export const AllRecipes = () => {
-    const dispatch = useDispatch()
 
-    useEffect(() => {
-        dispatch(fetchAllRecipes())
-    }, [dispatch])
 
     return (
         <Container className='all-recipes'>

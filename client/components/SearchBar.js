@@ -1,16 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 import { Container, TextField, Button } from '@material-ui/core'
+import { fetchAllRecipes } from '../store/recipes'
 
 
 export const SearchBar = () => {
     const [search, setSearch] = useState('')
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
     function handleSubmit(evt) {
         evt.preventDefault()
         navigate(`/search/${search}`)
     }
+
+    useEffect(() => {
+        dispatch(fetchAllRecipes())
+    }, [dispatch])
 
     return (
         <Container>
