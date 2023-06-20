@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import React from 'react'
 import { Container } from '@material-ui/core'
 import { RecipeCard } from './recipeCard'
-import { fetchAllRecipes } from '../store/recipes'
 
 
 export const AllRecipes = () => {
