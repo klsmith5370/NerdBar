@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container } from '@material-ui/core'
 import { RecipeCard } from './recipeCard'
+import SideBar from './SideBar'
 
 
 export const AllRecipes = () => {
@@ -9,6 +10,7 @@ export const AllRecipes = () => {
     return (
         <Container className='all-recipes'>
             <RecipeCard />
+            <SideBar />
         </Container>
 
     )
