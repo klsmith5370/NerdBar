@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import { Drawer, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
+import Navbar from './Navbar'
 
 const useStyles = makeStyles((theme) => ({
     drawer: {
@@ -28,6 +29,10 @@ export const SideBar = () => {
                         Home
                     </ListItemIcon> */}
                     <ListItemText primary='Back to Home'/>
+                </ListItem>
+
+                <ListItem>
+                    <Navbar />
                 </ListItem>
             </List>
 
