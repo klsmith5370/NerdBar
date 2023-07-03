@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import {logout} from '../store'
 import { SearchBar } from './SearchBar'
 import { HiHome }from 'react-icons/hi'
-import SideBar from './SideBar'
+
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
