@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '@material-ui/core'
+import { Container, Grid } from '@material-ui/core'
 import { RecipeCard } from './recipeCard'
 
 export const AllRecipes = () => {
@@ -7,7 +7,11 @@ export const AllRecipes = () => {
 
     return (
         <Container className='all-recipes'>
-            <RecipeCard />
+            <Grid container spacing={3}>
+                <Grid item xs={10} sm={6} md={6} lg={6}>
+                    <RecipeCard />
+                </Grid>
+            </Grid>
         </Container>
 
     )

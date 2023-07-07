@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { Container, Grid, Card, CardContent, CardMedia, CardHeader, Typography, CardActionArea, CardActions, IconButton, Collapse } from '@material-ui/core'
+import { Container, Card, CardContent, CardMedia, CardHeader, Typography, CardActionArea, CardActions, IconButton, Collapse } from '@material-ui/core'
 import { styled } from '@material-ui/core'
 import { BsChevronDown } from 'react-icons/bs'
 
@@ -29,77 +29,74 @@ export const RecipeCard = () => {
     }
 
     return (
-        // <Container className='recipe-cards'>
-        //     <Grid container spacing={2}>
-        //         {recipes.map((recipe) => (
-        //             <Grid item xs={12} sm={6} md={6} lg={6} key={recipe.id}>
-        //                 <Card sx={{ maxWidth: 345 }} style={{ backgroundColor: '#CC76A1', borderRadius: '10px' }}>
-        //                     <CardActionArea>
-        //                         <Link to={`/characterRecipes/${recipe.id}`}>
-        //                             <CardMedia 
-        //                                 component='img'
-        //                                 height='300'
-        //                                 image={recipe.characterImage}
-        //                                 alt='character image'
-        //                             />
-        //                         </Link>
+        <Container className='recipe-cards'>
+                {recipes.map((recipe) => (
+                        <Card sx={{ maxWidth: 345 }} style={{ backgroundColor: '#CC76A1', borderRadius: '10px' }}>
+                            <CardActionArea>
+                                <Link to={`/characterRecipes/${recipe.id}`}>
+                                    <CardMedia 
+                                        component='img'
+                                        height='300'
+                                        image={recipe.characterImage}
+                                        alt='character image'
+                                    />
+                                </Link>
 
-        //                         <CardContent>
-        //                             <Typography gutterBottom variant='h5' component='div'>
-        //                                 {recipe.characterName}
-        //                             </Typography>
+                                <CardContent>
+                                    <Typography gutterBottom variant='h5' component='div'>
+                                        {recipe.characterName}
+                                    </Typography>
 
-        //                             <Typography gutterBottom variant='h6'>
-        //                                 {recipe.recipeName}
-        //                             </Typography>
+                                    <Typography gutterBottom variant='h6'>
+                                        {recipe.recipeName}
+                                    </Typography>
 
-        //                             <Typography>
-        //                                 {recipe.recipeDescription}
-        //                             </Typography>
+                                    <Typography>
+                                        {recipe.recipeDescription}
+                                    </Typography>
 
-        //                         </CardContent>
+                                </CardContent>
 
-        //                         <CardActions disableSpacing>
-        //                             <ExpandMore 
-        //                                 expand={expanded[recipe.id]}
-        //                                 onClick={() => handleExpandClick(recipe.id)}
-        //                                 aria-expanded={expanded[recipe.id]}
-        //                                 aria-label='show more'
-        //                             >
-        //                                 <BsChevronDown />
-        //                             </ExpandMore>
-        //                         </CardActions>
+                                <CardActions disableSpacing>
+                                    <ExpandMore 
+                                        expand={expanded[recipe.id]}
+                                        onClick={() => handleExpandClick(recipe.id)}
+                                        aria-expanded={expanded[recipe.id]}
+                                        aria-label='show more'
+                                    >
+                                        <BsChevronDown />
+                                    </ExpandMore>
+                                </CardActions>
 
-        //                         <Collapse in={expanded[recipe.id]} timeout='auto' unmountOnExit>
-        //                             <CardContent>
-        //                                 <Typography>
-        //                                     Ingredients:
-        //                                 </Typography>
+                                <Collapse in={expanded[recipe.id]} timeout='auto' unmountOnExit>
+                                    <CardContent>
+                                        <Typography>
+                                            Ingredients:
+                                        </Typography>
 
-        //                                 <Typography>
-        //                                     {recipe.recipeIngredients}
-        //                                 </Typography>
+                                        <Typography>
+                                            {recipe.recipeIngredients}
+                                        </Typography>
 
-        //                             </CardContent>
+                                    </CardContent>
 
-        //                             <CardContent>
-        //                                 <Typography paragraph>
-        //                                     Instructions:
-        //                                 </Typography>
+                                    <CardContent>
+                                        <Typography paragraph>
+                                            Instructions:
+                                        </Typography>
 
-        //                                 <Typography>
-        //                                     {recipe.recipeInstructions}
-        //                                 </Typography>
-        //                             </CardContent>
+                                        <Typography>
+                                            {recipe.recipeInstructions}
+                                        </Typography>
+                                    </CardContent>
 
-        //                         </Collapse>
+                                </Collapse>
 
-        //                     </CardActionArea>
-        //                 </Card>
-        //             </Grid>
-        //         ))}
-        //     </Grid>
-        // </Container>
+                            </CardActionArea>
+                        </Card>
+    
+                ))}
+        </Container>
     )
 }
 
