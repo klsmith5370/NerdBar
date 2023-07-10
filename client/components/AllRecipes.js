@@ -7,10 +7,11 @@ export const AllRecipes = () => {
 
     return (
         <Container className='all-recipes'>
-            <Grid container spacing={3}>
-                <Grid item xs={10} sm={6} md={6} lg={6}>
+            <Grid container spacing={2}>
+                <Grid item xs={12} sm={8} md={8} lg={8}>
                     <RecipeCard />
                 </Grid>
+
             </Grid>
         </Container>
 
