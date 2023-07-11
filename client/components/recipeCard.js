@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { Container, Card, CardContent, CardMedia, CardHeader, Typography, CardActionArea, CardActions, IconButton, Collapse } from '@material-ui/core'
+import { Container, Grid, Card, CardContent, CardMedia, CardHeader, Typography, CardActionArea, CardActions, IconButton, Collapse } from '@material-ui/core'
 import { styled } from '@material-ui/core'
 import { BsChevronDown } from 'react-icons/bs'
 
@@ -30,7 +30,9 @@ export const RecipeCard = () => {
 
     return (
         <Container className='recipe-cards'>
+            <Grid container spacing={2}>
                 {recipes.map((recipe) => (
+                    <Grid item xs={12} sm={6} md={6} lg={6} key={recipe.id}>
                         <Card sx={{ maxWidth: 345 }} style={{ backgroundColor: '#CC76A1', borderRadius: '10px' }}>
                             <CardActionArea>
                                 <Link to={`/characterRecipes/${recipe.id}`}>
@@ -94,8 +96,9 @@ export const RecipeCard = () => {
 
                             </CardActionArea>
                         </Card>
-    
+                    </Grid>
                 ))}
+            </Grid>
         </Container>
     )
 }
