@@ -33,7 +33,7 @@ export const RecipeCard = () => {
             <Grid container spacing={2}>
                 {recipes.map((recipe) => (
                     <Grid item xs={12} sm={6} md={6} lg={6} key={recipe.id}>
-                        <Card sx={{ maxWidth: 345 }} style={{ backgroundColor: '#CC76A1', borderRadius: '10px' }}>
+                        <Card sx={{ maxWidth: 345 }} style={{ backgroundColor: '#CC76A1', borderRadius: '10px', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
                             <CardActionArea>
                                 <Link to={`/characterRecipes/${recipe.id}`}>
                                     <CardMedia 

@@ -4,7 +4,6 @@ import { RecipeCard } from './recipeCard'
 
 export const AllRecipes = () => {
 
-
     return (
         <Container className='all-recipes'>
             <Grid container spacing={2}>
