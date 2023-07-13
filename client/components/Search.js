@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { Container } from '@material-ui/core'
 import SingleRecipeCard from './SingleRecipeCard'
+import RecipeCard from './recipeCard'
 
 export const Search = () => {
     const { characterName } = useParams()
