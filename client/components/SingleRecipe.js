@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 // import { Container, Card, CardActionArea, CardMedia, CardContent, Typography } from '@material-ui/core'
-import { fetchSingleRecipe } from '../store/recipe'
+// import { fetchSingleRecipe } from '../store/recipe'
 
 export const SingleRecipe = () => {
     const recipe = useSelector(state => state.recipe)
@@ -10,9 +10,9 @@ export const SingleRecipe = () => {
     const dispatch = useDispatch()
     const { id } = useParams()
 
-    useEffect(() => {
-        dispatch(fetchSingleRecipe(id))
-    }, [dispatch])
+    // useEffect(() => {
+    //     dispatch(fetchSingleRecipe(id))
+    // }, [dispatch])
 
 
     return (

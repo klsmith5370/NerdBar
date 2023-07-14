@@ -6,7 +6,7 @@ import { Container, Card, CardActionArea, CardContent, CardMedia, Typography } f
 
 export const SingleRecipeCard = () => {
     const recipe = useSelector(state => state.recipe)
-    // const { characterImage, recipeName, recipeIngredients, recipeInstructions, recipeDescription } = recipe
+    const { characterImage, recipeName, recipeIngredients, recipeInstructions, recipeDescription } = recipe
     const dispatch = useDispatch()
     const { id } = useParams()
     
@@ -21,24 +21,24 @@ export const SingleRecipeCard = () => {
                     <CardMedia 
                         component='img'
                         height='300'
-                        image={recipe.characterImage}
+                        image={characterImage}
                         alt='character image'
                     />
                     <CardContent>
                         <Typography gutterBottom variant='h5'>
-                            {recipe.recipeName}
+                            {recipeName}
                         </Typography>
 
                         <Typography variant='body2'>
-                            {recipe.recipeDescription}
+                            {recipeDescription}
                         </Typography>
 
                         <Typography variant='body2'>
-                            {recipe.recipeIngredients}
+                            {recipeIngredients}
                         </Typography>
                 
                         <Typography variant='body2'>
-                            {recipe.recipeInstructions}
+                            {recipeInstructions}
                         </Typography>
                     </CardContent>
                 </CardActionArea>

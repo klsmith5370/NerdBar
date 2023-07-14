@@ -19,7 +19,7 @@ router.get('/', async (req, res, next) => {
 router.get('/:id', async(req, res, next) => {
     try {
         const recipe = await CharacterRecipe.findByPk(req.params.id)
-        res.json(recipe)
+        res.send(recipe)
     } catch (error) {
         next(error)
     }

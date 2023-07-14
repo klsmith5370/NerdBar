@@ -1,17 +1,25 @@
 import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { Container } from '@material-ui/core'
 import SingleRecipeCard from './SingleRecipeCard'
 import RecipeCard from './recipeCard'
+import { fetchSingleRecipe } from '../store/recipe'
+
 
 export const Search = () => {
     const { characterName } = useParams()
+    // const dispatch = useDispatch()
 
     const characterFilter = (item) => 
         item.characterName.toLowerCase().includes(characterName.toLowerCase())
 
-    const filteredRecipes = useSelector((state) => state.recipes).filter(characterFilter)
+    const recipes = useSelector((state) => state.recipes)
+    const filteredRecipes = recipes.filter(characterFilter)
+
+    // useEffect(() => {
+    //     dispatch(fetchSingleRecipe())
+    // }, [dispatch])
 
     return (
         <Container className='search-results'>
@@ -21,7 +29,7 @@ export const Search = () => {
                 {filteredRecipes.map((recipe) => {
                     return (
                         <div key={recipe.id}>
-                            <SingleRecipeCard recipe={filteredRecipes} />
+                            <SingleRecipeCard recipe={recipe} />
                         </div>
                     )
                 })}
