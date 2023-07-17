@@ -9,17 +9,12 @@ import { fetchSingleRecipe } from '../store/recipe'
 
 export const Search = () => {
     const { characterName } = useParams()
-    // const dispatch = useDispatch()
 
     const characterFilter = (item) => 
         item.characterName.toLowerCase().includes(characterName.toLowerCase())
 
     const recipes = useSelector((state) => state.recipes)
     const filteredRecipes = recipes.filter(characterFilter)
-
-    // useEffect(() => {
-    //     dispatch(fetchSingleRecipe())
-    // }, [dispatch])
 
     return (
         <Container className='search-results'>
