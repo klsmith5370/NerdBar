@@ -24,7 +24,7 @@ export const Search = () => {
                 {filteredRecipes.map((recipe) => {
                     return (
                         <div key={recipe.id}>
-                            <SingleRecipeCard recipe={recipe} />
+                            <RecipeCard recipe={recipe} />
                         </div>
                     )
                 })}
