@@ -4,8 +4,6 @@ import { useParams } from 'react-router-dom'
 import { Container } from '@material-ui/core'
 import SingleRecipeCard from './SingleRecipeCard'
 import RecipeCard from './recipeCard'
-import { fetchSingleRecipe } from '../store/recipe'
-
 
 export const Search = () => {
     const { characterName } = useParams()
@@ -24,13 +22,14 @@ export const Search = () => {
                 {filteredRecipes.map((recipe) => {
                     return (
                         <div key={recipe.id}>
-                            <RecipeCard recipe={recipe} />
+                            <SingleRecipeCard />
                         </div>
                     )
                 })}
             </div>
            ) : null}
         </Container>
+        
     )
 }
 
