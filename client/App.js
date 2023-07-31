@@ -47,10 +47,11 @@ const App = () => {
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/characterRecipes' element={<AllRecipes />} />
-            <Route path='/follow' element={<Contact />} />
+            {/* <Route path='/follow' element={<Contact />} /> */}
             <Route path='/search/:characterName' element={<Search />} />
           </Routes>
           )}
+          <Contact />
         </div>
   )
 }
