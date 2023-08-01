@@ -6,9 +6,10 @@ import { Container, Typography, Grid } from '@material-ui/core'
 import { styled } from '@material-ui/core'
 
 const FooterContainer = styled('footer')(({ theme }) => ({
-    backgroundColor: '',
+    backgroundColor: '#CDB4DB',
     padding: theme.spacing(6),
     marginTop: 'auto',
+    width: '100%'
 }))
 
 const CenteredGridItem = styled(Grid)(({ theme }) => ({
