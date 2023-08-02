@@ -4,7 +4,6 @@ import {authenticate} from '../store'
 import { Link } from 'react-router-dom'
 import { Button } from '@material-ui/core'
 
-import { Contact } from './Contact'
 
 /**
  * COMPONENT
@@ -33,7 +32,7 @@ export const AuthForm = props => {
         {error && error.response && <div> {error.response.data} </div>}
       </form>
       <Link to='/characterRecipes'>
-        <Button className='view-all-cards' variant='contained' color='primary' style={{ marginTop: '30em', textAlign: 'center', marginLeft: '15em' }}>Click to view all recipes!!</Button>
+        <Button className='view-all-cards' variant='contained' color='primary' style={{ marginTop: '25em', textAlign: 'center', marginLeft: '15em', marginBottom: '5em' }}>Click to view all recipes!!</Button>
       </Link>
     </div>
 

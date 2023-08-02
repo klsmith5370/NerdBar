@@ -8,8 +8,8 @@ import { styled } from '@material-ui/core'
 const FooterContainer = styled('footer')(({ theme }) => ({
     backgroundColor: '#CDB4DB',
     padding: theme.spacing(6),
-    marginTop: 'auto',
-    width: '100%'
+    // marginTop: 'auto',
+    width: '100%',
 }))
 
 const CenteredGridItem = styled(Grid)(({ theme }) => ({
