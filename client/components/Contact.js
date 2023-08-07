@@ -22,11 +22,11 @@ export const Contact = () => {
         <FooterContainer>
             <Container maxWidth='lg'>
                 <Grid container spacing={2} justifyContent='center'>
-                    <Grid item xs={12}>
+                    <CenteredGridItem item xs={12}>
                         <Typography>
                             Follow us on Instagram & TikTok!
                         </Typography>
-                    </Grid>
+                    </CenteredGridItem>
                 <CenteredGridItem item xs={6} sm={3}>
                     <Link className='icon-link'>
                         <SiTiktok />
