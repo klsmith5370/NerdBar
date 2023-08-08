@@ -100,6 +100,79 @@ export const RecipeCard = () => {
                 ))}
             </Grid>
         </Container>
+
+        // <Container className='recipe-cards'>
+        //     <Grid container spacing={2}>
+        //         <Grid item xs={12} sm={6} md={6} lg={6}>
+        //             <Card sx={{ maxWidth: 345 }} style={{ backgroundColor: '#CC76A1', borderRadius: '10px', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+        //                 <CardActionArea>
+        //                     <Link to={`/characterRecipes/${recipe.id}`}>
+        //                         <CardMedia
+        //                             component='img'
+        //                             height='300'
+        //                             image={recipe.characterImage}
+        //                             alt='character image'
+        //                         />
+        //                     </Link>
+        //                     <CardMedia
+        //                             component='img'
+        //                             height='300'
+        //                             image={recipe.characterImage}
+        //                             alt='character image'
+        //                     />
+
+        //                     <CardContent>
+        //                         <Typography gutterBottom variant='h5' component='div'>
+        //                             {recipe.characterName}
+        //                         </Typography>
+
+        //                         <Typography gutterBottom variant='h6'>
+        //                             {recipe.recipeName}
+        //                         </Typography>
+
+        //                         <Typography>
+        //                             {recipe.recipeDescription}
+        //                         </Typography>
+
+        //                     </CardContent>
+
+        //                     <CardActions disableSpacing>
+        //                         <ExpandMore
+        //                             expand={expanded}
+        //                             onClick={handleExpandClick}
+        //                             aria-expanded={expanded}
+        //                             aria-label='show more'
+        //                         >
+        //                             <BsChevronDown />
+        //                         </ExpandMore>
+        //                     </CardActions>
+
+        //                     <Collapse in={expanded} timeout='auto' unmountOnExit>
+        //                         <CardContent>
+        //                             <Typography>
+        //                                 Ingredients:
+        //                             </Typography>
+
+        //                             <Typography>
+        //                                 {recipe.recipeIngredients}
+        //                             </Typography>
+        //                         </CardContent>
+
+        //                         <CardContent>
+        //                             <Typography paragraph>
+        //                                 Instructions:
+        //                             </Typography>
+
+        //                             <Typography>
+        //                                 {recipe.recipeInstructions}
+        //                             </Typography>
+        //                         </CardContent>
+        //                     </Collapse>
+        //                 </CardActionArea>
+        //             </Card>
+        //         </Grid>
+        //     </Grid>
+        // </Container>
     )
 }
 
