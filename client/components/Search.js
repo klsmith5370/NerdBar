@@ -7,7 +7,6 @@ import RecipeCard from './recipeCard'
 
 export const Search = () => {
     const { characterName } = useParams()
-    const dispatch = useDispatch()
 
     const characterFilter = (item) => 
         item.characterName.toLowerCase().includes(characterName.toLowerCase())
