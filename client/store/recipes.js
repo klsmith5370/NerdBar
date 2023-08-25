@@ -4,6 +4,7 @@ import axios from 'axios'
  * ACTION TYPES
  */
 const GET_ALL_RECIPES = 'GET_ALL_RECIPES'
+const CREATE_RECIPE = 'CREATE_RECIPE'
 
 
 /**
@@ -16,6 +17,13 @@ const setAllRecipes = (recipes) => {
     }
 }
 
+const createRecipe = (recipe) => {
+    return {
+        type: CREATE_RECIPE,
+        recipe,
+    }
+}
+
 /**
  * THUNK CREATORS
  */
@@ -23,6 +31,12 @@ const setAllRecipes = (recipes) => {
 export const fetchAllRecipes = () => async (dispatch) => {
     const { data } = await axios.get('/api/characterRecipes')
     dispatch(setAllRecipes(data))
+}
+
+export const fetchCreateBook = (book, navigate) => async (dispatch) => {
+    const { data: created } = await axios.post('/api/characterRecipes', book)
+    dispatch(createRecipe(created))
+    navigate('/characterRecipes')
 }
 
 /**

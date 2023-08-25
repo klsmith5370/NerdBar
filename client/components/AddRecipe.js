@@ -7,4 +7,8 @@ import { useNavigate } from 'react-router-dom'
 
 const AddRecipe = () => {
     
+    const handleSubmit = (evt) => {
+        evt.preventDefault()
+        
+    }
 }
