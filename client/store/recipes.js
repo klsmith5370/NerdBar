@@ -33,8 +33,8 @@ export const fetchAllRecipes = () => async (dispatch) => {
     dispatch(setAllRecipes(data))
 }
 
-export const fetchCreateBook = (book, navigate) => async (dispatch) => {
-    const { data: created } = await axios.post('/api/characterRecipes', book)
+export const fetchCreateRecipe = (recipe, navigate) => async (dispatch) => {
+    const { data: created } = await axios.post('/api/characterRecipes', recipe)
     dispatch(createRecipe(created))
     navigate('/characterRecipes')
 }
