@@ -10,6 +10,8 @@ import { AuthForm } from '../client/components/AuthForm'
 import Contact from './components/Contact';
 import Navbar from './components/Navbar'
 import Search from './components/Search';
+import AddRecipe from './components/AddRecipe';
+import { SearchBar } from './components/SearchBar';
 
 
 const App = () => {
@@ -33,11 +35,13 @@ const App = () => {
           className='fixed-top'
           isLoggedIn={isLoggedIn}
         />
+        <SearchBar />
         {isLoggedIn ? (
           <Routes>
               <Route exact path="/home" element={<Home />} />
               <Route path='/characterRecipes' element={<AllRecipes />} />
-              <Route path='/search/:characterName' element={<Search />}/>
+              <Route path='/search/:characterName' element={<Search />} />
+              <Route path='/add' element={<AddRecipe />} />
           </Routes>
           ) : (
           <Routes>
