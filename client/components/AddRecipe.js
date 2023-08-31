@@ -32,16 +32,6 @@ const AddRecipe = () => {
 
     }
 
-    
-    // const handleSubmit = (evt) => {
-    //     evt.preventDefault()
-    //     const characterName = evt.target.characterName.value
-    //     const recipeName = evt.target.recipeName.value
-    //     const description = evt.target.recipeDescription.value
-    //     const ingredients = evt.target.recipeIngredients.value
-    //     const image = evt.target.characterImage.value
-
-    // }
 
     return (
         <div>

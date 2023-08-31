@@ -35,7 +35,6 @@ const App = () => {
           className='fixed-top'
           isLoggedIn={isLoggedIn}
         />
-        <SearchBar />
         {isLoggedIn ? (
           <Routes>
               <Route exact path="/home" element={<Home />} />
