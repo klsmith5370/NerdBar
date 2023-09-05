@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { fetchCreateRecipe } from '../store/recipes'
-import { TextField, Button } from '@material-ui/core'
+import { TextField, Button, Box } from '@material-ui/core'
 
 
 const AddRecipe = () => {
@@ -36,46 +36,48 @@ const AddRecipe = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <TextField
-                    label="Character Name"
-                    value={characterName}
-                    onChange={(evt) => setCharacterName(evt.target.value)}
-                    fullWidth
-                    margin="normal"
-                />
-                <TextField
-                    label="Recipe Name"
-                    value={recipeName}
-                    onChange={(evt) => setRecipeName(evt.target.value)}
-                    fullWidth
-                    margin="normal"
-                />
-                <TextField
-                    label="Description"
-                    value={recipeDescription}
-                    onChange={(evt) => setDescription(evt.target.value)}
-                    fullWidth
-                    multiline
-                    margin="normal"
-                />
-                <TextField
-                    label="Ingredients"
-                    value={recipeIngredients}
-                    onChange={(evt) => setIngredients(evt.target.value)}
-                    fullWidth
-                    multiline
-                    margin="normal"
-                />
-                <TextField
-                    label="Character Image"
-                    value={characterImage}
-                    onChange={(evt) => setImage(evt.target.value)}
-                    fullWidth
-                    margin="normal"
-                />
-                <Button type="submit" variant="contained" color="primary">
-                    Add Recipe
-                </Button>
+                <Box display="flex" flexDirection="column">
+                    <TextField
+                        label="Character Name"
+                        value={characterName}
+                        onChange={(evt) => setCharacterName(evt.target.value)}
+                        fullWidth
+                        margin="normal"
+                    />
+                    <TextField
+                        label="Recipe Name"
+                        value={recipeName}
+                        onChange={(evt) => setRecipeName(evt.target.value)}
+                        fullWidth
+                        margin="normal"
+                    />
+                    <TextField
+                        label="Description"
+                        value={recipeDescription}
+                        onChange={(evt) => setDescription(evt.target.value)}
+                        fullWidth
+                        multiline
+                        margin="normal"
+                    />
+                    <TextField
+                        label="Ingredients"
+                        value={recipeIngredients}
+                        onChange={(evt) => setIngredients(evt.target.value)}
+                        fullWidth
+                        multiline
+                        margin="normal"
+                    />
+                    <TextField
+                        label="Character Image"
+                        value={characterImage}
+                        onChange={(evt) => setImage(evt.target.value)}
+                        fullWidth
+                        margin="normal"
+                    />
+                    <Button type="submit" variant="contained" color="primary">
+                        Add Recipe
+                    </Button>
+                </Box>
             </form>
         </div>
     )

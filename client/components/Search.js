@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Container } from '@material-ui/core'
 import RecipeCard from './recipeCard'
 
@@ -26,6 +26,9 @@ export const Search = () => {
                 })}
             </div>
            ) : null}
+            <Button type="submit" variant="contained" color="primary" as={Link} to='/add'>
+                Don't see a favorite? Add it!
+            </Button>
         </Container>
         
     )
