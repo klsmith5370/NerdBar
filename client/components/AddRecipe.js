@@ -75,7 +75,7 @@ const AddRecipe = () => {
                         margin="normal"
                     />
                     <Button type="submit" variant="contained" color="primary">
-                        Add Recipe
+                        Add Your Own Inspiration!
                     </Button>
                 </Box>
             </form>
