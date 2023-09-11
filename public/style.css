@@ -86,6 +86,14 @@ form input[type='password'] {
   margin-bottom: 0;
 }
 
+.textfield-boxes {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+
 
 
 

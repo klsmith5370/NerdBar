@@ -36,44 +36,59 @@ const AddRecipe = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <Box display="flex" flexDirection="column">
-                    <TextField
-                        label="Character Name"
-                        value={characterName}
-                        onChange={(evt) => setCharacterName(evt.target.value)}
-                        fullWidth
-                        margin="normal"
-                    />
-                    <TextField
-                        label="Recipe Name"
-                        value={recipeName}
-                        onChange={(evt) => setRecipeName(evt.target.value)}
-                        fullWidth
-                        margin="normal"
-                    />
-                    <TextField
-                        label="Description"
-                        value={recipeDescription}
-                        onChange={(evt) => setDescription(evt.target.value)}
-                        fullWidth
-                        multiline
-                        margin="normal"
-                    />
-                    <TextField
-                        label="Ingredients"
-                        value={recipeIngredients}
-                        onChange={(evt) => setIngredients(evt.target.value)}
-                        fullWidth
-                        multiline
-                        margin="normal"
-                    />
+                <Box display="flex" flexDirection="column" className="textfield-boxes">
+                    <div>
+                        <TextField
+                            label="Character Name"
+                            value={characterName}
+                            onChange={(evt) => setCharacterName(evt.target.value)}
+                            fullWidth
+                            margin="normal"
+                            className='textfield-boxes'
+                        />
+                    </div>
+                    <div>
+                        <TextField
+                            label="Recipe Name"
+                            value={recipeName}
+                            onChange={(evt) => setRecipeName(evt.target.value)}
+                            fullWidth
+                            margin="normal"
+                            className='textfield-boxes'
+                        />
+                    </div>
+                    <div>
+                        <TextField
+                            label="Description"
+                            value={recipeDescription}
+                            onChange={(evt) => setDescription(evt.target.value)}
+                            fullWidth
+                            multiline
+                            margin="normal"
+                            className='textfield-boxes'
+                        />
+                    </div>
+                    <div>
+                        <TextField
+                            label="Ingredients"
+                            value={recipeIngredients}
+                            onChange={(evt) => setIngredients(evt.target.value)}
+                            fullWidth
+                            multiline
+                            margin="normal"
+                            className='textfield-boxes'
+                        />
+                    </div>
+                    <div>
                     <TextField
                         label="Character Image"
                         value={characterImage}
                         onChange={(evt) => setImage(evt.target.value)}
                         fullWidth
                         margin="normal"
+                        className='textfield-boxes'
                     />
+                    </div>
                     <Button type="submit" variant="contained" color="primary">
                         Add Your Own Inspiration!
                     </Button>
