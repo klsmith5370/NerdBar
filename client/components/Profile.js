@@ -11,5 +11,9 @@ const Profile = () => {
 
     const favoriteRecipe = recipes.find((recipe) => recipe.user_recipe.favorite === true)
 
-    
+    return (
+        <Container>
+            
+        </Container>
+    )
 }
