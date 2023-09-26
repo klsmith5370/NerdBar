@@ -1,7 +1,7 @@
 import React from "react"
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
-import { Container } from "@material-ui/core"
+import { Container, Card, CardContent, Typography, Button } from "@material-ui/core"
 // import Banner from "./Banner"
 // import SimpleSlider from "./SimpleSlider"
 
@@ -12,8 +12,10 @@ const Profile = () => {
     const favoriteRecipe = recipes.find((recipe) => recipe.user_recipe.favorite === true)
 
     return (
-        <Container>
-            
+        <Container className='profile'>
+
         </Container>
     )
 }
+
+export default Profile
