@@ -13,7 +13,24 @@ const Profile = () => {
 
     return (
         <Container className='profile'>
+            <Card>
+                <CardContent>
+                    <Typography variant="h4" gutterBottom>
+                        {user.name}'s Profile
+                    </Typography>
 
+                    <Typography>
+                        {favoriteRecipe ? (
+                            <Link></Link>
+                        ) : (
+                            <div>
+                                <h4>No favorite recipe</h4>
+                                <h4>Add a favorite</h4>
+                            </div>
+                        )}
+                    </Typography>
+                </CardContent>
+            </Card>
         </Container>
     )
 }
