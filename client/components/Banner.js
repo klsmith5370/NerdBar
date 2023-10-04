@@ -11,7 +11,10 @@ const Banner = (props) => {
     const dispatch = useDispatch()
 
     return (
-        <Container>
+        <Container 
+            className='banner-image' 
+            style={{ backgroundImage: `url(${user.bannerImage})`
+        }}>
 
         </Container>
     )
