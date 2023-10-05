@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { Container } from '@material-ui/core'
+import { Container, Paper } from '@material-ui/core'
+
+
 
 const Banner = (props) => {
     const { user } = props
@@ -10,21 +12,24 @@ const Banner = (props) => {
     }
     const dispatch = useDispatch()
 
+    const bannerStyles = {
+        backgroundImage: `url(${user.bannerImage})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        height: '200',
+        position: 'relative',
+    }
+
+
     return (
-        <Container  
-            className='user-info'
-            style={{ backgroundImage: `url(${user.bannerImage})`
-        }}>
-            <div className='banner-profile-image' alt='profile-image'>
-                <img>
-
-                </img>
-
-            </div>
-
-            <div>
-                
-            </div>
+        <Container>
+            <Paper style={bannerStyles}>
+                <div>
+                    {/* Add in profile information */}
+                </div>
+            </Paper>
+   
         </Container>
     )
 
