@@ -23,10 +23,16 @@ const Banner = (props) => {
 
 
     return (
-        <Container>
+        <Container className='user-info'>
             <Paper style={bannerStyles}>
                 <div>
-                    {/* Add in profile information */}
+                    <h1 style={{ fontSize: '50px', margin: '2rem' }}>
+                        {user.firstName} {user.lastName}
+                    </h1>
+
+                    <p style={{ margin: '2rem' }}>
+                        {user.bio}
+                    </p>
                 </div>
             </Paper>
    
