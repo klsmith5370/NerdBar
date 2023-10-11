@@ -16,7 +16,7 @@ const Profile = () => {
             <Card>
                 <CardContent>
                     <Typography variant="h4" gutterBottom>
-                        {user.name}'s Profile
+                        {user.firstName}'s Profile
                     </Typography>
 
                     <Typography>
