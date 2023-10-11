@@ -19,7 +19,7 @@ const Profile = () => {
                         {user.firstName}'s Profile
                     </Typography>
 
-                    <Typography>
+                    <Typography className='featured'>
                         {favoriteRecipe ? (
                             <Link></Link>
                         ) : (
@@ -28,6 +28,11 @@ const Profile = () => {
                                 <h4>Add a favorite</h4>
                             </div>
                         )}
+                    </Typography>
+
+                    <Typography className='favorite'>
+                        <h2>Favorite Recipes</h2>
+                        {/* insert slider here */}
                     </Typography>
                 </CardContent>
             </Card>
