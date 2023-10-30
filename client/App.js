@@ -11,7 +11,7 @@ import Contact from './components/Contact';
 import Navbar from './components/Navbar'
 import Search from './components/Search';
 import AddRecipe from './components/AddRecipe';
-import { SearchBar } from './components/SearchBar';
+import Profile from './components/Profile';
 
 
 const App = () => {
@@ -41,6 +41,7 @@ const App = () => {
               <Route path='/characterRecipes' element={<AllRecipes />} />
               <Route path='/search/:characterName' element={<Search />} />
               <Route path='/add' element={<AddRecipe />} />
+              <Route path='/profile' element={<Profile />} />
           </Routes>
           ) : (
           <Routes>
