@@ -2,14 +2,15 @@ import React from "react"
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { Container, Card, CardContent, Typography, Button } from "@material-ui/core"
+import ProfileSlider from "./Slider"
 // import Banner from "./Banner"
-// import SimpleSlider from "./SimpleSlider"
+
 
 const Profile = () => {
     const user = useSelector((state) => state.user)
     const recipes = user?.recipes || []
 
-    const favoriteRecipe = recipes.find((recipe) => recipe.user_recipe.favorite === true)
+    const favoriteRecipes = recipes.find((recipe) => recipe.user_recipe.favorite === true)
 
     return (
         <Container className='profile'>
@@ -20,7 +21,7 @@ const Profile = () => {
                     </Typography>
 
                     <Typography className='featured'>
-                        {favoriteRecipe ? (
+                        {favoriteRecipes ? (
                             <Link></Link>
                         ) : (
                             <div>
@@ -32,7 +33,7 @@ const Profile = () => {
 
                     <Typography className='favorite'>
                         <h2>Favorite Recipes</h2>
-                        {/* insert slider here */}
+                        <ProfileSlider recipes={favoriteRecipes} />
                     </Typography>
                 </CardContent>
             </Card>

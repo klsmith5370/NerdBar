@@ -1,9 +1,9 @@
 import React from 'react'
 import Slider from 'react-slick'
 import { Container } from '@material-ui/core'
-// import { Link } from 'react-router-dom'
 
-const profileSlider = (props) => {
+
+const ProfileSlider = (props) => {
     const { recipes } = props || []
     const items = recipes || []
 
@@ -86,7 +86,7 @@ const profileSlider = (props) => {
             {items.length !== 0 ? (
                 items.map((item) => (
                     <div key={item.id}>
-                        <img/>
+                        <img src={item.characterImage} alt='character image' />
                     </div>
                 ))
             ) : (
@@ -97,3 +97,5 @@ const profileSlider = (props) => {
     </Container>
   )
 }
+
+export default ProfileSlider
