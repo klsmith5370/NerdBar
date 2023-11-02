@@ -13,7 +13,8 @@ const Banner = (props) => {
     const dispatch = useDispatch()
 
     const bannerStyles = {
-        backgroundImage: `url(${user.bannerImage})`,
+        // backgroundImage: `url(${user.bannerImage})`,
+        backgroundColor: '',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
