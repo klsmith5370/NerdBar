@@ -7,10 +7,10 @@ import { Container, Paper } from '@material-ui/core'
 const Banner = (props) => {
     const { user } = props
     let auth = useSelector((state) => state.auth)
-    const isOwnProfile = () => {
-        return auth.id === user.id
-    }
-    const dispatch = useDispatch()
+    // const isOwnProfile = () => {
+    //     return auth.id === user.id
+    // }
+    // const dispatch = useDispatch()
 
     const bannerStyles = {
         // backgroundImage: `url(${user.bannerImage})`,
