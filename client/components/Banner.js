@@ -14,7 +14,7 @@ const Banner = (props) => {
 
     const bannerStyles = {
         // backgroundImage: `url(${user.bannerImage})`,
-        backgroundColor: '',
+        backgroundColor: '#98F5E1',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
