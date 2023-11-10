@@ -17,7 +17,7 @@ async function seed() {
     User.create({ firstName: 'Nezuko', lastName: 'Kamado', username: 'nezu.kama', password: '123' }),
   ])
 
-  // Creating recipes
+  // Creating recipes434
   const characterRecipes = await Promise.all([
     CharacterRecipe.create({
       characterName: 'Nezuko',

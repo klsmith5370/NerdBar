@@ -31,9 +31,6 @@ const Banner = (props) => {
                         {user.firstName} {user.lastName}
                     </h1>
 
-                    <p style={{ margin: '2rem' }}>
-                        {user.bio}
-                    </p>
                 </div>
             </Paper>
    
