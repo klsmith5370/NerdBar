@@ -1,6 +1,6 @@
 'use strict'
 
-const { db, models: { User, CharacterRecipe } } = require('../server/db/index')
+const { db, models: { User, CharacterRecipe, User_Recipe } } = require('../server/db/index')
 
 
 /**
