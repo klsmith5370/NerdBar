@@ -75,26 +75,27 @@ async function seed() {
 
   ])
 
-  for (let i = 1; i <= 3; i++) {
-    let done = []
-    for (let j = 0; j <= 15; j++) {
-      let recipeIdNum = Math.floor(Math.random() * 6) + 1
-      if (done.includes(recipeIdNum)) {
-        do {
-          recipeIdNum = Math.floor(Math.random() * 6)
-        } while (done.includes(recipeIdNum))
-      } else {
-        done.push(recipeIdNum)
-      }
-      await Promise.all([
-        User_Recipe.create({
-          userId: i,
-          recipeId: recipeIdNum,
-          favorite: true,
-        })
-      ])
-    }
-  }
+  // Favorite:
+  // for (let i = 1; i <= 3; i++) {
+  //   let done = []
+  //   for (let j = 0; j <= 15; j++) {
+  //     let recipeIdNum = Math.floor(Math.random() * 6) + 1
+  //     if (done.includes(recipeIdNum)) {
+  //       do {
+  //         recipeIdNum = Math.floor(Math.random() * 6)
+  //       } while (done.includes(recipeIdNum))
+  //     } else {
+  //       done.push(recipeIdNum)
+  //     }
+  //     await Promise.all([
+  //       User_Recipe.create({
+  //         userId: i,
+  //         recipeId: recipeIdNum,
+  //         favorite: true,
+  //       })
+  //     ])
+  //   }
+  // }
 
   console.log(`seeded ${users.length} users`)
   console.log(`seeded ${characterRecipes.length} recipes`)
