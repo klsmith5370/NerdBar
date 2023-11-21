@@ -19,7 +19,7 @@ const Banner = (props) => {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         height: '200',
-        position: 'relative',
+        position: 'right',
     }
 
 
