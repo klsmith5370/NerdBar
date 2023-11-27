@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { Container, Card, CardContent, Typography, Button } from "@material-ui/core"
 import ProfileSlider from "./Slider"
-// import Banner from "./Banner"
+import Banner from "./Banner"
 
 
 const Profile = () => {
@@ -14,6 +14,9 @@ const Profile = () => {
 
     return (
         <Container className='profile'>
+            <Card>
+                <Banner user={user}/>
+            </Card>
             <Card>
                 <CardContent>
                     <Typography variant="h4" gutterBottom>
