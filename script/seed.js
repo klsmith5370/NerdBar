@@ -1,6 +1,6 @@
 'use strict'
 
-const { db, models: { User, CharacterRecipe, User_Recipe } } = require('../server/db/index')
+const { db, models: { User, CharacterRecipe, } } = require('../server/db/index')
 
 
 /**
@@ -14,7 +14,7 @@ async function seed() {
   // Creating Users
   const users = await Promise.all([
     User.create({ firstName: 'Kourtney', lastName: 'Smith', username: 'kls5370', password: '123' }),
-    User.create({ firstName: 'Nezuko', lastName: 'Kamado', username: 'nezu.kama', password: '123' }),
+    User.create({ firstName: 'Nezuko', lastName: 'Kamado', username: 'nezukama', password: '123' }),
   ])
 
   // Creating recipes434
@@ -103,7 +103,7 @@ async function seed() {
   return {
     users: {
       kls5370: users[0],
-      yuna: users[1]
+      nezukama: users[1]
     }
   }
 }
