@@ -10,6 +10,20 @@ const Profile = () => {
     const user = useSelector((state) => state.user)
     const recipes = user?.recipes || []
 
+    if (!user) {
+        return (
+            <Container className='profile'>
+                <Card>
+                    <CardContent>
+                        <Typography variant="h4" gutterBottom>
+                            Loading...
+                        </Typography>
+                    </CardContent>
+                </Card>
+            </Container>
+        );
+    }
+
     const favoriteRecipes = recipes.find((recipe) => recipe.user_recipe.favorite === true)
 
     return (
@@ -20,7 +34,7 @@ const Profile = () => {
             <Card>
                 <CardContent>
                     <Typography variant="h4" gutterBottom>
-                        {user.firstName}'s Profile
+                        {user.username}
                     </Typography>
 
                     <Typography className='featured'>

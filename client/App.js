@@ -13,7 +13,6 @@ import Search from './components/Search';
 import AddRecipe from './components/AddRecipe';
 import Profile from './components/Profile';
 
-
 const App = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.id)
   const dispatch = useDispatch()
@@ -41,7 +40,7 @@ const App = () => {
               <Route path='/characterRecipes' element={<AllRecipes />} />
               <Route path='/search/:characterName' element={<Search />} />
               <Route path='/add' element={<AddRecipe />} />
-              <Route path='/profile' element={<Profile />} />
+              <Route path='/user-profile' element={<Profile />} />
           </Routes>
           ) : (
           <Routes>
