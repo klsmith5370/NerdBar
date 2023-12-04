@@ -13,8 +13,8 @@ const setSingleRecipe = (recipe) => {
 }
 
 export const fetchSingleRecipe = (id) => async (dispatch) => {
-    const { data } = await axios.get(`/api/characterRecipes/${id}`)
-    dispatch(setSingleRecipe(data))
+    const { data: recipe } = await axios.get(`/api/characterRecipes/${id}`)
+    dispatch(setSingleRecipe(recipe))
 }
 
 // REDUCER 

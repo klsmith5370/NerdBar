@@ -5,12 +5,14 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import auth from './auth'
 import recipesReducer from './recipes'
 import singleRecipeReducer from './recipe'
+import singleUserReducer from './user'
 
 
 const reducer = combineReducers({ 
   auth, 
   recipes: recipesReducer,
   recipe: singleRecipeReducer,
+  user: singleUserReducer,
 
 })
 

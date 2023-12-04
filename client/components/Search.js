@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
-import { Container } from '@material-ui/core'
+import { Container, Button } from '@material-ui/core'
 import RecipeCard from './recipeCard'
 
 
@@ -11,7 +11,7 @@ export const Search = () => {
     const characterFilter = (item) => 
         item.characterName.toLowerCase().includes(characterName.toLowerCase())
 
-    const recipes = useSelector((state) => state.recipe)
+    const recipes = useSelector((state) => state.recipes)
     const filteredRecipes = recipes.filter(characterFilter)
 
     return (
@@ -21,7 +21,7 @@ export const Search = () => {
                 <h3>Results: {filteredRecipes.length}</h3>
                 {filteredRecipes.map((recipe) => {
                     <div key={recipe.id}>
-                        <RecipeCard recipe={recipe} />
+                        <RecipeCard recipe={recipes} />
                     </div>
                 })}
             </div>
