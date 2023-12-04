@@ -12,8 +12,8 @@ const setUser = (user) => {
 }
 
 // Thunk Creator:
-export const fetchUser = (userId) => async (dispatch) => {
-    const { data: user } = await axios.get(`/api/users/${userId}`)
+export const fetchUser = (id) => async (dispatch) => {
+    const { data: user } = await axios.get(`/api/users/${id}`)
     dispatch(setUser(user))
 }
 

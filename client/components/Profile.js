@@ -1,6 +1,6 @@
-import React from "react"
-import { useSelector } from "react-redux"
-import { Link } from "react-router-dom"
+import React, { useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux"
+import { Link, useParams } from "react-router-dom"
 import { Container, Card, CardContent, Typography, Button } from "@material-ui/core"
 import ProfileSlider from "./Slider"
 import Banner from "./Banner"
@@ -10,27 +10,25 @@ const Profile = () => {
     const user = useSelector((state) => state.user)
     const recipes = user?.recipes || []
 
-    if (!user) {
-        return (
-            <Container className='profile'>
-                <Card>
-                    <CardContent>
-                        <Typography variant="h4" gutterBottom>
-                            Loading...
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </Container>
-        );
-    }
+    // if (!user) {
+    //     return (
+    //         <Container className='profile'>
+    //             <Card>
+    //                 <CardContent>
+    //                     <Typography variant="h4" gutterBottom>
+    //                         Loading...
+    //                     </Typography>
+    //                 </CardContent>
+    //             </Card>
+    //         </Container>
+    //     );
+    // }
 
     const favoriteRecipes = recipes.find((recipe) => recipe.user_recipe.favorite === true)
 
     return (
         <Container className='profile'>
-            <Card>
-                <Banner user={user}/>
-            </Card>
+            <Banner />
             <Card>
                 <CardContent>
                     <Typography variant="h4" gutterBottom>

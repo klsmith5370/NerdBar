@@ -1,8 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Container, Paper } from '@material-ui/core'
-
-
 
 const Banner = (props) => {
     const { user } = props
@@ -10,7 +8,6 @@ const Banner = (props) => {
     // const isOwnProfile = () => {
     //     return auth.id === user.id
     // }
-    // const dispatch = useDispatch()
 
     const bannerStyles = {
         // backgroundImage: `url(${user.bannerImage})`,
@@ -28,7 +25,7 @@ const Banner = (props) => {
             <Paper style={bannerStyles}>
                 <div>
                     <h1 style={{ fontSize: '50px', margin: '2rem' }}>
-                        {user.firstName} {user.lastName}
+                        {auth.firstName} {auth.lastName}
                     </h1>
 
                 </div>

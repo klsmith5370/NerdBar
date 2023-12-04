@@ -10,7 +10,7 @@ export const Home = props => {
 
   return (
     <div>
-      <h3>Welcome, {username}</h3>
+      <h3>Welcome to your bar, {username}!</h3>
       <h3>LOGGED IN EXPERIENCE COMING SOON!!</h3>
       <Link to="/characterRecipes">
         <button className="view-all-cards">Click to view all recipes!!</button>
