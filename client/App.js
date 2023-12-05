@@ -12,6 +12,7 @@ import Navbar from './components/Navbar'
 import Search from './components/Search';
 import AddRecipe from './components/AddRecipe';
 import Profile from './components/Profile';
+import SingleRecipe from './components/SingleRecipe';
 
 const App = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.id)
@@ -49,6 +50,7 @@ const App = () => {
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/characterRecipes' element={<AllRecipes />} />
+            <Route path='/characterRecipes/:id' element={<SingleRecipe />} />
             <Route path='/search/:characterName' element={<Search />} />
           </Routes>
           )}

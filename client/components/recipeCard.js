@@ -53,10 +53,6 @@ export const RecipeCard = () => {
                                         {recipe.recipeName}
                                     </Typography>
 
-                                    <Typography>
-                                        {recipe.recipeDescription}
-                                    </Typography>
-
                                 </CardContent>
 
                                 <CardActions disableSpacing>

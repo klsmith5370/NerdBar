@@ -28,7 +28,7 @@ const Profile = () => {
 
     return (
         <Container className='profile'>
-            <Banner />
+            <Banner user={user} />
             <Card>
                 <CardContent>
                     <Typography variant="h4" gutterBottom>

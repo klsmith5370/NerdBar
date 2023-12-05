@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Container, Paper } from '@material-ui/core'
 
-const Banner = (props) => {
-    const { user } = props
+const Banner = () => {
+    // const { user } = props
     let auth = useSelector((state) => state.auth)
     // const isOwnProfile = () => {
     //     return auth.id === user.id
