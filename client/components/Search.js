@@ -1,9 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
-import { Container, Button, Card, CardMedia } from '@material-ui/core'
-import SingleRecipe from './SingleRecipe'
-import RecipeCard from './recipeCard'
+import { Container, Button, Card, CardMedia, CardActionArea } from '@material-ui/core'
 
 
 export const Search = () => {
@@ -23,41 +21,33 @@ export const Search = () => {
                     {filteredRecipes.map((recipe) => {
                         return (
                             <Card key={recipe.id}>
-                                <CardMedia 
-                                    recipe={recipe}
-                                    component='img'
-                                    height='100'
-                                    image={recipe.characterImage}
-                                    alt='character image'
-                                />
+                                <CardActionArea>
+                                    <Link to={`/characterRecipes/${recipe.id}`}>
+                                    
+                                        <CardMedia 
+                                            recipe={recipe}
+                                            component='img'
+                                            height='100'
+                                            image={recipe.characterImage}
+                                            alt='character image'
+                                        />
+
+                                    </Link>
+                                </CardActionArea>
                             </Card>
                         )
                     })}
                 </div>
             ) : null}
+
+            <br /> 
+
             <Button type="submit" variant="contained" color="primary" as={Link} to='/add'>
                 Don't see a favorite? Add it!
             </Button>
+
         </Container>
     )
-    // return (
-    //     <Container className='search-results'>
-    //         {recipes.length > 0 ? (
-    //             <div>
-    //                 <h3>Results: {recipes.length}</h3>
-    //                 {recipes.map((recipe) => {
-    //                     <div key={recipe.id}>
-    //                         <SingleRecipe />
-    //                     </div>
-    //                 })}
-    //             </div>
-    //        ) : null}
-    //         <Button type="submit" variant="contained" color="primary" as={Link} to='/add'>
-    //             Don't see a favorite? Add it!
-    //         </Button>
-    //     </Container>
-        
-    // )
 }
 
 export default Search
