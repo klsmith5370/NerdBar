@@ -15,23 +15,6 @@ export const SingleRecipe = () => {
     }, [dispatch])
 
 
-    // return (
-    //     <div className='single-recipe-container'>
-    //         <div className='character-image'>
-    //             <img src={characterImage} alt='character image'/>
-    //         </div>
-
-    //         <div className='recipe-details'>
-    //             <h4>{characterName}</h4>
-    //             <h5>{recipeName}</h5>
-    //             <p>{recipeIngredients}</p>
-    //             <p>{recipeInstructions}</p>
-    //             <p>{recipeDescription}</p>
-    //         </div>
-
-    //     </div>
-    // )
-
     return (
         <Container className='single-recipe'>
             <Card>
@@ -43,6 +26,10 @@ export const SingleRecipe = () => {
                         alt='character image'
                     />
                     <CardContent>
+                    <Typography gutterBottom variant='h5'>
+                            {characterName}
+                        </Typography>
+
                         <Typography gutterBottom variant='h5'>
                             {recipeName}
                         </Typography>
@@ -51,9 +38,13 @@ export const SingleRecipe = () => {
                             {recipeDescription}
                         </Typography>
 
+                        <br />
+
                         <Typography variant='body2'>
                             {recipeIngredients}
                         </Typography>
+
+                        <br />
                 
                         <Typography variant='body2'>
                             {recipeInstructions}
