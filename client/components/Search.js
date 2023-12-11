@@ -28,6 +28,7 @@ export const Search = () => {
                                             recipe={recipe}
                                             component='img'
                                             height='100'
+                                            width='100'
                                             image={recipe.characterImage}
                                             alt='character image'
                                         />

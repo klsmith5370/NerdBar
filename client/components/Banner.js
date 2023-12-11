@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+// import { useParams } from 'react-router-dom'
 import { Container, Paper } from '@material-ui/core'
+// import { fetchUser } from '../store/user'
 
 const Banner = () => {
     // const { user } = props
@@ -8,6 +10,16 @@ const Banner = () => {
     // const isOwnProfile = () => {
     //     return auth.id === user.id
     // }
+
+    // const dispatch = useDispatch()
+
+    // let user = useSelector((state) => state.user)
+    // const { firstName, lastName } = user
+    // const { id } = useParams()
+
+    // useEffect(() => {
+    //     dispatch(fetchUser(id))
+    // }, [dispatch])
 
     const bannerStyles = {
         // backgroundImage: `url(${user.bannerImage})`,
