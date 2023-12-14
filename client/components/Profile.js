@@ -10,19 +10,19 @@ const Profile = () => {
     const user = useSelector((state) => state.user)
     const recipes = user?.recipes || []
 
-    // if (!user) {
-    //     return (
-    //         <Container className='profile'>
-    //             <Card>
-    //                 <CardContent>
-    //                     <Typography variant="h4" gutterBottom>
-    //                         Loading...
-    //                     </Typography>
-    //                 </CardContent>
-    //             </Card>
-    //         </Container>
-    //     );
-    // }
+    if (!user) {
+        return (
+            <Container className='profile'>
+                <Card>
+                    <CardContent>
+                        <Typography variant="h4" gutterBottom>
+                            Apologies!! No user exists
+                        </Typography>
+                    </CardContent>
+                </Card>
+            </Container>
+        );
+    }
 
     const favoriteRecipes = recipes.find((recipe) => recipe.user_recipe.favorite === true)
 
