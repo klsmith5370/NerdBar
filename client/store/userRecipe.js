@@ -2,10 +2,10 @@ import axios from 'axios'
 
 const GET_FAVORITE_RECIPE = "FAVORITE_RECIPE"
 
-const getFavoriteRecipe = (favoriteBook) => {
+const getFavoriteRecipe = (favoriteRecipe) => {
     return {
         type: GET_FAVORITE_RECIPE,
-        favoriteBook,
+        favoriteRecipe,
     }
 }
 
@@ -17,7 +17,7 @@ export const fetchFavoriteRecipe = (userId) => async (dispatch) => {
 export default function (state = {}, action) {
     switch (action.type) {
         case GET_FAVORITE_RECIPE:
-            return action.favoriteBook
+            return action.favoriteRecipe
         default:
             return state
     }
