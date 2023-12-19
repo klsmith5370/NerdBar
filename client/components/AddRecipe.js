@@ -45,6 +45,7 @@ const AddRecipe = () => {
                             fullWidth
                             margin="normal"
                             className='textfield-boxes'
+                            style={{ display: 'block', marginBottom: '16px', }}
                         />
                     </div>
                     <div>
@@ -55,6 +56,7 @@ const AddRecipe = () => {
                             fullWidth
                             margin="normal"
                             className='textfield-boxes'
+                            style={{ display: 'block', marginBottom: '16px'}}
                         />
                     </div>
                     <div>
@@ -66,6 +68,7 @@ const AddRecipe = () => {
                             multiline
                             margin="normal"
                             className='textfield-boxes'
+                            style={{ display: 'block', marginBottom: '16px'}}
                         />
                     </div>
                     <div>
@@ -77,6 +80,7 @@ const AddRecipe = () => {
                             multiline
                             margin="normal"
                             className='textfield-boxes'
+                            style={{ display: 'block', marginBottom: '16px'}}
                         />
                     </div>
                     <div>
@@ -87,6 +91,7 @@ const AddRecipe = () => {
                         fullWidth
                         margin="normal"
                         className='textfield-boxes'
+                        style={{ display: 'block', marginBottom: '16px'}}
                     />
                     </div>
                     <Button type="submit" variant="contained" color="primary">
