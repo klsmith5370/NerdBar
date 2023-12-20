@@ -14,7 +14,7 @@ export const fetchFavoriteRecipe = (userId) => async (dispatch) => {
     dispatch(getFavoriteRecipe(data))
 }
 
-export default function (state = {}, action) {
+export default function (state = [], action) {
     switch (action.type) {
         case GET_FAVORITE_RECIPE:
             return action.favoriteRecipe

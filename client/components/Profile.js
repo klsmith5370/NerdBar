@@ -44,16 +44,15 @@ const Profile = () => {
                             </Link>
                         ) : (
                             <div>
-                                <h4>No favorite recipe</h4>
                                 <h4>Add a favorite</h4>
+                                <Typography className='favorite'>
+                                    <h2>Favorite Recipes</h2>
+                                    <ProfileSlider recipes={favoriteRecipes} />
+                                </Typography>
                             </div>
                         )}
                     </Typography>
 
-                    <Typography className='favorite'>
-                        <h2>Favorite Recipes</h2>
-                        <ProfileSlider recipes={favoriteRecipes} />
-                    </Typography>
                 </CardContent>
             </Card>
         </Container>
