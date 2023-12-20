@@ -82,7 +82,7 @@ async function seed() {
       let recipeIdNum = Math.floor(Math.random() * 6) + 1
       if (done.includes(recipeIdNum)) {
         do {
-          recipeIdNum = Math.floor(Math.random() * 6)
+          recipeIdNum = Math.floor(Math.random() * 6) + 1
         } while (done.includes(recipeIdNum))
       } else {
         done.push(recipeIdNum)
@@ -96,6 +96,7 @@ async function seed() {
       ])
     }
   }
+
 
   console.log(`seeded ${users.length} users`)
   console.log(`seeded ${characterRecipes.length} recipes`)

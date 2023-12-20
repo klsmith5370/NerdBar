@@ -4,6 +4,8 @@ const {
     models: { User_Recipe },
 } = require("../db")
 
+module.exports = router;
+
 router.get("/favoriteRecipe/:userId", async (req, res, next) => {
     try {
         const recipes = await User_Recipe.findOne({
@@ -18,4 +20,3 @@ router.get("/favoriteRecipe/:userId", async (req, res, next) => {
     }
 })
 
-module.exports = router;

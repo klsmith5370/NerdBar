@@ -10,7 +10,7 @@ const Profile = () => {
     const user = useSelector((state) => state.user)
     const recipes = user?.recipes || []
 
-    const favoriteRecipe = recipes.filter(
+    const favoriteRecipes = recipes.filter(
         (recipe) => recipe.user_recipe.favorite === true
     )[0];
 
@@ -28,8 +28,6 @@ const Profile = () => {
         );
     }
 
-    // const favoriteRecipes = recipes.find((recipe) => recipe.user_recipe.favorite === true)
-
     return (
         <Container className='profile'>
             <Banner user={user} />
@@ -40,8 +38,10 @@ const Profile = () => {
                     </Typography>
 
                     <Typography className='featured'>
-                        {favoriteRecipe ? (
-                            <Link></Link>
+                        {favoriteRecipes ? (
+                            <Link>
+
+                            </Link>
                         ) : (
                             <div>
                                 <h4>No favorite recipe</h4>
