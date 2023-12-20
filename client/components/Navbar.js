@@ -3,7 +3,8 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
 import { SearchBar } from './SearchBar'
-import { HiHome }from 'react-icons/hi'
+import { HiHome } from 'react-icons/hi'
+import { Button } from '@material-ui/core'
 
 
 const Navbar = ({handleClick, isLoggedIn}) => (

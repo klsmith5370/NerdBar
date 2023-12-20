@@ -18,10 +18,10 @@ export const SingleRecipe = () => {
     return (
         <Container className='single-recipe'>
             <Card>
-                <CardActionArea>
+                
                     <CardMedia 
                         component='img'
-                        height='150'
+                        height='100'
                         image={characterImage}
                         alt='character image'
                     />
@@ -30,7 +30,7 @@ export const SingleRecipe = () => {
                             {characterName}
                         </Typography>
 
-                        <Typography gutterBottom variant='h5'>
+                        <Typography gutterBottom variant='h3'>
                             {recipeName}
                         </Typography>
 
@@ -51,7 +51,7 @@ export const SingleRecipe = () => {
                         </Typography>
 
                     </CardContent>
-                </CardActionArea>
+                
             </Card>
         </Container>
     )
