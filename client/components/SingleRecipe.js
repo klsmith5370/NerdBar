@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { useParams } from 'react-router-dom'
-import { Container, Card, CardActionArea, CardMedia, CardContent, Typography } from '@material-ui/core'
+import { useParams, Link } from 'react-router-dom'
+import { Container, Card, CardActionArea, CardMedia, CardContent, Typography, Button } from '@material-ui/core'
 import { fetchSingleRecipe } from '../store/recipe'
+import { FaArrowLeft } from 'react-icons/fa'
 
 export const SingleRecipe = () => {
     const recipe = useSelector(state => state.recipe)
@@ -55,6 +56,12 @@ export const SingleRecipe = () => {
                     <Typography variant='body2'>
                         {recipeInstructions}
                     </Typography>
+
+                    <br />
+
+                    <Link to={'/characterRecipes'}>
+                        <Button color='primary' variant='contained'><FaArrowLeft style={{ marginRight: '10px' }}/> Back to all recipes</Button>
+                    </Link>
 
                     </CardContent>
                 

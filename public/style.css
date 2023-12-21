@@ -82,8 +82,10 @@ form input[type='password'] {
 }
 
 .search {
-  margin-top: 1.5em;
-  margin-bottom: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
 }
 
 .textfield-boxes {
