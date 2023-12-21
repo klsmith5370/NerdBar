@@ -21,7 +21,7 @@ export const SingleRecipe = () => {
                 
                     <CardMedia 
                         component='img'
-                        height='100'
+                        height='400'
                         image={characterImage}
                         alt='character image'
                     />
@@ -35,7 +35,7 @@ export const SingleRecipe = () => {
                         {recipeName}
                     </Typography>
 
-                    <h5>Description:</h5>
+                    <h3>Description:</h3>
 
                     <Typography variant='body2'>
                         {recipeDescription}
@@ -43,14 +43,14 @@ export const SingleRecipe = () => {
 
                     <br />
 
-                    <h5>Ingredients:</h5>
+                    <h3>Ingredients:</h3>
                     <Typography variant='body2'>
                         {recipeIngredients}
                     </Typography>
 
                     <br />
 
-                    <h5>Instructions:</h5>
+                    <h3>Instructions:</h3>
             
                     <Typography variant='body2'>
                         {recipeInstructions}
