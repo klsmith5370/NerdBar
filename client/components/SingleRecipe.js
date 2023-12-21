@@ -26,29 +26,35 @@ export const SingleRecipe = () => {
                         alt='character image'
                     />
                     <CardContent>
-                    <Typography gutterBottom variant='h5'>
-                            {characterName}
-                        </Typography>
 
-                        <Typography gutterBottom variant='h3'>
-                            {recipeName}
-                        </Typography>
+                    <Typography gutterBottom variant='h2'>
+                        {characterName}
+                    </Typography>
 
-                        <Typography variant='body2'>
-                            {recipeDescription}
-                        </Typography>
+                    <Typography gutterBottom variant='h4'>
+                        {recipeName}
+                    </Typography>
 
-                        <br />
+                    <h5>Description:</h5>
 
-                        <Typography variant='body2'>
-                            {recipeIngredients}
-                        </Typography>
+                    <Typography variant='body2'>
+                        {recipeDescription}
+                    </Typography>
 
-                        <br />
-                
-                        <Typography variant='body2'>
-                            {recipeInstructions}
-                        </Typography>
+                    <br />
+
+                    <h5>Ingredients:</h5>
+                    <Typography variant='body2'>
+                        {recipeIngredients}
+                    </Typography>
+
+                    <br />
+
+                    <h5>Instructions:</h5>
+            
+                    <Typography variant='body2'>
+                        {recipeInstructions}
+                    </Typography>
 
                     </CardContent>
                 

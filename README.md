@@ -19,6 +19,7 @@ Express
 Node.js
 PostgreSQL
 Sequelize
+MaterialUI
 JSON Web Token
 Figma
 
