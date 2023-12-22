@@ -27,7 +27,7 @@ export const AuthForm = props => {
           <input name='password' type='password' />
         </div>
         <div>
-          <button className='login-submit' type='submit'>{displayName}</button>
+          <Button className='login-submit' type='submit' variant='contained' color='primary'>{displayName}</Button>
         </div>
         {error && error.response && <div> {error.response.data} </div>}
       </form>
