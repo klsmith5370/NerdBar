@@ -22,7 +22,7 @@ export const SingleRecipe = () => {
                 
                     <CardMedia 
                         component='img'
-                        height='400'
+                        height='100'
                         image={characterImage}
                         alt='character image'
                     />
