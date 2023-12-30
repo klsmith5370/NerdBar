@@ -87,6 +87,7 @@ async function seed() {
       } else {
         done.push(recipeIdNum)
       }
+
       await Promise.all([
         User_Recipe.create({
           userId: i,
@@ -94,6 +95,22 @@ async function seed() {
           favorite: true,
         })
       ])
+
+      // const existingRecord = await User_Recipe.findOne({
+      //   where: {
+      //     userId: i,
+      //     recipeId: recipeIdNum
+      //   },
+      // })
+
+      // if (!existingRecord) {
+      //   await User_Recipe.create({
+      //     userId: i,
+      //     recipeId: recipeIdNum,
+      //     favorite: true,
+      //   })
+      // }
+      
     }
   }
 

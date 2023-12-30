@@ -38,7 +38,7 @@ const Profile = () => {
                     </Typography>
 
                     <Typography className='featured'>
-                        {favoriteRecipes ? (
+                        {favoriteRecipes.length > 0 ? (
                             <Link>
 
                             </Link>
