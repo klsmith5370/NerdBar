@@ -17,7 +17,7 @@ export const SingleRecipe = () => {
 
 
     return (
-        <Container className='single-recipe'>
+        <Container className='single-recipe' style={{ zIndex: 1, position: 'relative', marginTop: '50px' }}>
             <Card>
                 
                     <CardMedia 

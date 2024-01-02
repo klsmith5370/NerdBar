@@ -37,7 +37,7 @@ router.post("/favoriteRecipe/:userId/:recipeId", async (req, res, next) => {
     }
 })
 
-router.get("/favoriteRecipe/:userId", async (req, res, next) => {
+router.get("/favoriteRecipes/:userId", async (req, res, next) => {
     try {
         const recipes = await User_Recipe.findAll({
             where: {
