@@ -54,7 +54,7 @@ const App = () => {
             <Route path='/search/:characterName' element={<Search />} />
           </Routes>
           )}
-          <Contact />
+          {/* <Contact /> */}
         </div>
   )
 }
