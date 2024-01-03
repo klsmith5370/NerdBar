@@ -15,6 +15,7 @@ async function seed() {
   const users = await Promise.all([
     User.create({ firstName: 'Kourtney', lastName: 'Smith', username: 'kls5370', password: '123' }),
     User.create({ firstName: 'Nezuko', lastName: 'Kamado', username: 'nezukama', password: '123' }),
+    User.create({ firstName: 'Yuna', lastName: 'Fantasy', username: 'yuna123', password: '123'})
   ])
 
   // Creating recipes434
@@ -75,7 +76,7 @@ async function seed() {
 
   ])
 
-  // Favorite:
+  // user_recipe connections
   for (let i = 1; i <= 3; i++) {
     let done = []
     for (let j = 1; j <= 15; j++) {
@@ -92,27 +93,32 @@ async function seed() {
         User_Recipe.create({
           userId: i,
           recipeId: recipeIdNum,
-          favorite: true,
-        })
-      ])
+          featured: true,
+        }),
 
-      // const existingRecord = await User_Recipe.findOne({
-      //   where: {
-      //     userId: i,
-      //     recipeId: recipeIdNum
-      //   },
-      // })
-
-      // if (!existingRecord) {
-      //   await User_Recipe.create({
-      //     userId: i,
-      //     recipeId: recipeIdNum,
-      //     favorite: true,
-      //   })
-      // }
-      
+      ])  
     }
   }
+
+    // for (let i = 1; i <= 3; i++) {
+    //   let done = []
+    //   for (let j = 1; j <= 15; j++) {
+    //     let recipeIdNum;
+    //     do {
+    //       recipeIdNum = Math.floor(Math.random() * 6) + 1;
+    //     } while (done.includes(recipeIdNum));
+    
+    //     done.push(recipeIdNum);
+    
+    //     await Promise.all([
+    //       User_Recipe.create({
+    //         userId: i,
+    //         recipeId: recipeIdNum,
+    //         featured: true,
+    //       }),
+    //     ]);
+    //   }
+    // }
 
 
   console.log(`seeded ${users.length} users`)
@@ -156,3 +162,29 @@ if (module === require.main) {
 
 // we export the seed function for testing purposes (see `./seed.spec.js`)
 module.exports = seed
+
+
+  // for (let i = 1; i <= 3; i++) {
+  //   let done = new Set(); // Use a Set for faster lookups
+
+  //   for (let j = 1; j <= 15; j++) {
+  //       let recipeIdNum;
+
+  //       do {
+  //           recipeIdNum = Math.floor(Math.random() * 6) + 1;
+  //       } while (done.has(recipeIdNum));
+
+  //       done.add(recipeIdNum);
+
+  //       try {
+  //           await User_Recipe.create({
+  //               userId: i,
+  //               recipeId: recipeIdNum,
+  //               favorite: true,
+  //           });
+  //       } catch (error) {
+  //           // Handle the error if needed
+  //           console.error(`Error creating record: ${error.message}`);
+  //       }
+  //     }
+  //   }

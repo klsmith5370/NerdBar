@@ -6,6 +6,16 @@ const User_Recipe = db.define('user_recipe', {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
     },
+
+    status: {
+        type: Sequelize.ENUM(['Saved'])
+
+    },
+
+    featured: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+    }
 })
 
 module.exports = User_Recipe
