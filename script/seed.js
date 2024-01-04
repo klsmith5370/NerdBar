@@ -77,48 +77,48 @@ async function seed() {
   ])
 
   // user_recipe connections
-  for (let i = 1; i <= 3; i++) {
-    let done = []
-    for (let j = 1; j <= 15; j++) {
-      let recipeIdNum = Math.floor(Math.random() * 6) + 1
-      if (done.includes(recipeIdNum)) {
+  // for (let i = 1; i <= 3; i++) {
+  //   let done = []
+  //   for (let j = 1; j <= 15; j++) {
+  //     let recipeIdNum = Math.floor(Math.random() * 6) + 1
+  //     if (done.includes(recipeIdNum)) {
+  //       do {
+  //         recipeIdNum = Math.floor(Math.random() * 6) + 1
+  //       } while (done.includes(recipeIdNum))
+  //     } else {
+  //       done.push(recipeIdNum)
+  //     }
+
+  //     await Promise.all([
+  //       User_Recipe.create({
+  //         userId: i,
+  //         recipeId: recipeIdNum,
+  //         featured: true,
+  //       }),
+
+  //     ])  
+  //   }
+  // }
+
+    for (let i = 1; i <= 3; i++) {
+      let done = []
+      for (let j = 1; j <= 15; j++) {
+        let recipeIdNum;
         do {
-          recipeIdNum = Math.floor(Math.random() * 6) + 1
-        } while (done.includes(recipeIdNum))
-      } else {
-        done.push(recipeIdNum)
+          recipeIdNum = Math.floor(Math.random() * 6) + 1;
+        } while (done.includes(recipeIdNum));
+    
+        done.push(recipeIdNum);
+    
+        await Promise.all([
+          User_Recipe.create({
+            userId: i,
+            recipeId: recipeIdNum,
+            featured: true,
+          }),
+        ]);
       }
-
-      await Promise.all([
-        User_Recipe.create({
-          userId: i,
-          recipeId: recipeIdNum,
-          featured: true,
-        }),
-
-      ])  
     }
-  }
-
-    // for (let i = 1; i <= 3; i++) {
-    //   let done = []
-    //   for (let j = 1; j <= 15; j++) {
-    //     let recipeIdNum;
-    //     do {
-    //       recipeIdNum = Math.floor(Math.random() * 6) + 1;
-    //     } while (done.includes(recipeIdNum));
-    
-    //     done.push(recipeIdNum);
-    
-    //     await Promise.all([
-    //       User_Recipe.create({
-    //         userId: i,
-    //         recipeId: recipeIdNum,
-    //         featured: true,
-    //       }),
-    //     ]);
-    //   }
-    // }
 
 
   console.log(`seeded ${users.length} users`)

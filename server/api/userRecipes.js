@@ -21,6 +21,8 @@ router.get("/favoriteRecipe/:userId", async (req, res, next) => {
     }
 })
 
+
+
 router.get('/:userId/:recipeId', async (req, res, next) => {
     try {
         const userRecipe = await User_Recipe.findOne({
@@ -30,6 +32,29 @@ router.get('/:userId/:recipeId', async (req, res, next) => {
             }
         })
         res.json(userRecipe)
+    } catch (error) {
+        next(error)
+    }
+})
+
+router.post('/', async (req, res, next) => {
+    try {
+        res.status(201).send(await User_Recipe.create(req.body))
+    } catch (error) {
+        next(error)
+    }
+})
+
+router.delete('/:userId/:recipeId', async (req, res, next) => {
+    try {
+        const userRecipe = await User_Recipe.findOne({
+            where: {
+                userId: req.params.userId,
+                recipeId: req.params.recipeId,
+            },
+        })
+        await userRecipe.destroy()
+        res.send(userRecipe)
     } catch (error) {
         next(error)
     }
