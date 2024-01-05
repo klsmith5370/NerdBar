@@ -7,11 +7,6 @@ const User_Recipe = db.define('user_recipe', {
         defaultValue: false,
     },
 
-    status: {
-        type: Sequelize.ENUM(['Saved'])
-
-    },
-
     featured: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,

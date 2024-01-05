@@ -114,7 +114,7 @@ async function seed() {
           User_Recipe.create({
             userId: i,
             recipeId: recipeIdNum,
-            featured: true,
+            favorite: true,
           }),
         ]);
       }
