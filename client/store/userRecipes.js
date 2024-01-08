@@ -9,7 +9,7 @@ const addFavorites = (userRecipe) => {
     }
 }
 
-export const fetchFavoriteRecipes = (userRecipe) => async (dispatch) => {
+export const fetchFavoriteRecipes = (userRecipes) => async (dispatch) => {
     const { data } = await axios.post(`/api/userRecipes`, userRecipe)  
      dispatch(addFavorites(data)) 
 }
