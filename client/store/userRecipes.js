@@ -23,14 +23,14 @@ export const addFavoriteRecipes = (userRecipes) => async (dispatch) => {
 }
 
 export const fetchFavoriteRecipes = (userId) => async (dispatch) => {
-    const { data } = await axios.get(`/api/userRecipes/favoriteRecipe/${userId}`)
+    const { data } = await axios.get(`/api/userRecipes/favoriteRecipes/${userId}`)
     dispatch(getFavorites(data))
 }
 
 export default function (state = [], action) {
     switch (action.type) {
         case ADD_FAVORITE_RECIPE:
-            return [...state, action.userRecipe]
+            return [...state, action.userRecipes]
         case GET_FAVORITE_RECIPES:
             return action.userRecipes
     }

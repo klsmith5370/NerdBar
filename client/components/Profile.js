@@ -4,15 +4,22 @@ import { Link, useParams } from "react-router-dom"
 import { Container, Card, CardContent, Typography, Button } from "@material-ui/core"
 import ProfileSlider from "./Slider"
 import Banner from "./Banner"
+import { fetchFavoriteRecipes } from "../store/userRecipes"
 
 
 const Profile = () => {
     const user = useSelector((state) => state.user)
     const recipes = user?.recipes || []
+    const dispatch = useDispatch()
 
     const favoriteRecipes = recipes.filter(
         (recipe) => recipe.user_recipe.favorite === true
     )[0];
+
+    useEffect(() => {
+        dispatch(fetchFavoriteRecipes())
+    }, [])
+
 
     if (!user) {
         return (
@@ -44,19 +51,20 @@ const Profile = () => {
                             </Link>
                         ) : (
                             <div>
-                                <h4>Add a favorite</h4>
+                                <Button>Add a favorite</Button>
                                 <Typography className='favorite'>
                                     <h2>Favorite Recipes</h2>
                                     <ProfileSlider recipes={favoriteRecipes} />
                                 </Typography>
                             </div>
                         )}
-                    </Typography>
-
+                        </Typography>
                 </CardContent>
             </Card>
         </Container>
     )
 }
 
+
 export default Profile
+
