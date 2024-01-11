@@ -46,7 +46,7 @@ const Profile = () => {
 
                     <Typography className='featured'>
                         {favoriteRecipes ? (
-                            <Link>
+                            <Link to={`/characterRecipes/${favoriteRecipes.id}`}>
 
                             </Link>
                         ) : (

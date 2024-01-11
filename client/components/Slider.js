@@ -86,7 +86,9 @@ const ProfileSlider = (props) => {
             {items.length !== 0 ? (
                 items.map((item) => (
                     <div key={item.id}>
+                      <Link to={`/${item.recipeName}s/${item.id}`}>
                         <img src={item.characterImage} alt='character image' />
+                      </Link>
                     </div>
                 ))
             ) : (
