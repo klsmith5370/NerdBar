@@ -1,12 +1,27 @@
 import axios from 'axios'
 
-const GET_USER_RECIPE = "GET_USER_RECIPE"
-
+const GET_USER_RECIPE = 'GET_USER_RECIPE'
+const UPDATE_USER_RECIPE = 'UPDATE_USER_RECIPE'
+const FAVORITE_RECIPE = 'FAVORITE_RECIPE'
 
 const getUserRecipe = (userRecipe) => {
     return {
         type: GET_USER_RECIPE,
         userRecipe,
+    }
+}
+
+const updateUserRecipe = (userRecipe) => {
+    return {
+        type: UPDATE_USER_RECIPE,
+        userRecipe,
+    }
+}
+
+const getFavoriteBook = (favoriteRecipe) => {
+    return {
+        type: FAVORITE_RECIPE,
+        favoriteRecipe,
     }
 }
 
