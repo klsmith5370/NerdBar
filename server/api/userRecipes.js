@@ -7,33 +7,33 @@ const {
 module.exports = router;
 
 
-router.get("/favoriteRecipe/:userId", async (req, res, next) => {
-    try {
-        const recipes = await User_Recipe.findOne({
-            where: {
-                userId: req.params.userId,
-                favorite: true,
-            },
-        })
-        res.json(recipes)
-    } catch (error) {
-        next(error)
-    }
-})
-
-// router.get('/favoriteRecipes/:userId', async (req,res, next) => {
+// router.get("/favoriteRecipe/:userId", async (req, res, next) => {
 //     try {
-//         const favoriteRecipes = await User_Recipe.findAll({
+//         const favoriteRecipe = await User_Recipe.findOne({
 //             where: {
 //                 userId: req.params.userId,
 //                 favorite: true,
 //             },
 //         })
-//         res.json(favoriteRecipes)
+//         res.json(favoriteRecipe)
 //     } catch (error) {
-
+//         next(error)
 //     }
 // })
+
+router.get('/favoriteRecipes/:userId', async (req,res, next) => {
+    try {
+        const favoriteRecipes = await User_Recipe.findAll({
+            where: {
+                userId: req.params.userId,
+                favorite: true,
+            },
+        })
+        res.json(favoriteRecipes)
+    } catch (error) {
+
+    }
+})
 
 router.get('/:userId/:recipeId', async (req, res, next) => {
     try {
@@ -49,19 +49,19 @@ router.get('/:userId/:recipeId', async (req, res, next) => {
     }
 })
 
-router.get('/savedRecipes/:userId', async (req,res, next) => {
-    try {
-        const recipes = await User_Recipe.findOne({
-            where: {
-                userId: req.params.userId,
-                status: 'Saved',
-            },
-        })
-        res.json(recipes)
-    } catch (error) {
-        next(error)
-    }
-})
+// router.get('/savedRecipes/:userId', async (req,res, next) => {
+//     try {
+//         const recipes = await User_Recipe.findOne({
+//             where: {
+//                 userId: req.params.userId,
+//                 status: 'Saved',
+//             },
+//         })
+//         res.json(recipes)
+//     } catch (error) {
+//         next(error)
+//     }
+// })
 
 router.get('/:userId/:recipeId', async (req, res, next) => {
     try {
