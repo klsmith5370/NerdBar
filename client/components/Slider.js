@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 import { Container } from '@material-ui/core'
+import { Link } from "react-router-dom"
 
 
 const ProfileSlider = (props) => {
@@ -81,12 +82,12 @@ const ProfileSlider = (props) => {
   }
 
   return (
-    <Container>
+    <Container className="slider">
         <Slider {...settings}>
             {items.length !== 0 ? (
                 items.map((item) => (
                     <div key={item.id}>
-                      <Link to={`/${item.recipeName}s/${item.id}`}>
+                      <Link to={`/${item.recipes}s/${item.id}`}>
                         <img src={item.characterImage} alt='character image' />
                       </Link>
                     </div>

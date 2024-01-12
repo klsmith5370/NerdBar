@@ -5,7 +5,7 @@ import { Container, Card, CardContent, Typography, Button } from "@material-ui/c
 import ProfileSlider from "./Slider"
 import Banner from "./Banner"
 import { fetchFavoriteRecipes } from "../store/userRecipes"
-
+import { fetchFavoriteRecipe } from "../store/userRecipe"
 
 const Profile = () => {
     const user = useSelector((state) => state.user)
@@ -15,6 +15,8 @@ const Profile = () => {
     const favoriteRecipes = recipes.filter(
         (recipe) => recipe.user_recipe.favorite === true
     )[0];
+
+    // const [favoriteRecipes, setFavoriteRecipes] = useState([]);
 
     useEffect(() => {
         dispatch(fetchFavoriteRecipes())
@@ -40,21 +42,15 @@ const Profile = () => {
             <Banner user={user} />
             <Card>
                 <CardContent>
-                    <Typography variant="h4" gutterBottom>
-                        {user.username}
-                    </Typography>
-
-                    <Typography className='featured'>
+                    <Typography>
                         {favoriteRecipes ? (
-                            <Link to={`/characterRecipes/${favoriteRecipes.id}`}>
-
-                            </Link>
+                            <ProfileSlider />
                         ) : (
                             <div>
                                 <Button>Add a favorite</Button>
-                                <Typography className='favorite'>
+                                <Typography>
                                     <h2>Favorite Recipes</h2>
-                                    <ProfileSlider recipes={favoriteRecipes} />
+                                    <ProfileSlider />
                                 </Typography>
                             </div>
                         )}
