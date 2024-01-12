@@ -8,6 +8,7 @@ const ProfileSlider = (props) => {
     const { recipes } = props || []
     const items = recipes || []
 
+
     let settings = {
         dots: items.length < 50,
     speed: 500,

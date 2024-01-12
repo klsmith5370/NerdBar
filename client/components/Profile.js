@@ -9,12 +9,11 @@ import { fetchFavoriteRecipe } from "../store/userRecipe"
 
 const Profile = () => {
     const user = useSelector((state) => state.user)
-    const recipes = user?.recipes || []
     const dispatch = useDispatch()
 
     const favoriteRecipes = recipes.filter(
         (recipe) => recipe.user_recipe.favorite === true
-    )[0];
+    );
 
     // const [favoriteRecipes, setFavoriteRecipes] = useState([]);
 
@@ -44,7 +43,9 @@ const Profile = () => {
                 <CardContent>
                     <Typography>
                         {favoriteRecipes ? (
-                            <ProfileSlider />
+                            <Link to={`/characterRecipes/${favoriteRecipes.id}`}>
+                        
+                            </Link>
                         ) : (
                             <div>
                                 <Button>Add a favorite</Button>
