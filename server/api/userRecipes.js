@@ -31,7 +31,7 @@ router.get('/favoriteRecipes/:userId', async (req,res, next) => {
         })
         res.json(favoriteRecipes)
     } catch (error) {
-
+        next(error)
     }
 })
 

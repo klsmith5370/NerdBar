@@ -14,11 +14,10 @@ async function seed() {
   // Creating Users
   const users = await Promise.all([
     User.create({ firstName: 'Kourtney', lastName: 'Smith', username: 'kls5370', password: '123' }),
-    User.create({ firstName: 'Nezuko', lastName: 'Kamado', username: 'nezukama', password: '123' }),
     User.create({ firstName: 'Yuna', lastName: 'Fantasy', username: 'yuna123', password: '123'})
   ])
 
-  // Creating recipes434
+  // Creating recipes
   const characterRecipes = await Promise.all([
     CharacterRecipe.create({
       characterName: 'Nezuko',
@@ -93,7 +92,7 @@ async function seed() {
   //       User_Recipe.create({
   //         userId: i,
   //         recipeId: recipeIdNum,
-  //         featured: true,
+  //         favorite: true,
   //       }),
 
   //     ])  
@@ -114,7 +113,7 @@ async function seed() {
           User_Recipe.create({
             userId: i,
             recipeId: recipeIdNum,
-            featured: true,
+            favorite: true,
           }),
 
         ]);

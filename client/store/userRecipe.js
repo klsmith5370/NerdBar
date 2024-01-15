@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const GET_USER_RECIPE = 'GET_USER_RECIPE'
 const UPDATE_USER_RECIPE = 'UPDATE_USER_RECIPE'
-const FAVORITE_RECIPE = 'FAVORITE_RECIPE'
+// const FAVORITE_RECIPE = 'FAVORITE_RECIPE'
 
 const getUserRecipe = (userRecipe) => {
     return {
