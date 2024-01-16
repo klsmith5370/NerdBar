@@ -23,7 +23,7 @@ module.exports = router;
 
 router.get('/favoriteRecipes/:userId', async (req,res, next) => {
     try {
-        const favoriteRecipes = await User_Recipe.findAll({
+        const favoriteRecipes = await User_Recipe.findAll(req.params.userId, {
             where: {
                 userId: req.params.userId,
                 favorite: true,

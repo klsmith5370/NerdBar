@@ -13,19 +13,26 @@ const AddRecipe = () => {
     const [recipeName, setRecipeName] = useState('');
     const [recipeDescription, setDescription] = useState('');
     const [recipeIngredients, setIngredients] = useState('');
+    const [recipeInstructions, setRecipeInstructions] = useState('')
     const [characterImage, setImage] = useState('');
 
     const handleSubmit = (evt) => {
         evt.preventDefault()
 
         dispatch(fetchCreateRecipe({ 
-            characterName, recipeName, recipeDescription, recipeIngredients, characterImage 
+            characterName, 
+            recipeName, 
+            recipeDescription, 
+            recipeIngredients, 
+            recipeInstructions, 
+            characterImage 
         }))
         
         setCharacterName('');
         setRecipeName('');
         setDescription('');
         setIngredients('');
+        setRecipeInstructions('');
         setImage('');
 
         navigate('/characterRecipes')
@@ -82,6 +89,17 @@ const AddRecipe = () => {
                             className='textfield-boxes'
                             style={{ display: 'block', marginBottom: '16px'}}
                         />
+                    </div>
+                    <div>
+                    <TextField
+                        label="Instructions"
+                        value={recipeInstructions}
+                        onChange={(evt) => setImage(evt.target.value)}
+                        fullWidth
+                        margin="normal"
+                        className='textfield-boxes'
+                        style={{ display: 'block', marginBottom: '16px'}}
+                    />
                     </div>
                     <div>
                     <TextField

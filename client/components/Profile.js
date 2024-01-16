@@ -13,8 +13,8 @@ const Profile = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(fetchFavoriteRecipes())
-    }, [])
+        dispatch(fetchFavoriteRecipes(user.id))
+    }, [dispatch, user.id])
 
 
     if (!user) {
@@ -31,7 +31,7 @@ const Profile = () => {
         );
     }
 
-    const favoriteRecipes = recipes.filter((recipe) => recipe.user_recipe.favorite === true)
+    const favoriteRecipes = recipes.filter((recipe) => recipe.user_recipe.favorite == true)
 
     return (
         <Container className='profile'>
@@ -45,16 +45,19 @@ const Profile = () => {
                                     <h2>Favorite Recipes</h2>
                                     {favoriteRecipes.map((recipe) => (
                                         <Link key={recipe.id} to={`/characterRecipes/${recipe.id}`}>
-                                            <Typography>{recipe.name}</Typography>
-                                            {/* <img src={recipe.characterImage} /> */}
+                                            <Typography>{recipe.recipeName}</Typography>
+                                            <img src={recipe.characterImage} />
                                         </Link>
                                     ))}
                                 </Typography>
-                                <ProfileSlider recipes={favoriteRecipes}/>
+                                {/* <ProfileSlider recipes={favoriteRecipes}/> */}
                             </div>
                         ) : (
                             <div>
-                                <Button>Add a favorite</Button>
+                                <Link to={'/add'}>
+                                    <Button className='add-button' variant='contained' color='primary'>Add a favorite</Button>
+                                </Link>
+                                
                                 <Typography>
                                     <h2>No Favorite Recipes Yet</h2>
                                 </Typography>
