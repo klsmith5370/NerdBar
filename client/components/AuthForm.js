@@ -9,11 +9,11 @@ import { Button } from '@material-ui/core'
  * COMPONENT
  */
 export const AuthForm = props => {
-  const {name, displayName, handleSubmit, error} = props
+  // const {name, displayName, handleSubmit, error} = props
 
   return (
     <div>
-      <form onSubmit={handleSubmit} name={name}>
+      {/* <form onSubmit={handleSubmit} name={name}>
         <div>
           <label htmlFor='username'>
             <small>Username</small>
@@ -30,10 +30,8 @@ export const AuthForm = props => {
           <Button className='login-submit' type='submit' variant='contained' color='primary'>{displayName}</Button>
         </div>
         {error && error.response && <div> {error.response.data} </div>}
-      </form>
-      <Link to='/characterRecipes'>
-        <Button className='view-all-cards' variant='contained' color='primary' style={{ marginTop: '25em', textAlign: 'center', marginLeft: '15em', marginBottom: '5em' }}>Click to view all recipes!!</Button>
-      </Link>
+      </form> */}
+      
     </div>
 
   )
