@@ -36,7 +36,11 @@ nav {
 }
 
 .navbar {
-  margin-right: 450px;
+  /* margin-right: 450px; */
+  /* background-color: #9BF6FF; */
+  padding: 1em 2em;
+  margin: 0;
+
 }
 
 nav a {

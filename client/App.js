@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import { Route, Routes, useNavigate, Link } from 'react-router-dom'
 import { Login, Signup } from './components/AuthForm'
 import Home from './components/Home';
 import { AllRecipes } from './components/AllRecipes'
@@ -13,6 +13,7 @@ import Search from './components/Search';
 import AddRecipe from './components/AddRecipe';
 import Profile from './components/Profile';
 import SingleRecipe from './components/SingleRecipe';
+import { Button } from '@material-ui/core'
 
 const App = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.id)
@@ -32,7 +33,7 @@ const App = () => {
       <div>
         <Navbar
           handleClick={handleClick}
-          className='fixed-top'
+          className='fixed'
           isLoggedIn={isLoggedIn}
         />
         {isLoggedIn ? (
