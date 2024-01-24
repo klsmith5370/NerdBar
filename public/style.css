@@ -1,6 +1,7 @@
 body {
   font-family: "Ubuntu Condensed", sans-serif;
-  background-image: url("color-background.jpg");
+  /* background-image: url("color-background.jpg"); */
+  background-color: #A0C4FF;
   background-size: cover;
   display: flex;
   flex-direction: row;
@@ -18,13 +19,10 @@ label {
 }
 
 .logo {
-  width: 400px;
-  max-width: 200px;
+  width: 300px;
   position: fixed;
-  padding: .5em;
   top: 0;
   left: 0;
-  margin-bottom: 2em;
 }
 
 nav {
