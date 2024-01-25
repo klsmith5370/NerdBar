@@ -1,9 +1,20 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams, Link } from 'react-router-dom'
-import { Container, Card, CardActionArea, CardMedia, CardContent, Typography, Button } from '@material-ui/core'
+import { Container, Card, CardActionArea, CardActions, CardMedia, CardContent, Typography, Button, Collapse, ExpandMoreIcon, IconButton } from '@material-ui/core'
 import { fetchSingleRecipe } from '../store/recipe'
 import { FaArrowLeft } from 'react-icons/fa'
+
+const ExpandMore = styled((props) => {
+    const { expand, ...other } = props;
+    return <IconButton {...other} />;
+  })(({ theme, expand }) => ({
+    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  }))
 
 export const SingleRecipe = () => {
     const recipe = useSelector(state => state.recipe)
@@ -14,6 +25,12 @@ export const SingleRecipe = () => {
     useEffect(() => {
         dispatch(fetchSingleRecipe(id))
     }, [dispatch])
+
+    const [expanded, setExpanded] = React.useState(false);
+
+    const handleExpandClick = () => {
+      setExpanded(!expanded);
+    }
 
 
     return (
@@ -28,43 +45,57 @@ export const SingleRecipe = () => {
                     />
                     <CardContent>
 
-                    <Typography gutterBottom variant='h2'>
-                        {characterName}
-                    </Typography>
+                        <Typography gutterBottom variant='h2'>
+                            {characterName}
+                        </Typography>
 
-                    <Typography gutterBottom variant='h4'>
-                        {recipeName}
-                    </Typography>
+                        <Typography gutterBottom variant='h4'>
+                            {recipeName}
+                        </Typography>
 
-                    <h3>Description:</h3>
+                        <h3>Description:</h3>
 
-                    <Typography variant='body2'>
-                        {recipeDescription}
-                    </Typography>
+                        <Typography variant='body2'>
+                            {recipeDescription}
+                        </Typography>
 
-                    <br />
+                        <br />
 
-                    <h3>Ingredients:</h3>
-                    <Typography variant='body2'>
-                        {recipeIngredients}
-                    </Typography>
+                        <h3>Ingredients:</h3>
+                        <Typography variant='body2'>
+                            {recipeIngredients}
+                        </Typography>
 
-                    <br />
+                        <br />
 
-                    <h3>Instructions:</h3>
-            
-                    <Typography variant='body2'>
-                        {recipeInstructions}
-                    </Typography>
+                        <h3>Instructions:</h3>
+                
+                        <Typography variant='body2'>
+                            {recipeInstructions}
+                        </Typography>
 
-                    <br />
+                        <br />
 
-                    <Link to={'/characterRecipes'}>
-                        <Button color='primary' variant='contained'><FaArrowLeft style={{ marginRight: '10px' }}/> Back to all recipes</Button>
-                    </Link>
+                        <Link to={'/characterRecipes'}>
+                            <Button color='primary' variant='contained'><FaArrowLeft style={{ marginRight: '10px' }}/> Back to all recipes</Button>
+                        </Link>
 
                     </CardContent>
-                
+
+                    <CardActions>
+                        <ExpandMore
+                        expand={expanded}
+                        onClick={handleExpandClick}
+                        aria-expanded={expanded}
+                        aria-label="show more"
+                        >
+                            <ExpandMoreIcon />
+                        </ExpandMore>
+                    </CardActions>
+
+                    <Collapse in={expanded} timeout='auto' unmountOnExit>
+
+                    </Collapse>
             </Card>
         </Container>
     )
