@@ -6,7 +6,7 @@ import Home from './components/Home';
 import { AllRecipes } from './components/AllRecipes'
 
 import { me, logout } from './store'
-// import { AuthForm } from '../client/components/AuthForm'
+import { AuthForm } from '../client/components/AuthForm'
 // import Contact from './components/Contact';
 import Navbar from './components/Navbar'
 import Search from './components/Search';
@@ -47,15 +47,18 @@ const App = () => {
           ) : (
           <Routes>
             <Route exact path='/' element={<Login />} />
-            {/* <Route path='/home' element={<AuthForm />} /> */}
-            {/* <Route path='/login' element={<Login />} /> */}
-            {/* <Route path='/signup' element={<Signup />} /> */}
+            <Route path='/home' element={<AuthForm />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
             <Route path='/characterRecipes' element={<AllRecipes />} />
             <Route path='/characterRecipes/:id' element={<SingleRecipe />} />
             <Route path='/search/:characterName' element={<Search />} />
           </Routes>
           )}
           {/* <Contact /> */}
+          <Link to='/characterRecipes'>
+            <Button className='view-all-cards' variant='contained' style={{ backgroundColor: '#8EECF5' }}>Click to view all recipes!!</Button>
+          </Link>
         </div>
   )
 }

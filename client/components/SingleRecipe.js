@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom'
 import { Container, Card, CardActionArea, CardActions, CardMedia, CardContent, Typography, Button, Collapse, IconButton } from '@material-ui/core'
 import { fetchSingleRecipe } from '../store/recipe'
 import { FaArrowLeft } from 'react-icons/fa'
-import { FaArrowDown } from "react-icons/fa6"
+import { FaArrowRight } from 'react-icons/fa'
 import { styled } from '@material-ui/core'
 
 const ExpandMore = styled((props) => {
@@ -91,12 +91,14 @@ export const SingleRecipe = () => {
                         aria-expanded={expanded}
                         aria-label="show more"
                         >
-                            <FaArrowDown />
+                            <FaArrowRight /> 
                         </ExpandMore>
                     </CardActions>
 
                     <Collapse in={expanded} timeout='auto' unmountOnExit>
-                        Add to Favorite
+                        <CardContent>
+                            Add to Favorite
+                        </CardContent>
                     </Collapse>
             </Card>
         </Container>
