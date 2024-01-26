@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams, Link } from 'react-router-dom'
-import { Container, Card, CardActionArea, CardActions, CardMedia, CardContent, Typography, Button, Collapse, ExpandMoreIcon, IconButton } from '@material-ui/core'
+import { Container, Card, CardActionArea, CardActions, CardMedia, CardContent, Typography, Button, Collapse, IconButton } from '@material-ui/core'
 import { fetchSingleRecipe } from '../store/recipe'
 import { FaArrowLeft } from 'react-icons/fa'
+import { FaArrowDown } from "react-icons/fa6"
+import { styled } from '@material-ui/core'
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -26,7 +28,7 @@ export const SingleRecipe = () => {
         dispatch(fetchSingleRecipe(id))
     }, [dispatch])
 
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded, setExpanded] = useState(false);
 
     const handleExpandClick = () => {
       setExpanded(!expanded);
@@ -89,12 +91,12 @@ export const SingleRecipe = () => {
                         aria-expanded={expanded}
                         aria-label="show more"
                         >
-                            <ExpandMoreIcon />
+                            <FaArrowDown />
                         </ExpandMore>
                     </CardActions>
 
                     <Collapse in={expanded} timeout='auto' unmountOnExit>
-
+                        Add to Favorite
                     </Collapse>
             </Card>
         </Container>
