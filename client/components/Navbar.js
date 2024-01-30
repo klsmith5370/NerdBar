@@ -11,11 +11,11 @@ import { AuthForm } from './AuthForm'
 
 
 const Navbar = ({handleClick, isLoggedIn}) => (
-  <AppBar>
-    <Toolbar>
-      <IconButton edge='start' color='inherit' component={Link} to='/login'>
+  <AppBar style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Toolbar style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+      {/* <IconButton edge='start' color='inherit' component={Link} to='/login'>
         {isLoggedIn ? <HiHome /> : <IoMenuOutline />}
-      </IconButton>
+      </IconButton> */}
 
       <Typography>
         <img className='logo' src='NerdBar-logo.jpg' alt='NerdBar brand logo'/>
@@ -39,7 +39,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         <Box>
           <Button component={Link} to='/login' color='inherit'>Login</Button>
           <Button component={Link} to='/signup' color='inherit'>Sign Up</Button>
-          <AuthForm />
+          {/* <AuthForm /> */}
         </Box>
          
       )}

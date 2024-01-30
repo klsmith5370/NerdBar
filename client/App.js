@@ -47,7 +47,7 @@ const App = () => {
           ) : (
           <Routes>
             <Route exact path='/' element={<Login />} />
-            <Route path='/home' element={<AuthForm />} />
+            {/* <Route path='/home' element={<AuthForm />} /> */}
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/characterRecipes' element={<AllRecipes />} />
