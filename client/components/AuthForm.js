@@ -5,9 +5,6 @@ import { Link } from 'react-router-dom'
 import { Button } from '@material-ui/core'
 
 
-/**
- * COMPONENT
- */
 export const AuthForm = props => {
   const {name, displayName, handleSubmit, error} = props
 
