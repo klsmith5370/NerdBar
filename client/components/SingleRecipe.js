@@ -4,19 +4,18 @@ import { useParams, Link } from 'react-router-dom'
 import { Container, Card, CardActionArea, CardActions, CardMedia, CardContent, Typography, Button, Collapse, IconButton } from '@material-ui/core'
 import { fetchSingleRecipe } from '../store/recipe'
 import { FaArrowLeft } from 'react-icons/fa'
-import { FaArrowRight } from 'react-icons/fa'
 import { styled } from '@material-ui/core'
 
-const ExpandMore = styled((props) => {
-    const { expand, ...other } = props;
-    return <IconButton {...other} />;
-  })(({ theme, expand }) => ({
-    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  }))
+// const ExpandMore = styled((props) => {
+//     const { expand, ...other } = props;
+//     return <IconButton {...other} />;
+//   })(({ theme, expand }) => ({
+//     transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+//     marginLeft: 'auto',
+//     transition: theme.transitions.create('transform', {
+//       duration: theme.transitions.duration.shortest,
+//     }),
+//   }))
 
 export const SingleRecipe = () => {
     const recipe = useSelector(state => state.recipe)
@@ -28,15 +27,15 @@ export const SingleRecipe = () => {
         dispatch(fetchSingleRecipe(id))
     }, [dispatch])
 
-    const [expanded, setExpanded] = useState(false);
+    // const [expanded, setExpanded] = useState(false);
 
-    const handleExpandClick = () => {
-      setExpanded(!expanded);
-    }
+    // const handleExpandClick = () => {
+    //   setExpanded(!expanded);
+    // }
 
 
     return (
-        <Container className='single-recipe' style={{ zIndex: 1, position: 'relative', marginTop: '50px' }}>
+        <Container className='single-recipe' style={{ zIndex: 1, position: 'relative', marginTop: '50px', borderRadius: '50px' }}>
             <Card style={{ display: 'flex', alignItems: 'flex-start', backgroundColor: '#FFC6FF' }}>
                 
                     <CardMedia 
@@ -84,7 +83,7 @@ export const SingleRecipe = () => {
 
                     </CardContent>
 
-                    <CardActions>
+                    {/* <CardActions>
                         <ExpandMore
                         expand={expanded}
                         onClick={handleExpandClick}
@@ -99,7 +98,7 @@ export const SingleRecipe = () => {
                         <CardContent>
                             Add to Favorite
                         </CardContent>
-                    </Collapse>
+                    </Collapse> */}
             </Card>
         </Container>
     )

@@ -34,8 +34,8 @@ nav {
 }
 
 .navbar {
-  /* margin-right: 450px; */
-  /* background-color: #9BF6FF; */
+  display: flex;
+  align-items: center;
   padding: 1em 2em;
   margin: 0;
 
@@ -44,6 +44,10 @@ nav {
 nav a {
   margin: 0.5em;
   padding: 0.5em 1em;
+}
+
+.all-recipes-button {
+  margin-top: 10px;
 }
 
 form {

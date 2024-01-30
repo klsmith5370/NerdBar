@@ -32,8 +32,14 @@ const Navbar = ({handleClick, isLoggedIn}) => (
           <SearchBar />
         </div>
         
+        
       )}     
     </nav>
+    <div className='all-recipes-button'>
+      <Link to='/characterRecipes'>
+        <Button className='view-all-cards' variant='contained' style={{ backgroundColor: '#8EECF5' }}>Click to view all recipes!!</Button>
+      </Link>
+    </div>
   </div>
   
 )

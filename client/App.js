@@ -56,9 +56,7 @@ const App = () => {
           </Routes>
           )}
           {/* <Contact /> */}
-          <Link to='/characterRecipes'>
-            <Button className='view-all-cards' variant='contained' style={{ backgroundColor: '#8EECF5' }}>Click to view all recipes!!</Button>
-          </Link>
+        
         </div>
   )
 }
