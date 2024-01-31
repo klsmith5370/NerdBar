@@ -28,7 +28,7 @@ export const SearchBar = () => {
                     onChange={(evt) => setSearch(evt.target.value)}
                 />
 
-                <Button type='submit' variant='contained' color='primary'>
+                <Button type='submit' variant='contained' style={{ backgroundColor: '#9BF6FF', marginTop: '20px', marginLeft: '10px'}}>
                     Search!
                 </Button>
             </form>

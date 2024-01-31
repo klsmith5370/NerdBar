@@ -11,7 +11,7 @@ import { AuthForm } from './AuthForm'
 
 
 const Navbar = ({handleClick, isLoggedIn}) => (
-  <AppBar style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+  <AppBar style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#FFADAD', padding: '2px'}}>
     <Toolbar style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
       {/* <IconButton edge='start' color='inherit' component={Link} to='/login'>
         {isLoggedIn ? <HiHome /> : <IoMenuOutline />}
