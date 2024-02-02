@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import {logout} from '../store'
 import { SearchBar } from './SearchBar'
 import { HiHome } from 'react-icons/hi'
-import { IoIosMail } from 'react-icons/io'
+import { CgProfile } from "react-icons/cg"
 import { IoMenuOutline } from 'react-icons/io5'
 import { Button, AppBar, Box, Toolbar, IconButton, Typography, Badge } from '@material-ui/core'
 import { AuthForm } from './AuthForm'
@@ -29,7 +29,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         <Box>
           <IconButton size="large" color="inherit">
               <Badge badgeContent={4} color="error">
-                <HiHome />
+                <CgProfile />
               </Badge>
           </IconButton>
 
@@ -38,9 +38,9 @@ const Navbar = ({handleClick, isLoggedIn}) => (
           </a>
         </Box>
       ) : (
-        <Box>
+        <Box style={{ display:"flex", justifyContent:"space-between", padding: '10px' }}>
           <Button component={Link} to='/login' color='inherit'>Login</Button>
-          <Button component={Link} to='/signup' color='inherit'>Sign Up</Button>
+          <Button component={Link} to='/signup' color='inherit' style={{ whiteSpace: 'nowrap' }}>Sign Up</Button>
           {/* <AuthForm /> */}
         </Box>
          
