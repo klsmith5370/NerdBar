@@ -18,7 +18,9 @@ const Navbar = ({handleClick, isLoggedIn}) => (
       </IconButton> */}
 
       <Typography>
-        <img className='logo' src='NerdBar-logo.jpg' alt='NerdBar brand logo'/>
+        <Link to={'/'}>
+          <img className='logo' src='NerdBar-logo.jpg' alt='NerdBar brand logo'/>
+        </Link>
       </Typography>
 
       <SearchBar />
@@ -27,7 +29,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         <Box>
           <IconButton size="large" color="inherit">
               <Badge badgeContent={4} color="error">
-                <IoIosMail />
+                <HiHome />
               </Badge>
           </IconButton>
 

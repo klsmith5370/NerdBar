@@ -35,16 +35,17 @@ export const SingleRecipe = () => {
 
 
     return (
-        <Container className='single-recipe' style={{ zIndex: 1, position: 'relative', marginTop: '50px', borderRadius: '50px' }}>
+        <Container className='single-recipe' style={{ zIndex: 1, position: 'relative', marginTop: '150px', borderRadius: '50px' }}>
             <Card style={{ display: 'flex', alignItems: 'flex-start', backgroundColor: '#FFC6FF' }}>
                 
                     <CardMedia 
                         component='img'
-                        height='100'
+                        style={{ flex: 1, objectFit: 'cover' }}
+                        height='200'
                         image={characterImage}
                         alt='character image'
                     />
-                    <CardContent>
+                    <CardContent style={{ flex: 2 }}>
 
                         <Typography gutterBottom variant='h2'>
                             {characterName}
