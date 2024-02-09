@@ -4,10 +4,10 @@ import { useDispatch } from 'react-redux'
 import {authenticate} from '../store'
 import { Link } from 'react-router-dom'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { Button } from '@material-ui/core'
+import { Container, Grid, Typography, TextField, Button, Link } from '@material-ui/core'
 
 
-export const AuthForm = props => {
+export const AuthForm = (props) => {
   // const {name, displayName, handleSubmit, error} = props
   const location = useLocation().pathname
   const dispatch = useDispatch()
@@ -37,29 +37,65 @@ export const AuthForm = props => {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} name={name}>
-        <div>
-          <label htmlFor='username'>
-            <small>Username</small>
-          </label>
-          <input name='username' type='text' />
-        </div>
-        <div>
-          <label htmlFor='password'>
-            <small>Password</small>
-          </label>
-          <input name='password' type='password' />
-        </div>
-        <div>
-          <Button className='login-submit' type='submit' variant='contained' color='#9BF6FF'>{displayName}</Button>
-        </div>
-        {error && error.response && <div> {error.response.data} </div>}
-      </form>
-      
-    </div>
+    <Container maxWidth='md'>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={6}>
+          <Typography variant="h4">{location === "/signup" ? "Sign Up" : "Login"}</Typography>
+          <form onSubmit={location === "/signup" ? handleSignUp : handleLogin}>
+            {location === '/signup' && (
+              <>
+                <TextField name="email" label="Email" fullWidth />
+                <TextField name="firstname" label="First Name" fullWidth />
+                <TextField name="lastname" label="Last Name" fullWidth />
+              </>
+            )}
 
+              <TextField name="username" label="Username" fullWidth/>
+              <TextField name="password" label="Password" type="password" fullWidth/>
+              <Button type='submit' variant='contained' color='primary'>
+                {location === '/signup' ? 'Sign Up' : 'Login'}
+              </Button>
+              {error && error.response && <Typography color="error">{error.response.data}</Typography>}
+          </form>
+
+          <Typography>
+            {location === "/signup" ? "Already have an Account?" : "Don't have an Account?"}{" "}
+            <Link href={location === "/signup" ? "/login" : "/signup"}>
+              <Button color="primary">{location === "/signup" ? "Login" : "Sign Up"}</Button>
+            </Link>
+          </Typography>
+
+        </Grid>
+        
+      </Grid>
+
+    </Container>
   )
+
+//   return (
+//     <div>
+//       <form onSubmit={handleSubmit} name={name}>
+//         <div>
+//           <label htmlFor='username'>
+//             <small>Username</small>
+//           </label>
+//           <input name='username' type='text' />
+//         </div>
+//         <div>
+//           <label htmlFor='password'>
+//             <small>Password</small>
+//           </label>
+//           <input name='password' type='password' />
+//         </div>
+//         <div>
+//           <Button className='login-submit' type='submit' variant='contained' color='#9BF6FF'>{displayName}</Button>
+//         </div>
+//         {error && error.response && <div> {error.response.data} </div>}
+//       </form>
+      
+//     </div>
+
+//   )
 }
 
 export default AuthForm
