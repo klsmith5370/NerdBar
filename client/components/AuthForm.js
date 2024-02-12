@@ -67,6 +67,13 @@ export const AuthForm = (props) => {
 
         </Grid>
         
+        <Grid item xs={12} sm={6}>
+          <img
+            src={location === "/signup" ? "/images/readingPerson.svg" : "/images/watchingMovie.svg"}
+            alt={location === "/signup" ? "Signup illustration" : "Login illustration"}
+            style={{ width: "100%" }}
+          />
+        </Grid>
       </Grid>
 
     </Container>

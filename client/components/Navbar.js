@@ -7,7 +7,6 @@ import { HiHome } from 'react-icons/hi'
 import { CgProfile } from "react-icons/cg"
 import { IoMenuOutline } from 'react-icons/io5'
 import { Button, AppBar, Box, Toolbar, IconButton, Typography, Badge } from '@material-ui/core'
-import { AuthForm } from './AuthForm'
 
 
 const Navbar = ({handleClick, isLoggedIn}) => (
@@ -41,7 +40,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         <Box style={{ display:"flex", justifyContent:"space-between", padding: '10px' }}>
           <Button component={Link} to='/login' color='inherit'>Login</Button>
           <Button component={Link} to='/signup' color='inherit' style={{ whiteSpace: 'nowrap' }}>Sign Up</Button>
-          {/* <AuthForm /> */}
+
         </Box>
          
       )}
