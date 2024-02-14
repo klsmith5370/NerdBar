@@ -69,7 +69,7 @@ export const AuthForm = (props) => {
 
         <Grid item xs={12} sm={6}>
           <img
-            src={location === "/signup" ? "/public/SignUp.png" : "/public/Login.png"}
+            src={location === "/signup" ? "/SignUp.png" : "/Login.png"}
             alt={location === "/signup" ? "Signup illustration" : "Login illustration"}
             style={{ width: "100%" }}
           />
