@@ -46,10 +46,10 @@ const App = () => {
           </Routes>
           ) : (
           <Routes>
-            <Route exact path='/' element={<Login />} />
+            <Route exact path='/' element={<AuthForm />} />
             {/* <Route path='/home' element={<AuthForm />} /> */}
-            <Route path='/login' element={<Login />} />
-            <Route path='/signup' element={<Signup />} />
+            <Route path='/login' element={<AuthForm />} />
+            <Route path='/signup' element={<AuthForm />} />
             <Route path='/characterRecipes' element={<AllRecipes />} />
             <Route path='/characterRecipes/:id' element={<SingleRecipe />} />
             <Route path='/search/:characterName' element={<Search />} />

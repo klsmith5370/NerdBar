@@ -1,10 +1,10 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {authenticate} from '../store'
 import { Link } from 'react-router-dom'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { Container, Grid, Typography, TextField, Button, Link } from '@material-ui/core'
+import { Container, Grid, Typography, TextField, Button } from '@material-ui/core'
 
 
 export const AuthForm = (props) => {
@@ -66,10 +66,10 @@ export const AuthForm = (props) => {
           </Typography>
 
         </Grid>
-        
+
         <Grid item xs={12} sm={6}>
           <img
-            src={location === "/signup" ? "/images/readingPerson.svg" : "/images/watchingMovie.svg"}
+            src={location === "/signup" ? "/public/SignUp.png" : "/public/Login.png"}
             alt={location === "/signup" ? "Signup illustration" : "Login illustration"}
             style={{ width: "100%" }}
           />
