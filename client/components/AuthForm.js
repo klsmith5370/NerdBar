@@ -37,7 +37,7 @@ export const AuthForm = (props) => {
   }
 
   return (
-    <Container maxWidth='md'>
+    <Container maxWidth='md' style={{ padding: '200px' }}>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <Typography variant="h4">{location === "/signup" ? "Sign Up" : "Login"}</Typography>
