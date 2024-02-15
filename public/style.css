@@ -86,11 +86,12 @@ form div {
 
 form input[type='text'],
 form input[type='password'] {
-  padding: 0.5em;
+  padding: 2em;
   margin: 0.5em 2em;
   width: 100%;
   border-radius: 10px;
 }
+
 
 .login-submit {
   display: inline-block;
@@ -115,7 +116,7 @@ form input[type='password'] {
 .search {
   top: 0;
   right: 0;
-  padding: 5px;
+  /* padding: 5px; */
   margin-top: 0;
 }
 

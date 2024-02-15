@@ -37,23 +37,40 @@ export const AuthForm = (props) => {
   }
 
   return (
-    <Container maxWidth='md' style={{ padding: '200px' }}>
+    <Container maxWidth='md' style={{ marginTop: '200px' }}>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <Typography variant="h4">{location === "/signup" ? "Sign Up" : "Login"}</Typography>
           <form onSubmit={location === "/signup" ? handleSignUp : handleLogin}>
             {location === '/signup' && (
               <>
+              <div>
                 <TextField name="email" label="Email" fullWidth />
-                <TextField name="firstname" label="First Name" fullWidth />
-                <TextField name="lastname" label="Last Name" fullWidth />
+              </div>
+                
+                <div>
+                  <TextField name="firstname" label="First Name" fullWidth />
+                </div>
+                
+                <div>
+                  <TextField name="lastname" label="Last Name" fullWidth />
+                </div>
+                
               </>
             )}
+            <>
+              <div>
+                <TextField name="username" label="Username" fullWidth/>
+              </div>
+              
+              <div>
+                <TextField name="password" label="Password" type="password" fullWidth/>
+              </div>
 
-              <TextField name="username" label="Username" fullWidth/>
-              <TextField name="password" label="Password" type="password" fullWidth/>
+            </>
+              
               <Button type='submit' variant='contained' color='primary'>
-                {location === '/signup' ? 'Sign Up' : 'Login'}
+                {location === '/signup' ? "Sign Up" : "Login"}
               </Button>
               {error && error.response && <Typography color="error">{error.response.data}</Typography>}
           </form>

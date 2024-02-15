@@ -10,8 +10,8 @@ import { Button, AppBar, Box, Toolbar, IconButton, Typography, Badge } from '@ma
 
 
 const Navbar = ({handleClick, isLoggedIn}) => (
-  <AppBar style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#FFADAD', padding: '2px'}}>
-    <Toolbar style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+  <AppBar style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#FFADAD' }}>
+    <Toolbar style={{ display: 'flex', justifyContent: 'space-between', width: '100%', padding: "0" }}>
       {/* <IconButton edge='start' color='inherit' component={Link} to='/login'>
         {isLoggedIn ? <HiHome /> : <IoMenuOutline />}
       </IconButton> */}
@@ -26,11 +26,13 @@ const Navbar = ({handleClick, isLoggedIn}) => (
 
       {isLoggedIn ? (
         <Box>
-          <IconButton size="large" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <CgProfile />
-              </Badge>
-          </IconButton>
+          <Link to="/profile">
+            <IconButton size="large" color="inherit">
+                <Badge>
+                    <CgProfile />
+                </Badge>
+            </IconButton>
+          </Link>
 
           <a href="#" onClick={handleClick}>
             Logout
