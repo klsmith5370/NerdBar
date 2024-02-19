@@ -11,7 +11,7 @@ import { Button, AppBar, Box, Toolbar, IconButton, Typography, Badge } from '@ma
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <AppBar style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#FFADAD' }}>
-    <Toolbar style={{ display: 'flex', justifyContent: 'space-between', width: '100%', padding: "0" }}>
+    <Toolbar style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
       {/* <IconButton edge='start' color='inherit' component={Link} to='/login'>
         {isLoggedIn ? <HiHome /> : <IoMenuOutline />}
       </IconButton> */}
