@@ -13,7 +13,6 @@ import Search from './components/Search';
 import AddRecipe from './components/AddRecipe';
 import Profile from './components/Profile';
 import SingleRecipe from './components/SingleRecipe';
-import { Button } from '@material-ui/core'
 
 const App = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.id)

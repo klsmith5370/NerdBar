@@ -1,6 +1,6 @@
 body {
   font-family: "Ubuntu Condensed", sans-serif;
-  /* background-image: url("color-background.jpg"); */
+  /* background-image: url("Drinks.jpg"); */
   background-color: #A0C4FF;
   background-size: cover;
   margin: 0;
@@ -21,44 +21,13 @@ label {
 
 .logo {
   width: 200px;
-  /* position: fixed;
-  top: 0;
-  left: 0; */
 }
 
-/* .AppBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.Toolbar {
-  display: flex;
-  justify-content: space-between;
-  width: 100%
-} */
 
 .Box {
   margin-left: auto;
 }
 
-
-/* nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1.5em;
-
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  padding: 1em 2em;
-  margin: 0;
-
-} */
 
 nav a {
   margin: 0.5em;
