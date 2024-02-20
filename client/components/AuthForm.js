@@ -77,9 +77,7 @@ export const AuthForm = (props) => {
 
           <Typography>
             {location === "/signup" ? "Already have an Account?" : "Don't have an Account?"}{" "}
-            <Link href={location === "/signup" ? "/login" : "/signup"}>
-              <Button color="primary">{location === "/signup" ? "Login" : "Sign Up"}</Button>
-            </Link>
+            <Button component={Link} to={location === "/signup" ? "/login" : "/signup"} color='primary'>{location === "/signup" ? "Login" : "Sign Up"}</Button>
           </Typography>
 
         </Grid>
