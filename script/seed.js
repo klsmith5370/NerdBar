@@ -35,7 +35,7 @@ async function seed() {
       recipeIngredients: '1 cup of fresh mixed berries (strawberries, raspberries, blueberries). 1/2 cup of fresh orange juice. 1/4 cup of fresh lemon juice. 1/4 cup of agave syrup. 1 cup of sparkling water. Ice cubes.',
       recipeInstructions: 'Wash and rinse the mixed berries thoroughly and put them in a blender. Add the orange juice, lemon juice, and agave syrup to the blender and blend the mixture until smooth. Pour the blended mixture into a tall glass filled with ice cubes. Top off the glass with sparkling water and stir gently. Garnish with a slice of lemon and a strawberry on the rim of the glass. Serve and enjoy!',
       recipeDescription: 'Anya Forger from Spy Family is a young, energetic and playful girl who loves to have fun. Taking inspiration from her personality and interests, this non-alcoholic drink that is colorful, refreshing, and perfect for a sunny day out.',
-      characterImage: 'https://img1.ak.crunchyroll.com/i/spire2/59a30d14cee549bafa1f0ba5f6f4e6681650356534_full.png'
+      characterImage: '/recipeImages/anyaDrink.jpg'
     }),
 
     CharacterRecipe.create({
@@ -71,7 +71,7 @@ async function seed() {
       recipeIngredients: '2 ripe peaches, pitted and sliced. 2 cups peach nectar. 1/2 cup pineapple juice. 1/4 cup honey. 2 tablespoons lemon juice. 1 cup sparkling water. Ice. Peach slices and mint leaves for garnish.',
       recipeInstructions: 'In a blender, combine the sliced peaches, peach nectar, pineapple juice, honey, and lemon juice; blend until smooth. Pour the mixture into a pitcher and add the sparkling water; stir to combine. Fill glasses with ice and pour the punch over the ice. Garnish with peach slices and mint leaves. Enjoy!',
       recipeDescription: 'Peachy Punch is a delicious non-alcoholic drink recipe inspired by the iconic character from Super Mario Bros. This refreshing and fruity punch is made with ripe peaches, peach nectar, pineapple juice, honey, and lemon juice, all blended together until smooth. The addition of sparkling water gives the punch a bubbly and effervescent quality, while the peach slices and mint leaves add a beautiful touch of color and flavor. This drink is perfect for any occasion, whether you are hosting a party or simply looking for a tasty and refreshing beverage to enjoy on a warm day. Sip on this Peachy Punch and feel like royalty, just like Princess Peach herself!',
-      characterImage: 'https://play.nintendo.com/images/profile-mk-peach.7bf2a8f2.aead314d58b63e27.png'
+      characterImage: '/recipeImages/princessPeach.jpg'
     }),
 
   ])
