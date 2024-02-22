@@ -26,7 +26,7 @@ async function seed() {
       recipeIngredients: '1/2 oz blood orange juice. 1 oz raspberry liqueur, 1 oz vodka. 12 oz lime juice. Splash of grenadine. Edible gold glitter for garnish.',
       recipeInstructions: 'In a cocktail shaker filled with ice, combine blood orange juice, raspberry liqueur, vodka, and lime juice. Shake well until ingredients are well combined and chilled. Strain mixture into a chilled glass. Add a splash of grenadine to the top of the cocktail. Garnish with a sprinkle of edible gold glitter to represent Nezukos fiery powers. Enjoy responsibly!',
       recipeDescription: 'This cocktail is inspired by Nezukos fiery spirit and her striking red and black color scheme. The blood orange juice and raspberry liqueur create a deep, rich hue reminiscent of the Blood Moon, while the vodka and lime juice add a tart and refreshing kick. The grenadine provides a sweet finish, and the edible gold glitter adds a touch of glamour fit for a demon slayer.',
-      characterImage: 'https://cdn.epicstream.com/images/ncavvykf/epicstream/1291d35e00f077741819c23a19e5043c0a54e8fc-864x382.png'
+      characterImage: '/recipeImages/nezukoDrink.jpg'
     }),
 
     CharacterRecipe.create({
@@ -44,7 +44,7 @@ async function seed() {
       recipeIngredients: '2 oz gin. 1 oz blue curacao. 1 oz pineapple juice. 1 oz lime juice. 1 oz simple syrup. Edible silver glitter or edible pearl dust (optional, for decoration).',
       recipeInstructions: 'Fill a cocktail shaker with ice. Add gin, blue curacao, pineapple juice, lime juice, and simple syrup. Shake well until chilled and strain into a chilled glass. Optional: Add a sprinkle of edible silver glitter or edible pearl dust for a magical effect. Garnish with a slice of pineapple or a lime wedge, if desired.',
       recipeDescription: 'This Sailor Moon-inspired cocktail is perfect for any Sailor Moon fan or anime lover. With its vibrant blue color and tropical flavors, it will transport you to the magical world of Sailor Moon and her friends. Enjoy!',
-      characterImage: 'https://screenrant.com/wp-content/uploads/2019/12/Sailor-Moon-Cropped.jpg'
+      characterImage: '/recipeImages/sailorMoonDrink.jpg'
     }),
 
     CharacterRecipe.create({
@@ -53,7 +53,7 @@ async function seed() {
       recipeIngredients: '2 oz dark rum. 1 oz fresh lime juice. 1 oz blackberry liqueur. 1/2 oz ginger syrup. 1/2 oz demerara syrup. 2 dashes aromatic bitters. Ginger beer. Mint sprig and blackberries for garnish.',
       recipeInstructions: 'Fill a cocktail shaker with ice. Add the dark rum, fresh lime juice, blackberry liqueur, ginger syrup, demerara syrup, and aromatic bitters. Shake well until the shaker is frosted. Fill a copper mug with ice. Strain the cocktail into the copper mug over the ice. Top with ginger beer. Stir gently to combine. Garnish with a mint sprig and a few blackberries. Enjoy!',
       recipeDescription: 'This cocktail is inspired by the playful and mysterious character Morgana from the popular video game Persona 5. The Midnight Mule is a dark and intriguing drink that combines the rich flavors of dark rum, blackberry liqueur, and ginger syrup, with a touch of lime juice and aromatic bitters. The addition of demerara syrup gives it a subtle sweetness, while the ginger beer adds a spicy kick. The cocktail is then garnished with a mint sprig and a few blackberries, giving it a fresh and fruity aroma. Sipping on a Morganas Midnight Mule will transport you to the streets of Tokyo at night, as you navigate through the neon lit city with the Phantom Thieves.',
-      characterImage: 'https://cdn.shopify.com/s/files/1/0101/1036/9888/products/UDONStore-Product-P5Shirt-MorganaInsta_1080x.jpg'
+      characterImage: '/recipeImages/morganaDrink.jpg'
     }),
 
     CharacterRecipe.create({
@@ -62,7 +62,7 @@ async function seed() {
       recipeIngredients: '1 1/2 oz dark rum. 1 oz pineapple juice. 1/2 oz lime juice. 1/2 oz blue curaçao. 1/4 oz grenadine. 1/4 oz absinthe. Pineapple wedge, for garnish.',
       recipeInstructions: 'Combine the dark rum, pineapple juice, lime juice, blue curaçao, and grenadine in a shaker with ice. Shake well and strain into a chilled glass filled with ice. Slowly pour the absinthe over the back of a spoon to float it on top of the cocktail. Garnish with a pineapple wedge. Sip and feel the power of the One-Winged Angel course through you.',
       recipeDescription: 'This cocktail is inspired by Sephiroths infamous transformation into his One-Winged Angel form during the final battle of FF7. The dark rum and pineapple juice represent the darkness and power of his character, while the blue curaçao and grenadine add a touch of his signature color. The absinthe float on top represents the ethereal and otherworldly nature of his transformation. Sip on this cocktail and embrace your own inner power. Enjoy!',
-      characterImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsoWkigGkbbuX2E-611OkErnU6Ok8iWVoK9w&usqp=CAU'
+      characterImage: '/recipeImages/sephirothDrink.jpg'
     }),
 
     CharacterRecipe.create({
