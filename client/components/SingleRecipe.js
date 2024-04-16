@@ -36,7 +36,7 @@ export const SingleRecipe = () => {
 
     return (
         <Container className='single-recipe' style={{ zIndex: 1, position: 'relative', marginTop: '50px', borderRadius: '50px' }}>
-            <Card style={{ display: 'flex', alignItems: 'flex-start', backgroundColor: '#FFC6FF' }}>
+            <Card style={{ backgroundColor: '#FFC6FF' }}>
                 
                     <CardMedia 
                         component='img'

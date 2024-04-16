@@ -26,7 +26,7 @@ export const SearchBar = () => {
                     label='Search'
                     value={search}
                     onChange={(evt) => setSearch(evt.target.value)}
-                    style={{ paddingBottom: '10px' }}
+                    style={{ paddingBottom: '5px' }}
                 />
 
                 <Button type='submit' variant='contained' style={{ backgroundColor: '#9BF6FF', marginTop: '50px', marginLeft: '10px'}}>
