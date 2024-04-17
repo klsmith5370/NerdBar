@@ -36,7 +36,7 @@ export const SingleRecipe = () => {
 
     return (
         <Container className='single-recipe' style={{ zIndex: 1, position: 'relative', marginTop: '50px', borderRadius: '50px' }}>
-            <Card style={{ backgroundColor: '#FFC6FF' }}>
+            <Card>
                 
                     <CardMedia 
                         component='img'
@@ -44,45 +44,49 @@ export const SingleRecipe = () => {
                         image={characterImage}
                         alt='character image'
                     />
-                    <CardContent>
+            </Card>
 
-                        <Typography gutterBottom variant='h2'>
-                            {characterName}
-                        </Typography>
+            <br/>
+                    
+            <Card style={{ backgroundColor: '#FFC6FF' }}>
+                <CardContent>
 
-                        <Typography gutterBottom variant='h4'>
-                            {recipeName}
-                        </Typography>
+                    <Typography gutterBottom variant='h2'>
+                        {characterName}
+                    </Typography>
 
-                        <h3>Description:</h3>
+                    <Typography gutterBottom variant='h4'>
+                        {recipeName}
+                    </Typography>
 
-                        <Typography variant='body2'>
-                            {recipeDescription}
-                        </Typography>
+                    <h3>Description:</h3>
 
-                        <br />
+                    <Typography variant='body2'>
+                        {recipeDescription}
+                    </Typography>
 
-                        <h3>Ingredients:</h3>
-                        <Typography variant='body2'>
-                            {recipeIngredients}
-                        </Typography>
+                    <br />
 
-                        <br />
+                    <h3>Ingredients:</h3>
+                    <Typography variant='body2'>
+                        {recipeIngredients}
+                    </Typography>
 
-                        <h3>Instructions:</h3>
-                
-                        <Typography variant='body2'>
-                            {recipeInstructions}
-                        </Typography>
+                    <br />
 
-                        <br />
+                    <h3>Instructions:</h3>
 
-                        <Link to={'/characterRecipes'}>
-                            <Button color='primary' variant='contained'><FaArrowLeft style={{ marginRight: '10px' }}/> Back to all recipes</Button>
-                        </Link>
+                    <Typography variant='body2'>
+                        {recipeInstructions}
+                    </Typography>
+
+                    <br />
+
+                    <Link to={'/characterRecipes'}>
+                        <Button color='primary' variant='contained'><FaArrowLeft style={{ marginRight: '10px' }}/> Back to all recipes</Button>
+                    </Link>
 
                     </CardContent>
-
                     {/* <CardActions>
                         <ExpandMore
                         expand={expanded}
