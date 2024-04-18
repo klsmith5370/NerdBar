@@ -35,7 +35,7 @@ export const SingleRecipe = () => {
 
 
     return (
-        <Container className='single-recipe' style={{ zIndex: 1, position: 'relative', marginTop: '50px', borderRadius: '50px' }}>
+        <div className='single-recipe' style={{ zIndex: 1, position: 'relative', marginTop: '50px', borderRadius: '50px' }}>
             <Card>
                 
                     <CardMedia 
@@ -45,48 +45,53 @@ export const SingleRecipe = () => {
                         alt='character image'
                     />
             </Card>
-
+            
             <br/>
+
+            <div>
+                <Card style={{ backgroundColor: '#FFC6FF' }}>
+                    <CardContent>
+
+                        <Typography gutterBottom variant='h2'>
+                            {characterName}
+                        </Typography>
+
+                        <Typography gutterBottom variant='h4'>
+                            {recipeName}
+                        </Typography>
+
+                        <h3>Description:</h3>
+
+                        <Typography variant='body2'>
+                            {recipeDescription}
+                        </Typography>
+
+                        <br />
+
+                        <h3>Ingredients:</h3>
+                        <Typography variant='body2'>
+                            {recipeIngredients}
+                        </Typography>
+
+                        <br />
+
+                        <h3>Instructions:</h3>
+
+                        <Typography variant='body2'>
+                            {recipeInstructions}
+                        </Typography>
+
+                        <br />
+
+                        <Link to={'/characterRecipes'}>
+                            <Button color='primary' variant='contained'><FaArrowLeft style={{ marginRight: '10px' }}/> Back to all recipes</Button>
+                        </Link>
+
+                        </CardContent>
+                </Card>
+            </div>
                     
-            <Card style={{ backgroundColor: '#FFC6FF' }}>
-                <CardContent>
-
-                    <Typography gutterBottom variant='h2'>
-                        {characterName}
-                    </Typography>
-
-                    <Typography gutterBottom variant='h4'>
-                        {recipeName}
-                    </Typography>
-
-                    <h3>Description:</h3>
-
-                    <Typography variant='body2'>
-                        {recipeDescription}
-                    </Typography>
-
-                    <br />
-
-                    <h3>Ingredients:</h3>
-                    <Typography variant='body2'>
-                        {recipeIngredients}
-                    </Typography>
-
-                    <br />
-
-                    <h3>Instructions:</h3>
-
-                    <Typography variant='body2'>
-                        {recipeInstructions}
-                    </Typography>
-
-                    <br />
-
-                    <Link to={'/characterRecipes'}>
-                        <Button color='primary' variant='contained'><FaArrowLeft style={{ marginRight: '10px' }}/> Back to all recipes</Button>
-                    </Link>
-
-                    </CardContent>
+            
                     {/* <CardActions>
                         <ExpandMore
                         expand={expanded}
@@ -103,8 +108,8 @@ export const SingleRecipe = () => {
                             Add to Favorite
                         </CardContent>
                     </Collapse> */}
-            </Card>
-        </Container>
+            
+        </div>
     )
 
 }
