@@ -35,20 +35,15 @@ export const SingleRecipe = () => {
 
 
     return (
-        <div className='single-recipe' style={{ zIndex: 1, position: 'relative', marginTop: '50px', borderRadius: '50px' }}>
-            <Card>
-                
-                    <CardMedia 
-                        component='img'
-                        height='auto'
-                        image={characterImage}
-                        alt='character image'
-                    />
-            </Card>
+        <div className='single-recipe' style={{ zIndex: 1, position: 'relative', justifyContent: 'flex-end', marginTop: '50px', borderRadius: '50px' }}>
+            <img 
+                src={characterImage}
+                alt='character image'
+                style={{ height: 'auto', width: '50%', objectFit: 'contain' }}
+            />
             
             <br/>
 
-            <div>
                 <Card style={{ backgroundColor: '#FFC6FF' }}>
                     <CardContent>
 
@@ -88,9 +83,7 @@ export const SingleRecipe = () => {
                         </Link>
 
                         </CardContent>
-                </Card>
-            </div>
-                    
+                </Card>                 
             
                     {/* <CardActions>
                         <ExpandMore
