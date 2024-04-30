@@ -35,74 +35,98 @@ export const SingleRecipe = () => {
 
 
     return (
-        <div className='single-recipe' style={{ zIndex: 1, position: 'relative', justifyContent: 'flex-end', marginTop: '50px', borderRadius: '50px' }}>
-            <img 
-                src={characterImage}
-                alt='character image'
-                style={{ height: 'auto', width: '50%', objectFit: 'contain' }}
-            />
-            
-            <br/>
+        <Container>
+            <div 
+                className='single-recipe' 
+                style={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'space-between', 
+                    marginTop: '50px', 
+                    borderRadius: '50px', 
+                }}
+            >
 
-                <Card style={{ backgroundColor: '#FFC6FF' }}>
-                    <CardContent>
+                <img 
+                    src={characterImage}
+                    alt='character image'
+                    style={{ 
+                        height: 'auto', 
+                        width: '50%', 
+                        objectFit: 'contain',
+                        borderRadius: '10px', 
+                    }}
+                />
+                
+                <br/>
 
-                        <Typography gutterBottom variant='h2'>
-                            {characterName}
-                        </Typography>
-
-                        <Typography gutterBottom variant='h4'>
-                            {recipeName}
-                        </Typography>
-
-                        <h3>Description:</h3>
-
-                        <Typography variant='body2'>
-                            {recipeDescription}
-                        </Typography>
-
-                        <br />
-
-                        <h3>Ingredients:</h3>
-                        <Typography variant='body2'>
-                            {recipeIngredients}
-                        </Typography>
-
-                        <br />
-
-                        <h3>Instructions:</h3>
-
-                        <Typography variant='body2'>
-                            {recipeInstructions}
-                        </Typography>
-
-                        <br />
-
-                        <Link to={'/characterRecipes'}>
-                            <Button color='primary' variant='contained'><FaArrowLeft style={{ marginRight: '10px' }}/> Back to all recipes</Button>
-                        </Link>
-
-                        </CardContent>
-                </Card>                 
-            
-                    {/* <CardActions>
-                        <ExpandMore
-                        expand={expanded}
-                        onClick={handleExpandClick}
-                        aria-expanded={expanded}
-                        aria-label="show more"
-                        >
-                            <FaArrowRight /> 
-                        </ExpandMore>
-                    </CardActions>
-
-                    <Collapse in={expanded} timeout='auto' unmountOnExit>
+                
+                    <Card 
+                        style={{ 
+                            backgroundColor: '#FFC6FF',
+                            width: '50%',
+                            marginLeft: '20px',
+                        }}
+                    >
                         <CardContent>
-                            Add to Favorite
+
+                            <Typography gutterBottom variant='h2'>
+                                {characterName}
+                            </Typography>
+
+                            <Typography gutterBottom variant='h4'>
+                                {recipeName}
+                            </Typography>
+
+                            <h3>Description:</h3>
+
+                            <Typography variant='body2'>
+                                {recipeDescription}
+                            </Typography>
+
+                            <br />
+
+                            <h3>Ingredients:</h3>
+                            <Typography variant='body2'>
+                                {recipeIngredients}
+                            </Typography>
+
+                            <br />
+
+                            <h3>Instructions:</h3>
+
+                            <Typography variant='body2'>
+                                {recipeInstructions}
+                            </Typography>
+
+                            <br />
+
+                            <Link to={'/characterRecipes'}>
+                                <Button color='primary' variant='contained'><FaArrowLeft style={{ marginRight: '10px' }}/> Back to all recipes</Button>
+                            </Link>
+
                         </CardContent>
-                    </Collapse> */}
-            
-        </div>
+                    </Card>   
+                            
+                
+                        {/* <CardActions>
+                            <ExpandMore
+                            expand={expanded}
+                            onClick={handleExpandClick}
+                            aria-expanded={expanded}
+                            aria-label="show more"
+                            >
+                                <FaArrowRight /> 
+                            </ExpandMore>
+                        </CardActions>
+
+                        <Collapse in={expanded} timeout='auto' unmountOnExit>
+                            <CardContent>
+                                Add to Favorite
+                            </CardContent>
+                        </Collapse> */}          
+            </div>
+        </Container>
     )
 
 }
