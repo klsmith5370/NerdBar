@@ -43,7 +43,8 @@ export const SingleRecipe = () => {
                     alignItems: 'center', 
                     justifyContent: 'space-between', 
                     marginTop: '50px', 
-                    borderRadius: '50px', 
+                    borderRadius: '50px',
+                    
                 }}
             >
 
@@ -54,7 +55,8 @@ export const SingleRecipe = () => {
                         height: 'auto', 
                         width: '50%', 
                         objectFit: 'contain',
-                        borderRadius: '10px', 
+                        borderRadius: '10px',
+                        marginTop: '100px', 
                     }}
                 />
                 
@@ -66,6 +68,7 @@ export const SingleRecipe = () => {
                             backgroundColor: '#FFC6FF',
                             width: '50%',
                             marginLeft: '20px',
+                            marginTop: '100px',
                         }}
                     >
                         <CardContent>
