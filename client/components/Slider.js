@@ -60,7 +60,7 @@ const ProfileSlider = (props) => {
         style={{
           ...style,
           display: "block",
-          content: " url(../images/next.png)",
+          // content: " url(../images/next.png)",
         }}
         onClick={onClick}
       />
