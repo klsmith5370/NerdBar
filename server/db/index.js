@@ -7,7 +7,7 @@ const CharacterRecipe = require('./models/CharacterRecipe')
 const User_Recipe = require('./models/UserRecipe')
 
 // Associations go here!
-User.hasMany(CharacterRecipe, { through: User_Recipe })
+User.hasMany(CharacterRecipe)
 CharacterRecipe.belongsToMany(User, { through: User_Recipe })
 
 module.exports = {
