@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
 import { Container, Card, CardContent, Typography, Button } from "@material-ui/core"
-import ProfileSlider from "./Slider"
+import ProfileSlider from "./ProfileSlider"
 import Banner from "./Banner"
 import { fetchFavoriteRecipes } from "../store/userRecipes"
 import { fetchFavoriteRecipe } from "../store/userRecipe"
@@ -50,7 +50,7 @@ const Profile = () => {
                                         </Link>
                                     ))}
                                 </Typography>
-                                {/* <ProfileSlider recipes={favoriteRecipes}/> */}
+                                <ProfileSlider recipes={favoriteRecipes} />
                             </div>
                         ) : (
                             <div>

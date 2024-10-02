@@ -36,7 +36,7 @@ export const fetchUserRecipe = (userRecipe) => async (dispatch) => {
 //     dispatch(getFavoriteRecipe(data))
 // }
 
-export const fetchUpdateUserBook = (userRecipe) => async (dispatch) => {
+export const fetchUpdateUserRecipe = (userRecipe) => async (dispatch) => {
     const { userId, recipeId } = userRecipe
     const { data } = await axios.put(`/api/userRecipes/${userId}/${recipeId}`, userRecipe)
     dispatch(updateUserRecipe(data))
