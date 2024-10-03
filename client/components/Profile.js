@@ -5,7 +5,7 @@ import { Container, Card, CardContent, Typography, Button } from "@material-ui/c
 import ProfileSlider from "./ProfileSlider"
 import Banner from "./Banner"
 import { fetchFavoriteRecipes } from "../store/userRecipes"
-import { fetchFavoriteRecipe } from "../store/userRecipe"
+// import { fetchFavoriteRecipe } from "../store/userRecipe"
 
 const Profile = () => {
     const user = useSelector((state) => state.user)

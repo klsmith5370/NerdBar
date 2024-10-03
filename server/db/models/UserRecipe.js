@@ -7,10 +7,10 @@ const User_Recipe = db.define('user_recipe', {
         defaultValue: false,
     },
 
-    featured: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false,
-    }
+    // featured: {
+    //     type: Sequelize.BOOLEAN,
+    //     defaultValue: false,
+    // }
 })
 
 module.exports = User_Recipe

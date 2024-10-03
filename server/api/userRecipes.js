@@ -21,19 +21,19 @@ module.exports = router;
 //     }
 // })
 
-router.get('/favoriteRecipes/:userId', async (req,res, next) => {
-    try {
-        const favoriteRecipes = await User_Recipe.findAll(req.params.userId, {
-            where: {
-                userId: req.params.userId,
-                favorite: true,
-            },
-        })
-        res.json(favoriteRecipes)
-    } catch (error) {
-        next(error)
-    }
-})
+// router.get('/favoriteRecipes/:userId', async (req,res, next) => {
+//     try {
+//         const favoriteRecipes = await User_Recipe.findAll(req.params.userId, {
+//             where: {
+//                 userId: req.params.userId,
+//                 favorite: true,
+//             },
+//         })
+//         res.json(favoriteRecipes)
+//     } catch (error) {
+//         next(error)
+//     }
+// })
 
 router.get('/:userId/:recipeId', async (req, res, next) => {
     try {
