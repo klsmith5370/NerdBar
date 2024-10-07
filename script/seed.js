@@ -109,10 +109,12 @@ async function seed() {
         } while (done.includes(recipeIdNum));
     
         done.push(recipeIdNum);
+
+        const randomUserId = Math.floor(Math.random() * 3) + 1;
     
         await Promise.all([
           User_Recipe.create({
-            userId: i,
+            userId: randomUserId,
             recipeId: recipeIdNum,
             favorite: true,
           }),
