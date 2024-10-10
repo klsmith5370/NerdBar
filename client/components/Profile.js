@@ -74,22 +74,3 @@ const Profile = () => {
 export default Profile
 
 
-
-    // const favoriteRecipes = recipes.filter(
-    //     (recipe) => recipe.user_recipe.favorite === true
-    // );
-
-    // {recipes.filter((recipe) => recipe.user_recipe.favorite === true).length > 0 ? (
-    //     <Link to={`/characterRecipes/${recipes.id}`}>
-    
-    //     </Link>
-    // ) : (
-    //     <div>
-    //         <Button>Add a favorite</Button>
-    //         <Typography>
-    //             <h2>Favorite Recipes</h2>
-    //             <ProfileSlider />
-    //         </Typography>
-    //     </div>
-    // )}
-
