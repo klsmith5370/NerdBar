@@ -50,7 +50,7 @@ export const fetchDeleteUserRecipe = (userRecipe) => async (dispatch) => {
 // }
 
 export const fetchFavoriteRecipes = (userId) => async (dispatch) => {
-    const { data } = await axios.get(`/api/userRecipes/favoriteRecipes/${userId}`)
+    const { data } = await axios.get(`/api/userRecipes/${userId}/favorite-recipes`)
     dispatch(getFavorites(data))
 }
 

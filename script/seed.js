@@ -142,28 +142,3 @@ if (module === require.main) {
 // we export the seed function for testing purposes (see `./seed.spec.js`)
 module.exports = seed
 
-
-  // for (let i = 1; i <= 3; i++) {
-  //   let done = new Set(); // Use a Set for faster lookups
-
-  //   for (let j = 1; j <= 15; j++) {
-  //       let recipeIdNum;
-
-  //       do {
-  //           recipeIdNum = Math.floor(Math.random() * 6) + 1;
-  //       } while (done.has(recipeIdNum));
-
-  //       done.add(recipeIdNum);
-
-  //       try {
-  //           await User_Recipe.create({
-  //               userId: i,
-  //               recipeId: recipeIdNum,
-  //               favorite: true,
-  //           });
-  //       } catch (error) {
-  //           // Handle the error if needed
-  //           console.error(`Error creating record: ${error.message}`);
-  //       }
-  //     }
-  //   }
