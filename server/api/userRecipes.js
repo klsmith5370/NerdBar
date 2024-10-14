@@ -2,6 +2,7 @@ const router = require("express").Router()
 
 const User = require('../db/models/User')
 const CharacterRecipe = require('../db/models/CharacterRecipe')
+const UserRecipe = require('../db/models/UserRecipe')
 
 const {
     models: { User_Recipe },
@@ -37,19 +38,33 @@ router.get('/:userId/:recipeId', async (req, res, next) => {
     }
 })
 
-router.get('/:userId/favorite-recipes', async (req, res, next) => {
+router.get('/favoriteRecipes/:userId', async (req,res, next) => {
     try {
-        const user = await User.findByPk(req.params.userId, {
-            include: {
-                model: CharacterRecipe, 
-                through: { where: { favorite: true } }, 
-            }
+        const favoriteRecipes = await User_Recipe.findAll(req.params.userId, {
+            where: {
+                userId: req.params.userId,
+                favorite: true,
+            },
         })
-        res.json(user)
+        res.json(favoriteRecipes)
     } catch (error) {
         next(error)
     }
 })
+
+// router.get('/:userId/favorites', async (req, res, next) => {
+//     try {
+//         const favorites = await User.findByPk(req.params.userId, {
+//             include: {
+//                 model: UserRecipe, 
+//                 through: { where: { favorite: true } }, 
+//             }
+//         })
+//         res.json(favorites)
+//     } catch (error) {
+//         next(error)
+//     }
+// })
 
 router.post('/', async (req, res, next) => {
     try {
@@ -103,16 +118,3 @@ router.delete('/:userId/:recipeId', async (req, res, next) => {
 //     }
 // })
 
-// router.get('/favoriteRecipes/:userId', async (req,res, next) => {
-//     try {
-//         const favoriteRecipes = await User_Recipe.findAll(req.params.userId, {
-//             where: {
-//                 userId: req.params.userId,
-//                 favorite: true,
-//             },
-//         })
-//         res.json(favoriteRecipes)
-//     } catch (error) {
-//         next(error)
-//     }
-// })

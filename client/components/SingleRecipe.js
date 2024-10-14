@@ -5,7 +5,7 @@ import { Container, Card, CardActionArea, CardActions, CardMedia, CardContent, T
 import { fetchSingleRecipe } from '../store/recipe'
 import { FaArrowLeft } from 'react-icons/fa'
 import { styled } from '@material-ui/core'
-import userRecipe, { fetchUpdateUserRecipe } from '../store/userRecipe'
+// import userRecipe, { fetchUpdateUserRecipe } from '../store/userRecipe'
 
 // const ExpandMore = styled((props) => {
 //     const { expand, ...other } = props;
@@ -115,13 +115,13 @@ export const SingleRecipe = () => {
 
                             <br />
 
-                            <Button
+                            {/* <Button
                                 color='secondary'
                                 variant='contained'
                                 onClick={handleFavoriteClick}
                             >
                                 {recipe.user_recipe.favorite ? 'Remove from Favorites' : 'Add to Favorites'}
-                            </Button>
+                            </Button> */}
 
                             <Link to={'/characterRecipes'}>
                                 <Button color='primary' variant='contained'><FaArrowLeft style={{ marginRight: '10px' }}/> Back to all recipes</Button>
