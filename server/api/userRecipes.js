@@ -52,6 +52,24 @@ router.get('/favoriteRecipes/:userId', async (req,res, next) => {
     }
 })
 
+// router.get("/favoriteRecipes/:userId", async (req, res, next) => {
+//     try {
+//         const favoriteRecipes = await User_Recipe.findAll({
+//             where: {
+//                 userId: req.params.userId,
+//                 favorite: true,
+//             },
+//         })
+//         if (favoriteRecipes.length > 0) {
+//             res.json(favoriteRecipes)
+//         } else {
+//             res.status(404).json({ error: "No favorite recipes found for this user." })
+//         }   
+//     } catch (error) {
+//         next(error)
+//     }
+// })
+
 // router.get('/:userId/favorites', async (req, res, next) => {
 //     try {
 //         const favorites = await User.findByPk(req.params.userId, {
@@ -104,17 +122,4 @@ router.delete('/:userId/:recipeId', async (req, res, next) => {
 })
 
 
-// router.get("/favoriteRecipe/:userId", async (req, res, next) => {
-//     try {
-//         const favoriteRecipe = await User_Recipe.findOne({
-//             where: {
-//                 userId: req.params.userId,
-//                 favorite: true,
-//             },
-//         })
-//         res.json(favoriteRecipe)
-//     } catch (error) {
-//         next(error)
-//     }
-// })
 
